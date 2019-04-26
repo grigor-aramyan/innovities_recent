@@ -1,0 +1,28 @@
+var _user$project$Utils$makeRealString = function (str) {
+	var _p0 = str;
+	if (_p0.ctor === 'Just') {
+		return _p0._0;
+	} else {
+		return '';
+	}
+};
+var _user$project$Utils$defaultInnovator = A5(_user$project$Models$TopInnovator, 0, 'Innovator Name', 'https://www.bea-sensors.com/wp/wp-content/uploads/2016/10/user_profile_male.jpg', 3, 'Address');
+var _user$project$Utils$defaultOrganization = A4(_user$project$Models$TopOrganization, 0, 'Organization Name', 'https://conferencesolutions.com/wp-content/uploads/2017/03/logo-1.png', 'Address');
+var _user$project$Utils$makeRealInnovator = function (topInno) {
+	var _p1 = topInno;
+	if (_p1.ctor === 'Just') {
+		var _p2 = _p1._0;
+		return A5(_user$project$Models$TopInnovator, _p2.id, _p2.name, _p2.pic_uri, _p2.rating, _p2.country);
+	} else {
+		return _user$project$Utils$defaultInnovator;
+	}
+};
+var _user$project$Utils$makeRealOrganization = function (topOrg) {
+	var _p3 = topOrg;
+	if (_p3.ctor === 'Just') {
+		var _p4 = _p3._0;
+		return A4(_user$project$Models$TopOrganization, _p4.id, _p4.name, _p4.pic_uri, _p4.country);
+	} else {
+		return _user$project$Utils$defaultOrganization;
+	}
+};

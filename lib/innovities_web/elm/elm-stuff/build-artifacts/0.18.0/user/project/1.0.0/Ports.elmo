@@ -1,0 +1,1287 @@
+var _user$project$Ports$scrollToElement = _elm_lang$core$Native_Platform.outgoingPort(
+	'scrollToElement',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$cacheAllData = _elm_lang$core$Native_Platform.outgoingPort(
+	'cacheAllData',
+	function (v) {
+		return {
+			loggedInMember: {id: v.loggedInMember.id, name: v.loggedInMember.name, email: v.loggedInMember.email, isOrganization: v.loggedInMember.isOrganization, token: v.loggedInMember.token},
+			dashboardMobilePage: v.dashboardMobilePage,
+			currentInnovatorExtended: {id: v.currentInnovatorExtended.id, name: v.currentInnovatorExtended.name, pic_uri: v.currentInnovatorExtended.pic_uri, rating: v.currentInnovatorExtended.rating, country: v.currentInnovatorExtended.country, email: v.currentInnovatorExtended.email, ideas_count: v.currentInnovatorExtended.ideas_count, innovators_plan_id: v.currentInnovatorExtended.innovators_plan_id, description: v.currentInnovatorExtended.description, about_me: v.currentInnovatorExtended.about_me, education: v.currentInnovatorExtended.education, experience: v.currentInnovatorExtended.experience, username: v.currentInnovatorExtended.username, phone: v.currentInnovatorExtended.phone, connections_count: v.currentInnovatorExtended.connections_count},
+			currentOrganizationExtended: {id: v.currentOrganizationExtended.id, name: v.currentOrganizationExtended.name, pic_uri: v.currentOrganizationExtended.pic_uri, country: v.currentOrganizationExtended.country, email: v.currentOrganizationExtended.email, complete_ideas_count: v.currentOrganizationExtended.complete_ideas_count, organizations_plan_id: v.currentOrganizationExtended.organizations_plan_id, description: v.currentOrganizationExtended.description, webpage: v.currentOrganizationExtended.webpage, about_us: v.currentOrganizationExtended.about_us, industry: v.currentOrganizationExtended.industry, interested_industries: v.currentOrganizationExtended.interested_industries, username: v.currentOrganizationExtended.username, phone: v.currentOrganizationExtended.phone, rating: v.currentOrganizationExtended.rating, connections_count: v.currentOrganizationExtended.connections_count},
+			postList: _elm_lang$core$Native_List.toArray(v.postList).map(
+				function (v) {
+					return {author_name: v.author_name, author_desc: v.author_desc, author_pic: v.author_pic, author_id: v.author_id, post_id: v.post_id, post_media_file: v.post_media_file, post_message: v.post_message, post_likes: v.post_likes};
+				}),
+			currentChatHistory: _elm_lang$core$Native_List.toArray(v.currentChatHistory).map(
+				function (v) {
+					return {id: v.id, sender_id: v.sender_id, receiver_id: v.receiver_id, body: v.body, sender_is_organization: v.sender_is_organization, receiver_is_organization: v.receiver_is_organization, inserted_at: v.inserted_at};
+				}),
+			pendingUnredMessages: _elm_lang$core$Native_List.toArray(v.pendingUnredMessages).map(
+				function (v) {
+					return {id: v.id, sender_id: v.sender_id, receiver_id: v.receiver_id, body: v.body, sender_is_organization: v.sender_is_organization, receiver_is_organization: v.receiver_is_organization, inserted_at: v.inserted_at, sender_picture_uri: v.sender_picture_uri};
+				}),
+			suggestedUsers: _elm_lang$core$Native_List.toArray(v.suggestedUsers).map(
+				function (v) {
+					return {id: v.id, name: v.name, description: v.description, picture: v.picture};
+				}),
+			notifications: _elm_lang$core$Native_List.toArray(v.notifications).map(
+				function (v) {
+					return {id: v.id, title: v.title, body: v.body, notificationType: v.notificationType, requestedIdeaId: v.requestedIdeaId};
+				}),
+			language: v.language,
+			desktopPage: v.desktopPage,
+			seeOtherInnovator: {id: v.seeOtherInnovator.id, name: v.seeOtherInnovator.name, pic_uri: v.seeOtherInnovator.pic_uri, rating: v.seeOtherInnovator.rating, country: v.seeOtherInnovator.country, email: v.seeOtherInnovator.email, ideas_count: v.seeOtherInnovator.ideas_count, innovators_plan_id: v.seeOtherInnovator.innovators_plan_id, description: v.seeOtherInnovator.description, about_me: v.seeOtherInnovator.about_me, education: v.seeOtherInnovator.education, experience: v.seeOtherInnovator.experience, username: v.seeOtherInnovator.username, phone: v.seeOtherInnovator.phone, connections_count: v.seeOtherInnovator.connections_count},
+			seeOtherOrganization: {id: v.seeOtherOrganization.id, name: v.seeOtherOrganization.name, pic_uri: v.seeOtherOrganization.pic_uri, country: v.seeOtherOrganization.country, email: v.seeOtherOrganization.email, complete_ideas_count: v.seeOtherOrganization.complete_ideas_count, organizations_plan_id: v.seeOtherOrganization.organizations_plan_id, description: v.seeOtherOrganization.description, webpage: v.seeOtherOrganization.webpage, about_us: v.seeOtherOrganization.about_us, industry: v.seeOtherOrganization.industry, interested_industries: v.seeOtherOrganization.interested_industries, username: v.seeOtherOrganization.username, phone: v.seeOtherOrganization.phone, rating: v.seeOtherOrganization.rating, connections_count: v.seeOtherOrganization.connections_count},
+			viewingCurrentIdea: {id: v.viewingCurrentIdea.id, short_description: v.viewingCurrentIdea.short_description, idea_name: v.viewingCurrentIdea.idea_name, industry: v.viewingCurrentIdea.industry, tags: v.viewingCurrentIdea.tags, price: v.viewingCurrentIdea.price, picture_uris: v.viewingCurrentIdea.picture_uris, video_uri: v.viewingCurrentIdea.video_uri, innovator_id: v.viewingCurrentIdea.innovator_id, innovator_name: v.viewingCurrentIdea.innovator_name, innovator_pic: v.viewingCurrentIdea.innovator_pic},
+			viewingCurrentFullIdea: {id: v.viewingCurrentFullIdea.id, short_description: v.viewingCurrentFullIdea.short_description, idea_name: v.viewingCurrentFullIdea.idea_name, industry: v.viewingCurrentFullIdea.industry, tags: v.viewingCurrentFullIdea.tags, price: v.viewingCurrentFullIdea.price, picture_uris: v.viewingCurrentFullIdea.picture_uris, video_uri: v.viewingCurrentFullIdea.video_uri, innovator_id: v.viewingCurrentFullIdea.innovator_id, innovator_name: v.viewingCurrentFullIdea.innovator_name, innovator_pic: v.viewingCurrentFullIdea.innovator_pic, long_description: v.viewingCurrentFullIdea.long_description, has_nda: v.viewingCurrentFullIdea.has_nda, is_default_nda: v.viewingCurrentFullIdea.is_default_nda, custom_nda: v.viewingCurrentFullIdea.custom_nda},
+			mobilePageHistory: _elm_lang$core$Native_List.toArray(v.mobilePageHistory).map(
+				function (v) {
+					return v;
+				}),
+			pageHistory: _elm_lang$core$Native_List.toArray(v.pageHistory).map(
+				function (v) {
+					return v;
+				}),
+			signedNDAs: _elm_lang$core$Native_List.toArray(v.signedNDAs).map(
+				function (v) {
+					return {idea_id: v.idea_id, idea_name: v.idea_name, idea_industry: v.idea_industry, idea_price: v.idea_price, signing_date: v.signing_date};
+				})
+		};
+	});
+var _user$project$Ports$fetchCachedDataResponse = _elm_lang$core$Native_Platform.incomingPort(
+	'fetchCachedDataResponse',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (loggedInMember) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (dashboardMobilePage) {
+					return A2(
+						_elm_lang$core$Json_Decode$andThen,
+						function (currentInnovatorExtended) {
+							return A2(
+								_elm_lang$core$Json_Decode$andThen,
+								function (currentOrganizationExtended) {
+									return A2(
+										_elm_lang$core$Json_Decode$andThen,
+										function (postList) {
+											return A2(
+												_elm_lang$core$Json_Decode$andThen,
+												function (currentChatHistory) {
+													return A2(
+														_elm_lang$core$Json_Decode$andThen,
+														function (pendingUnredMessages) {
+															return A2(
+																_elm_lang$core$Json_Decode$andThen,
+																function (suggestedUsers) {
+																	return A2(
+																		_elm_lang$core$Json_Decode$andThen,
+																		function (notifications) {
+																			return A2(
+																				_elm_lang$core$Json_Decode$andThen,
+																				function (language) {
+																					return A2(
+																						_elm_lang$core$Json_Decode$andThen,
+																						function (desktopPage) {
+																							return A2(
+																								_elm_lang$core$Json_Decode$andThen,
+																								function (seeOtherInnovator) {
+																									return A2(
+																										_elm_lang$core$Json_Decode$andThen,
+																										function (seeOtherOrganization) {
+																											return A2(
+																												_elm_lang$core$Json_Decode$andThen,
+																												function (viewingCurrentIdea) {
+																													return A2(
+																														_elm_lang$core$Json_Decode$andThen,
+																														function (viewingCurrentFullIdea) {
+																															return A2(
+																																_elm_lang$core$Json_Decode$andThen,
+																																function (mobilePageHistory) {
+																																	return A2(
+																																		_elm_lang$core$Json_Decode$andThen,
+																																		function (pageHistory) {
+																																			return A2(
+																																				_elm_lang$core$Json_Decode$andThen,
+																																				function (signedNDAs) {
+																																					return _elm_lang$core$Json_Decode$succeed(
+																																						{loggedInMember: loggedInMember, dashboardMobilePage: dashboardMobilePage, currentInnovatorExtended: currentInnovatorExtended, currentOrganizationExtended: currentOrganizationExtended, postList: postList, currentChatHistory: currentChatHistory, pendingUnredMessages: pendingUnredMessages, suggestedUsers: suggestedUsers, notifications: notifications, language: language, desktopPage: desktopPage, seeOtherInnovator: seeOtherInnovator, seeOtherOrganization: seeOtherOrganization, viewingCurrentIdea: viewingCurrentIdea, viewingCurrentFullIdea: viewingCurrentFullIdea, mobilePageHistory: mobilePageHistory, pageHistory: pageHistory, signedNDAs: signedNDAs});
+																																				},
+																																				A2(
+																																					_elm_lang$core$Json_Decode$field,
+																																					'signedNDAs',
+																																					_elm_lang$core$Json_Decode$list(
+																																						A2(
+																																							_elm_lang$core$Json_Decode$andThen,
+																																							function (idea_id) {
+																																								return A2(
+																																									_elm_lang$core$Json_Decode$andThen,
+																																									function (idea_name) {
+																																										return A2(
+																																											_elm_lang$core$Json_Decode$andThen,
+																																											function (idea_industry) {
+																																												return A2(
+																																													_elm_lang$core$Json_Decode$andThen,
+																																													function (idea_price) {
+																																														return A2(
+																																															_elm_lang$core$Json_Decode$andThen,
+																																															function (signing_date) {
+																																																return _elm_lang$core$Json_Decode$succeed(
+																																																	{idea_id: idea_id, idea_name: idea_name, idea_industry: idea_industry, idea_price: idea_price, signing_date: signing_date});
+																																															},
+																																															A2(_elm_lang$core$Json_Decode$field, 'signing_date', _elm_lang$core$Json_Decode$string));
+																																													},
+																																													A2(_elm_lang$core$Json_Decode$field, 'idea_price', _elm_lang$core$Json_Decode$string));
+																																											},
+																																											A2(_elm_lang$core$Json_Decode$field, 'idea_industry', _elm_lang$core$Json_Decode$string));
+																																									},
+																																									A2(_elm_lang$core$Json_Decode$field, 'idea_name', _elm_lang$core$Json_Decode$string));
+																																							},
+																																							A2(_elm_lang$core$Json_Decode$field, 'idea_id', _elm_lang$core$Json_Decode$int)))));
+																																		},
+																																		A2(
+																																			_elm_lang$core$Json_Decode$field,
+																																			'pageHistory',
+																																			_elm_lang$core$Json_Decode$list(_elm_lang$core$Json_Decode$string)));
+																																},
+																																A2(
+																																	_elm_lang$core$Json_Decode$field,
+																																	'mobilePageHistory',
+																																	_elm_lang$core$Json_Decode$list(_elm_lang$core$Json_Decode$string)));
+																														},
+																														A2(
+																															_elm_lang$core$Json_Decode$field,
+																															'viewingCurrentFullIdea',
+																															A2(
+																																_elm_lang$core$Json_Decode$andThen,
+																																function (id) {
+																																	return A2(
+																																		_elm_lang$core$Json_Decode$andThen,
+																																		function (short_description) {
+																																			return A2(
+																																				_elm_lang$core$Json_Decode$andThen,
+																																				function (idea_name) {
+																																					return A2(
+																																						_elm_lang$core$Json_Decode$andThen,
+																																						function (industry) {
+																																							return A2(
+																																								_elm_lang$core$Json_Decode$andThen,
+																																								function (tags) {
+																																									return A2(
+																																										_elm_lang$core$Json_Decode$andThen,
+																																										function (price) {
+																																											return A2(
+																																												_elm_lang$core$Json_Decode$andThen,
+																																												function (picture_uris) {
+																																													return A2(
+																																														_elm_lang$core$Json_Decode$andThen,
+																																														function (video_uri) {
+																																															return A2(
+																																																_elm_lang$core$Json_Decode$andThen,
+																																																function (innovator_id) {
+																																																	return A2(
+																																																		_elm_lang$core$Json_Decode$andThen,
+																																																		function (innovator_name) {
+																																																			return A2(
+																																																				_elm_lang$core$Json_Decode$andThen,
+																																																				function (innovator_pic) {
+																																																					return A2(
+																																																						_elm_lang$core$Json_Decode$andThen,
+																																																						function (long_description) {
+																																																							return A2(
+																																																								_elm_lang$core$Json_Decode$andThen,
+																																																								function (has_nda) {
+																																																									return A2(
+																																																										_elm_lang$core$Json_Decode$andThen,
+																																																										function (is_default_nda) {
+																																																											return A2(
+																																																												_elm_lang$core$Json_Decode$andThen,
+																																																												function (custom_nda) {
+																																																													return _elm_lang$core$Json_Decode$succeed(
+																																																														{id: id, short_description: short_description, idea_name: idea_name, industry: industry, tags: tags, price: price, picture_uris: picture_uris, video_uri: video_uri, innovator_id: innovator_id, innovator_name: innovator_name, innovator_pic: innovator_pic, long_description: long_description, has_nda: has_nda, is_default_nda: is_default_nda, custom_nda: custom_nda});
+																																																												},
+																																																												A2(_elm_lang$core$Json_Decode$field, 'custom_nda', _elm_lang$core$Json_Decode$string));
+																																																										},
+																																																										A2(_elm_lang$core$Json_Decode$field, 'is_default_nda', _elm_lang$core$Json_Decode$bool));
+																																																								},
+																																																								A2(_elm_lang$core$Json_Decode$field, 'has_nda', _elm_lang$core$Json_Decode$bool));
+																																																						},
+																																																						A2(_elm_lang$core$Json_Decode$field, 'long_description', _elm_lang$core$Json_Decode$string));
+																																																				},
+																																																				A2(_elm_lang$core$Json_Decode$field, 'innovator_pic', _elm_lang$core$Json_Decode$string));
+																																																		},
+																																																		A2(_elm_lang$core$Json_Decode$field, 'innovator_name', _elm_lang$core$Json_Decode$string));
+																																																},
+																																																A2(_elm_lang$core$Json_Decode$field, 'innovator_id', _elm_lang$core$Json_Decode$int));
+																																														},
+																																														A2(_elm_lang$core$Json_Decode$field, 'video_uri', _elm_lang$core$Json_Decode$string));
+																																												},
+																																												A2(_elm_lang$core$Json_Decode$field, 'picture_uris', _elm_lang$core$Json_Decode$string));
+																																										},
+																																										A2(_elm_lang$core$Json_Decode$field, 'price', _elm_lang$core$Json_Decode$string));
+																																								},
+																																								A2(_elm_lang$core$Json_Decode$field, 'tags', _elm_lang$core$Json_Decode$string));
+																																						},
+																																						A2(_elm_lang$core$Json_Decode$field, 'industry', _elm_lang$core$Json_Decode$string));
+																																				},
+																																				A2(_elm_lang$core$Json_Decode$field, 'idea_name', _elm_lang$core$Json_Decode$string));
+																																		},
+																																		A2(_elm_lang$core$Json_Decode$field, 'short_description', _elm_lang$core$Json_Decode$string));
+																																},
+																																A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int))));
+																												},
+																												A2(
+																													_elm_lang$core$Json_Decode$field,
+																													'viewingCurrentIdea',
+																													A2(
+																														_elm_lang$core$Json_Decode$andThen,
+																														function (id) {
+																															return A2(
+																																_elm_lang$core$Json_Decode$andThen,
+																																function (short_description) {
+																																	return A2(
+																																		_elm_lang$core$Json_Decode$andThen,
+																																		function (idea_name) {
+																																			return A2(
+																																				_elm_lang$core$Json_Decode$andThen,
+																																				function (industry) {
+																																					return A2(
+																																						_elm_lang$core$Json_Decode$andThen,
+																																						function (tags) {
+																																							return A2(
+																																								_elm_lang$core$Json_Decode$andThen,
+																																								function (price) {
+																																									return A2(
+																																										_elm_lang$core$Json_Decode$andThen,
+																																										function (picture_uris) {
+																																											return A2(
+																																												_elm_lang$core$Json_Decode$andThen,
+																																												function (video_uri) {
+																																													return A2(
+																																														_elm_lang$core$Json_Decode$andThen,
+																																														function (innovator_id) {
+																																															return A2(
+																																																_elm_lang$core$Json_Decode$andThen,
+																																																function (innovator_name) {
+																																																	return A2(
+																																																		_elm_lang$core$Json_Decode$andThen,
+																																																		function (innovator_pic) {
+																																																			return _elm_lang$core$Json_Decode$succeed(
+																																																				{id: id, short_description: short_description, idea_name: idea_name, industry: industry, tags: tags, price: price, picture_uris: picture_uris, video_uri: video_uri, innovator_id: innovator_id, innovator_name: innovator_name, innovator_pic: innovator_pic});
+																																																		},
+																																																		A2(_elm_lang$core$Json_Decode$field, 'innovator_pic', _elm_lang$core$Json_Decode$string));
+																																																},
+																																																A2(_elm_lang$core$Json_Decode$field, 'innovator_name', _elm_lang$core$Json_Decode$string));
+																																														},
+																																														A2(_elm_lang$core$Json_Decode$field, 'innovator_id', _elm_lang$core$Json_Decode$int));
+																																												},
+																																												A2(_elm_lang$core$Json_Decode$field, 'video_uri', _elm_lang$core$Json_Decode$string));
+																																										},
+																																										A2(_elm_lang$core$Json_Decode$field, 'picture_uris', _elm_lang$core$Json_Decode$string));
+																																								},
+																																								A2(_elm_lang$core$Json_Decode$field, 'price', _elm_lang$core$Json_Decode$string));
+																																						},
+																																						A2(_elm_lang$core$Json_Decode$field, 'tags', _elm_lang$core$Json_Decode$string));
+																																				},
+																																				A2(_elm_lang$core$Json_Decode$field, 'industry', _elm_lang$core$Json_Decode$string));
+																																		},
+																																		A2(_elm_lang$core$Json_Decode$field, 'idea_name', _elm_lang$core$Json_Decode$string));
+																																},
+																																A2(_elm_lang$core$Json_Decode$field, 'short_description', _elm_lang$core$Json_Decode$string));
+																														},
+																														A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int))));
+																										},
+																										A2(
+																											_elm_lang$core$Json_Decode$field,
+																											'seeOtherOrganization',
+																											A2(
+																												_elm_lang$core$Json_Decode$andThen,
+																												function (id) {
+																													return A2(
+																														_elm_lang$core$Json_Decode$andThen,
+																														function (name) {
+																															return A2(
+																																_elm_lang$core$Json_Decode$andThen,
+																																function (pic_uri) {
+																																	return A2(
+																																		_elm_lang$core$Json_Decode$andThen,
+																																		function (country) {
+																																			return A2(
+																																				_elm_lang$core$Json_Decode$andThen,
+																																				function (email) {
+																																					return A2(
+																																						_elm_lang$core$Json_Decode$andThen,
+																																						function (complete_ideas_count) {
+																																							return A2(
+																																								_elm_lang$core$Json_Decode$andThen,
+																																								function (organizations_plan_id) {
+																																									return A2(
+																																										_elm_lang$core$Json_Decode$andThen,
+																																										function (description) {
+																																											return A2(
+																																												_elm_lang$core$Json_Decode$andThen,
+																																												function (webpage) {
+																																													return A2(
+																																														_elm_lang$core$Json_Decode$andThen,
+																																														function (about_us) {
+																																															return A2(
+																																																_elm_lang$core$Json_Decode$andThen,
+																																																function (industry) {
+																																																	return A2(
+																																																		_elm_lang$core$Json_Decode$andThen,
+																																																		function (interested_industries) {
+																																																			return A2(
+																																																				_elm_lang$core$Json_Decode$andThen,
+																																																				function (username) {
+																																																					return A2(
+																																																						_elm_lang$core$Json_Decode$andThen,
+																																																						function (phone) {
+																																																							return A2(
+																																																								_elm_lang$core$Json_Decode$andThen,
+																																																								function (rating) {
+																																																									return A2(
+																																																										_elm_lang$core$Json_Decode$andThen,
+																																																										function (connections_count) {
+																																																											return _elm_lang$core$Json_Decode$succeed(
+																																																												{id: id, name: name, pic_uri: pic_uri, country: country, email: email, complete_ideas_count: complete_ideas_count, organizations_plan_id: organizations_plan_id, description: description, webpage: webpage, about_us: about_us, industry: industry, interested_industries: interested_industries, username: username, phone: phone, rating: rating, connections_count: connections_count});
+																																																										},
+																																																										A2(_elm_lang$core$Json_Decode$field, 'connections_count', _elm_lang$core$Json_Decode$int));
+																																																								},
+																																																								A2(_elm_lang$core$Json_Decode$field, 'rating', _elm_lang$core$Json_Decode$int));
+																																																						},
+																																																						A2(_elm_lang$core$Json_Decode$field, 'phone', _elm_lang$core$Json_Decode$string));
+																																																				},
+																																																				A2(_elm_lang$core$Json_Decode$field, 'username', _elm_lang$core$Json_Decode$string));
+																																																		},
+																																																		A2(_elm_lang$core$Json_Decode$field, 'interested_industries', _elm_lang$core$Json_Decode$string));
+																																																},
+																																																A2(_elm_lang$core$Json_Decode$field, 'industry', _elm_lang$core$Json_Decode$string));
+																																														},
+																																														A2(_elm_lang$core$Json_Decode$field, 'about_us', _elm_lang$core$Json_Decode$string));
+																																												},
+																																												A2(_elm_lang$core$Json_Decode$field, 'webpage', _elm_lang$core$Json_Decode$string));
+																																										},
+																																										A2(_elm_lang$core$Json_Decode$field, 'description', _elm_lang$core$Json_Decode$string));
+																																								},
+																																								A2(_elm_lang$core$Json_Decode$field, 'organizations_plan_id', _elm_lang$core$Json_Decode$int));
+																																						},
+																																						A2(_elm_lang$core$Json_Decode$field, 'complete_ideas_count', _elm_lang$core$Json_Decode$int));
+																																				},
+																																				A2(_elm_lang$core$Json_Decode$field, 'email', _elm_lang$core$Json_Decode$string));
+																																		},
+																																		A2(_elm_lang$core$Json_Decode$field, 'country', _elm_lang$core$Json_Decode$string));
+																																},
+																																A2(_elm_lang$core$Json_Decode$field, 'pic_uri', _elm_lang$core$Json_Decode$string));
+																														},
+																														A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string));
+																												},
+																												A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int))));
+																								},
+																								A2(
+																									_elm_lang$core$Json_Decode$field,
+																									'seeOtherInnovator',
+																									A2(
+																										_elm_lang$core$Json_Decode$andThen,
+																										function (id) {
+																											return A2(
+																												_elm_lang$core$Json_Decode$andThen,
+																												function (name) {
+																													return A2(
+																														_elm_lang$core$Json_Decode$andThen,
+																														function (pic_uri) {
+																															return A2(
+																																_elm_lang$core$Json_Decode$andThen,
+																																function (rating) {
+																																	return A2(
+																																		_elm_lang$core$Json_Decode$andThen,
+																																		function (country) {
+																																			return A2(
+																																				_elm_lang$core$Json_Decode$andThen,
+																																				function (email) {
+																																					return A2(
+																																						_elm_lang$core$Json_Decode$andThen,
+																																						function (ideas_count) {
+																																							return A2(
+																																								_elm_lang$core$Json_Decode$andThen,
+																																								function (innovators_plan_id) {
+																																									return A2(
+																																										_elm_lang$core$Json_Decode$andThen,
+																																										function (description) {
+																																											return A2(
+																																												_elm_lang$core$Json_Decode$andThen,
+																																												function (about_me) {
+																																													return A2(
+																																														_elm_lang$core$Json_Decode$andThen,
+																																														function (education) {
+																																															return A2(
+																																																_elm_lang$core$Json_Decode$andThen,
+																																																function (experience) {
+																																																	return A2(
+																																																		_elm_lang$core$Json_Decode$andThen,
+																																																		function (username) {
+																																																			return A2(
+																																																				_elm_lang$core$Json_Decode$andThen,
+																																																				function (phone) {
+																																																					return A2(
+																																																						_elm_lang$core$Json_Decode$andThen,
+																																																						function (connections_count) {
+																																																							return _elm_lang$core$Json_Decode$succeed(
+																																																								{id: id, name: name, pic_uri: pic_uri, rating: rating, country: country, email: email, ideas_count: ideas_count, innovators_plan_id: innovators_plan_id, description: description, about_me: about_me, education: education, experience: experience, username: username, phone: phone, connections_count: connections_count});
+																																																						},
+																																																						A2(_elm_lang$core$Json_Decode$field, 'connections_count', _elm_lang$core$Json_Decode$int));
+																																																				},
+																																																				A2(_elm_lang$core$Json_Decode$field, 'phone', _elm_lang$core$Json_Decode$string));
+																																																		},
+																																																		A2(_elm_lang$core$Json_Decode$field, 'username', _elm_lang$core$Json_Decode$string));
+																																																},
+																																																A2(_elm_lang$core$Json_Decode$field, 'experience', _elm_lang$core$Json_Decode$string));
+																																														},
+																																														A2(_elm_lang$core$Json_Decode$field, 'education', _elm_lang$core$Json_Decode$string));
+																																												},
+																																												A2(_elm_lang$core$Json_Decode$field, 'about_me', _elm_lang$core$Json_Decode$string));
+																																										},
+																																										A2(_elm_lang$core$Json_Decode$field, 'description', _elm_lang$core$Json_Decode$string));
+																																								},
+																																								A2(_elm_lang$core$Json_Decode$field, 'innovators_plan_id', _elm_lang$core$Json_Decode$int));
+																																						},
+																																						A2(_elm_lang$core$Json_Decode$field, 'ideas_count', _elm_lang$core$Json_Decode$int));
+																																				},
+																																				A2(_elm_lang$core$Json_Decode$field, 'email', _elm_lang$core$Json_Decode$string));
+																																		},
+																																		A2(_elm_lang$core$Json_Decode$field, 'country', _elm_lang$core$Json_Decode$string));
+																																},
+																																A2(_elm_lang$core$Json_Decode$field, 'rating', _elm_lang$core$Json_Decode$int));
+																														},
+																														A2(_elm_lang$core$Json_Decode$field, 'pic_uri', _elm_lang$core$Json_Decode$string));
+																												},
+																												A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string));
+																										},
+																										A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int))));
+																						},
+																						A2(_elm_lang$core$Json_Decode$field, 'desktopPage', _elm_lang$core$Json_Decode$string));
+																				},
+																				A2(_elm_lang$core$Json_Decode$field, 'language', _elm_lang$core$Json_Decode$string));
+																		},
+																		A2(
+																			_elm_lang$core$Json_Decode$field,
+																			'notifications',
+																			_elm_lang$core$Json_Decode$list(
+																				A2(
+																					_elm_lang$core$Json_Decode$andThen,
+																					function (id) {
+																						return A2(
+																							_elm_lang$core$Json_Decode$andThen,
+																							function (title) {
+																								return A2(
+																									_elm_lang$core$Json_Decode$andThen,
+																									function (body) {
+																										return A2(
+																											_elm_lang$core$Json_Decode$andThen,
+																											function (notificationType) {
+																												return A2(
+																													_elm_lang$core$Json_Decode$andThen,
+																													function (requestedIdeaId) {
+																														return _elm_lang$core$Json_Decode$succeed(
+																															{id: id, title: title, body: body, notificationType: notificationType, requestedIdeaId: requestedIdeaId});
+																													},
+																													A2(_elm_lang$core$Json_Decode$field, 'requestedIdeaId', _elm_lang$core$Json_Decode$int));
+																											},
+																											A2(_elm_lang$core$Json_Decode$field, 'notificationType', _elm_lang$core$Json_Decode$string));
+																									},
+																									A2(_elm_lang$core$Json_Decode$field, 'body', _elm_lang$core$Json_Decode$string));
+																							},
+																							A2(_elm_lang$core$Json_Decode$field, 'title', _elm_lang$core$Json_Decode$string));
+																					},
+																					A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int)))));
+																},
+																A2(
+																	_elm_lang$core$Json_Decode$field,
+																	'suggestedUsers',
+																	_elm_lang$core$Json_Decode$list(
+																		A2(
+																			_elm_lang$core$Json_Decode$andThen,
+																			function (id) {
+																				return A2(
+																					_elm_lang$core$Json_Decode$andThen,
+																					function (name) {
+																						return A2(
+																							_elm_lang$core$Json_Decode$andThen,
+																							function (description) {
+																								return A2(
+																									_elm_lang$core$Json_Decode$andThen,
+																									function (picture) {
+																										return _elm_lang$core$Json_Decode$succeed(
+																											{id: id, name: name, description: description, picture: picture});
+																									},
+																									A2(_elm_lang$core$Json_Decode$field, 'picture', _elm_lang$core$Json_Decode$string));
+																							},
+																							A2(_elm_lang$core$Json_Decode$field, 'description', _elm_lang$core$Json_Decode$string));
+																					},
+																					A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string));
+																			},
+																			A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int)))));
+														},
+														A2(
+															_elm_lang$core$Json_Decode$field,
+															'pendingUnredMessages',
+															_elm_lang$core$Json_Decode$list(
+																A2(
+																	_elm_lang$core$Json_Decode$andThen,
+																	function (id) {
+																		return A2(
+																			_elm_lang$core$Json_Decode$andThen,
+																			function (sender_id) {
+																				return A2(
+																					_elm_lang$core$Json_Decode$andThen,
+																					function (receiver_id) {
+																						return A2(
+																							_elm_lang$core$Json_Decode$andThen,
+																							function (body) {
+																								return A2(
+																									_elm_lang$core$Json_Decode$andThen,
+																									function (sender_is_organization) {
+																										return A2(
+																											_elm_lang$core$Json_Decode$andThen,
+																											function (receiver_is_organization) {
+																												return A2(
+																													_elm_lang$core$Json_Decode$andThen,
+																													function (inserted_at) {
+																														return A2(
+																															_elm_lang$core$Json_Decode$andThen,
+																															function (sender_picture_uri) {
+																																return _elm_lang$core$Json_Decode$succeed(
+																																	{id: id, sender_id: sender_id, receiver_id: receiver_id, body: body, sender_is_organization: sender_is_organization, receiver_is_organization: receiver_is_organization, inserted_at: inserted_at, sender_picture_uri: sender_picture_uri});
+																															},
+																															A2(_elm_lang$core$Json_Decode$field, 'sender_picture_uri', _elm_lang$core$Json_Decode$string));
+																													},
+																													A2(_elm_lang$core$Json_Decode$field, 'inserted_at', _elm_lang$core$Json_Decode$string));
+																											},
+																											A2(_elm_lang$core$Json_Decode$field, 'receiver_is_organization', _elm_lang$core$Json_Decode$bool));
+																									},
+																									A2(_elm_lang$core$Json_Decode$field, 'sender_is_organization', _elm_lang$core$Json_Decode$bool));
+																							},
+																							A2(_elm_lang$core$Json_Decode$field, 'body', _elm_lang$core$Json_Decode$string));
+																					},
+																					A2(_elm_lang$core$Json_Decode$field, 'receiver_id', _elm_lang$core$Json_Decode$int));
+																			},
+																			A2(_elm_lang$core$Json_Decode$field, 'sender_id', _elm_lang$core$Json_Decode$int));
+																	},
+																	A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int)))));
+												},
+												A2(
+													_elm_lang$core$Json_Decode$field,
+													'currentChatHistory',
+													_elm_lang$core$Json_Decode$list(
+														A2(
+															_elm_lang$core$Json_Decode$andThen,
+															function (id) {
+																return A2(
+																	_elm_lang$core$Json_Decode$andThen,
+																	function (sender_id) {
+																		return A2(
+																			_elm_lang$core$Json_Decode$andThen,
+																			function (receiver_id) {
+																				return A2(
+																					_elm_lang$core$Json_Decode$andThen,
+																					function (body) {
+																						return A2(
+																							_elm_lang$core$Json_Decode$andThen,
+																							function (sender_is_organization) {
+																								return A2(
+																									_elm_lang$core$Json_Decode$andThen,
+																									function (receiver_is_organization) {
+																										return A2(
+																											_elm_lang$core$Json_Decode$andThen,
+																											function (inserted_at) {
+																												return _elm_lang$core$Json_Decode$succeed(
+																													{id: id, sender_id: sender_id, receiver_id: receiver_id, body: body, sender_is_organization: sender_is_organization, receiver_is_organization: receiver_is_organization, inserted_at: inserted_at});
+																											},
+																											A2(_elm_lang$core$Json_Decode$field, 'inserted_at', _elm_lang$core$Json_Decode$string));
+																									},
+																									A2(_elm_lang$core$Json_Decode$field, 'receiver_is_organization', _elm_lang$core$Json_Decode$bool));
+																							},
+																							A2(_elm_lang$core$Json_Decode$field, 'sender_is_organization', _elm_lang$core$Json_Decode$bool));
+																					},
+																					A2(_elm_lang$core$Json_Decode$field, 'body', _elm_lang$core$Json_Decode$string));
+																			},
+																			A2(_elm_lang$core$Json_Decode$field, 'receiver_id', _elm_lang$core$Json_Decode$int));
+																	},
+																	A2(_elm_lang$core$Json_Decode$field, 'sender_id', _elm_lang$core$Json_Decode$int));
+															},
+															A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int)))));
+										},
+										A2(
+											_elm_lang$core$Json_Decode$field,
+											'postList',
+											_elm_lang$core$Json_Decode$list(
+												A2(
+													_elm_lang$core$Json_Decode$andThen,
+													function (author_name) {
+														return A2(
+															_elm_lang$core$Json_Decode$andThen,
+															function (author_desc) {
+																return A2(
+																	_elm_lang$core$Json_Decode$andThen,
+																	function (author_pic) {
+																		return A2(
+																			_elm_lang$core$Json_Decode$andThen,
+																			function (author_id) {
+																				return A2(
+																					_elm_lang$core$Json_Decode$andThen,
+																					function (post_id) {
+																						return A2(
+																							_elm_lang$core$Json_Decode$andThen,
+																							function (post_media_file) {
+																								return A2(
+																									_elm_lang$core$Json_Decode$andThen,
+																									function (post_message) {
+																										return A2(
+																											_elm_lang$core$Json_Decode$andThen,
+																											function (post_likes) {
+																												return _elm_lang$core$Json_Decode$succeed(
+																													{author_name: author_name, author_desc: author_desc, author_pic: author_pic, author_id: author_id, post_id: post_id, post_media_file: post_media_file, post_message: post_message, post_likes: post_likes});
+																											},
+																											A2(_elm_lang$core$Json_Decode$field, 'post_likes', _elm_lang$core$Json_Decode$int));
+																									},
+																									A2(_elm_lang$core$Json_Decode$field, 'post_message', _elm_lang$core$Json_Decode$string));
+																							},
+																							A2(_elm_lang$core$Json_Decode$field, 'post_media_file', _elm_lang$core$Json_Decode$string));
+																					},
+																					A2(_elm_lang$core$Json_Decode$field, 'post_id', _elm_lang$core$Json_Decode$int));
+																			},
+																			A2(_elm_lang$core$Json_Decode$field, 'author_id', _elm_lang$core$Json_Decode$int));
+																	},
+																	A2(_elm_lang$core$Json_Decode$field, 'author_pic', _elm_lang$core$Json_Decode$string));
+															},
+															A2(_elm_lang$core$Json_Decode$field, 'author_desc', _elm_lang$core$Json_Decode$string));
+													},
+													A2(_elm_lang$core$Json_Decode$field, 'author_name', _elm_lang$core$Json_Decode$string)))));
+								},
+								A2(
+									_elm_lang$core$Json_Decode$field,
+									'currentOrganizationExtended',
+									A2(
+										_elm_lang$core$Json_Decode$andThen,
+										function (id) {
+											return A2(
+												_elm_lang$core$Json_Decode$andThen,
+												function (name) {
+													return A2(
+														_elm_lang$core$Json_Decode$andThen,
+														function (pic_uri) {
+															return A2(
+																_elm_lang$core$Json_Decode$andThen,
+																function (country) {
+																	return A2(
+																		_elm_lang$core$Json_Decode$andThen,
+																		function (email) {
+																			return A2(
+																				_elm_lang$core$Json_Decode$andThen,
+																				function (complete_ideas_count) {
+																					return A2(
+																						_elm_lang$core$Json_Decode$andThen,
+																						function (organizations_plan_id) {
+																							return A2(
+																								_elm_lang$core$Json_Decode$andThen,
+																								function (description) {
+																									return A2(
+																										_elm_lang$core$Json_Decode$andThen,
+																										function (webpage) {
+																											return A2(
+																												_elm_lang$core$Json_Decode$andThen,
+																												function (about_us) {
+																													return A2(
+																														_elm_lang$core$Json_Decode$andThen,
+																														function (industry) {
+																															return A2(
+																																_elm_lang$core$Json_Decode$andThen,
+																																function (interested_industries) {
+																																	return A2(
+																																		_elm_lang$core$Json_Decode$andThen,
+																																		function (username) {
+																																			return A2(
+																																				_elm_lang$core$Json_Decode$andThen,
+																																				function (phone) {
+																																					return A2(
+																																						_elm_lang$core$Json_Decode$andThen,
+																																						function (rating) {
+																																							return A2(
+																																								_elm_lang$core$Json_Decode$andThen,
+																																								function (connections_count) {
+																																									return _elm_lang$core$Json_Decode$succeed(
+																																										{id: id, name: name, pic_uri: pic_uri, country: country, email: email, complete_ideas_count: complete_ideas_count, organizations_plan_id: organizations_plan_id, description: description, webpage: webpage, about_us: about_us, industry: industry, interested_industries: interested_industries, username: username, phone: phone, rating: rating, connections_count: connections_count});
+																																								},
+																																								A2(_elm_lang$core$Json_Decode$field, 'connections_count', _elm_lang$core$Json_Decode$int));
+																																						},
+																																						A2(_elm_lang$core$Json_Decode$field, 'rating', _elm_lang$core$Json_Decode$int));
+																																				},
+																																				A2(_elm_lang$core$Json_Decode$field, 'phone', _elm_lang$core$Json_Decode$string));
+																																		},
+																																		A2(_elm_lang$core$Json_Decode$field, 'username', _elm_lang$core$Json_Decode$string));
+																																},
+																																A2(_elm_lang$core$Json_Decode$field, 'interested_industries', _elm_lang$core$Json_Decode$string));
+																														},
+																														A2(_elm_lang$core$Json_Decode$field, 'industry', _elm_lang$core$Json_Decode$string));
+																												},
+																												A2(_elm_lang$core$Json_Decode$field, 'about_us', _elm_lang$core$Json_Decode$string));
+																										},
+																										A2(_elm_lang$core$Json_Decode$field, 'webpage', _elm_lang$core$Json_Decode$string));
+																								},
+																								A2(_elm_lang$core$Json_Decode$field, 'description', _elm_lang$core$Json_Decode$string));
+																						},
+																						A2(_elm_lang$core$Json_Decode$field, 'organizations_plan_id', _elm_lang$core$Json_Decode$int));
+																				},
+																				A2(_elm_lang$core$Json_Decode$field, 'complete_ideas_count', _elm_lang$core$Json_Decode$int));
+																		},
+																		A2(_elm_lang$core$Json_Decode$field, 'email', _elm_lang$core$Json_Decode$string));
+																},
+																A2(_elm_lang$core$Json_Decode$field, 'country', _elm_lang$core$Json_Decode$string));
+														},
+														A2(_elm_lang$core$Json_Decode$field, 'pic_uri', _elm_lang$core$Json_Decode$string));
+												},
+												A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string));
+										},
+										A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int))));
+						},
+						A2(
+							_elm_lang$core$Json_Decode$field,
+							'currentInnovatorExtended',
+							A2(
+								_elm_lang$core$Json_Decode$andThen,
+								function (id) {
+									return A2(
+										_elm_lang$core$Json_Decode$andThen,
+										function (name) {
+											return A2(
+												_elm_lang$core$Json_Decode$andThen,
+												function (pic_uri) {
+													return A2(
+														_elm_lang$core$Json_Decode$andThen,
+														function (rating) {
+															return A2(
+																_elm_lang$core$Json_Decode$andThen,
+																function (country) {
+																	return A2(
+																		_elm_lang$core$Json_Decode$andThen,
+																		function (email) {
+																			return A2(
+																				_elm_lang$core$Json_Decode$andThen,
+																				function (ideas_count) {
+																					return A2(
+																						_elm_lang$core$Json_Decode$andThen,
+																						function (innovators_plan_id) {
+																							return A2(
+																								_elm_lang$core$Json_Decode$andThen,
+																								function (description) {
+																									return A2(
+																										_elm_lang$core$Json_Decode$andThen,
+																										function (about_me) {
+																											return A2(
+																												_elm_lang$core$Json_Decode$andThen,
+																												function (education) {
+																													return A2(
+																														_elm_lang$core$Json_Decode$andThen,
+																														function (experience) {
+																															return A2(
+																																_elm_lang$core$Json_Decode$andThen,
+																																function (username) {
+																																	return A2(
+																																		_elm_lang$core$Json_Decode$andThen,
+																																		function (phone) {
+																																			return A2(
+																																				_elm_lang$core$Json_Decode$andThen,
+																																				function (connections_count) {
+																																					return _elm_lang$core$Json_Decode$succeed(
+																																						{id: id, name: name, pic_uri: pic_uri, rating: rating, country: country, email: email, ideas_count: ideas_count, innovators_plan_id: innovators_plan_id, description: description, about_me: about_me, education: education, experience: experience, username: username, phone: phone, connections_count: connections_count});
+																																				},
+																																				A2(_elm_lang$core$Json_Decode$field, 'connections_count', _elm_lang$core$Json_Decode$int));
+																																		},
+																																		A2(_elm_lang$core$Json_Decode$field, 'phone', _elm_lang$core$Json_Decode$string));
+																																},
+																																A2(_elm_lang$core$Json_Decode$field, 'username', _elm_lang$core$Json_Decode$string));
+																														},
+																														A2(_elm_lang$core$Json_Decode$field, 'experience', _elm_lang$core$Json_Decode$string));
+																												},
+																												A2(_elm_lang$core$Json_Decode$field, 'education', _elm_lang$core$Json_Decode$string));
+																										},
+																										A2(_elm_lang$core$Json_Decode$field, 'about_me', _elm_lang$core$Json_Decode$string));
+																								},
+																								A2(_elm_lang$core$Json_Decode$field, 'description', _elm_lang$core$Json_Decode$string));
+																						},
+																						A2(_elm_lang$core$Json_Decode$field, 'innovators_plan_id', _elm_lang$core$Json_Decode$int));
+																				},
+																				A2(_elm_lang$core$Json_Decode$field, 'ideas_count', _elm_lang$core$Json_Decode$int));
+																		},
+																		A2(_elm_lang$core$Json_Decode$field, 'email', _elm_lang$core$Json_Decode$string));
+																},
+																A2(_elm_lang$core$Json_Decode$field, 'country', _elm_lang$core$Json_Decode$string));
+														},
+														A2(_elm_lang$core$Json_Decode$field, 'rating', _elm_lang$core$Json_Decode$int));
+												},
+												A2(_elm_lang$core$Json_Decode$field, 'pic_uri', _elm_lang$core$Json_Decode$string));
+										},
+										A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string));
+								},
+								A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int))));
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'dashboardMobilePage', _elm_lang$core$Json_Decode$string));
+		},
+		A2(
+			_elm_lang$core$Json_Decode$field,
+			'loggedInMember',
+			A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (id) {
+					return A2(
+						_elm_lang$core$Json_Decode$andThen,
+						function (name) {
+							return A2(
+								_elm_lang$core$Json_Decode$andThen,
+								function (email) {
+									return A2(
+										_elm_lang$core$Json_Decode$andThen,
+										function (isOrganization) {
+											return A2(
+												_elm_lang$core$Json_Decode$andThen,
+												function (token) {
+													return _elm_lang$core$Json_Decode$succeed(
+														{id: id, name: name, email: email, isOrganization: isOrganization, token: token});
+												},
+												A2(_elm_lang$core$Json_Decode$field, 'token', _elm_lang$core$Json_Decode$string));
+										},
+										A2(_elm_lang$core$Json_Decode$field, 'isOrganization', _elm_lang$core$Json_Decode$bool));
+								},
+								A2(_elm_lang$core$Json_Decode$field, 'email', _elm_lang$core$Json_Decode$string));
+						},
+						A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string));
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int)))));
+var _user$project$Ports$clearCachedData = _elm_lang$core$Native_Platform.outgoingPort(
+	'clearCachedData',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$showNDAConfirmDialog = _elm_lang$core$Native_Platform.outgoingPort(
+	'showNDAConfirmDialog',
+	function (v) {
+		return {companyName: v.companyName, innovatorName: v.innovatorName, ideaName: v.ideaName, langString: v.langString, customNda: v.customNda};
+	});
+var _user$project$Ports$ndaRejected = _elm_lang$core$Native_Platform.incomingPort('ndaRejected', _elm_lang$core$Json_Decode$string);
+var _user$project$Ports$ndaAccepted = _elm_lang$core$Native_Platform.incomingPort('ndaAccepted', _elm_lang$core$Json_Decode$string);
+var _user$project$Ports$turnOnNewNotifsFetch = _elm_lang$core$Native_Platform.outgoingPort(
+	'turnOnNewNotifsFetch',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$turnOffNewNotifsFetch = _elm_lang$core$Native_Platform.outgoingPort(
+	'turnOffNewNotifsFetch',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$regularNewNotifsFetch = _elm_lang$core$Native_Platform.incomingPort('regularNewNotifsFetch', _elm_lang$core$Json_Decode$string);
+var _user$project$Ports$sharePostOnFacebook = _elm_lang$core$Native_Platform.outgoingPort(
+	'sharePostOnFacebook',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$shareProfileOnFacebook = _elm_lang$core$Native_Platform.outgoingPort(
+	'shareProfileOnFacebook',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$submitOrgSettingsPicToFirebase = _elm_lang$core$Native_Platform.outgoingPort(
+	'submitOrgSettingsPicToFirebase',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$replyWithOrgSettingsPicUri = _elm_lang$core$Native_Platform.incomingPort(
+	'replyWithOrgSettingsPicUri',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (uri) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (error) {
+					return _elm_lang$core$Json_Decode$succeed(
+						{uri: uri, error: error});
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'uri', _elm_lang$core$Json_Decode$string)));
+var _user$project$Ports$submitSettingsPicToFirebase = _elm_lang$core$Native_Platform.outgoingPort(
+	'submitSettingsPicToFirebase',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$replyWithSettingsPicUri = _elm_lang$core$Native_Platform.incomingPort(
+	'replyWithSettingsPicUri',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (uri) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (error) {
+					return _elm_lang$core$Json_Decode$succeed(
+						{uri: uri, error: error});
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'uri', _elm_lang$core$Json_Decode$string)));
+var _user$project$Ports$initOrgSettingsMediaBtn = _elm_lang$core$Native_Platform.outgoingPort(
+	'initOrgSettingsMediaBtn',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$getOrgSettingsImageName = _elm_lang$core$Native_Platform.incomingPort(
+	'getOrgSettingsImageName',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (fileName) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (error) {
+					return _elm_lang$core$Json_Decode$succeed(
+						{fileName: fileName, error: error});
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'fileName', _elm_lang$core$Json_Decode$string)));
+var _user$project$Ports$initSettingsMediaBtn = _elm_lang$core$Native_Platform.outgoingPort(
+	'initSettingsMediaBtn',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$getSettingsImageName = _elm_lang$core$Native_Platform.incomingPort(
+	'getSettingsImageName',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (fileName) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (error) {
+					return _elm_lang$core$Json_Decode$succeed(
+						{fileName: fileName, error: error});
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'fileName', _elm_lang$core$Json_Decode$string)));
+var _user$project$Ports$markIncomingMessageAsRed = _elm_lang$core$Native_Platform.outgoingPort(
+	'markIncomingMessageAsRed',
+	function (v) {
+		return {message_id: v.message_id, token: v.token};
+	});
+var _user$project$Ports$markAsRedChatMessage = _elm_lang$core$Native_Platform.outgoingPort(
+	'markAsRedChatMessage',
+	function (v) {
+		return {message_id: v.message_id, token: v.token};
+	});
+var _user$project$Ports$replyToMarkAsRedWithSendersData = _elm_lang$core$Native_Platform.incomingPort(
+	'replyToMarkAsRedWithSendersData',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (message_id) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (receiver_id) {
+					return A2(
+						_elm_lang$core$Json_Decode$andThen,
+						function (receiver_is_org) {
+							return A2(
+								_elm_lang$core$Json_Decode$andThen,
+								function (receiver_name) {
+									return _elm_lang$core$Json_Decode$succeed(
+										{message_id: message_id, receiver_id: receiver_id, receiver_is_org: receiver_is_org, receiver_name: receiver_name});
+								},
+								A2(_elm_lang$core$Json_Decode$field, 'receiver_name', _elm_lang$core$Json_Decode$string));
+						},
+						A2(_elm_lang$core$Json_Decode$field, 'receiver_is_org', _elm_lang$core$Json_Decode$bool));
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'receiver_id', _elm_lang$core$Json_Decode$int));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'message_id', _elm_lang$core$Json_Decode$int)));
+var _user$project$Ports$fetchMessageSenderPicture = _elm_lang$core$Native_Platform.outgoingPort(
+	'fetchMessageSenderPicture',
+	function (v) {
+		return {id: v.id, sender_id: v.sender_id, receiver_id: v.receiver_id, body: v.body, sender_is_organization: v.sender_is_organization, receiver_is_organization: v.receiver_is_organization, inserted_at: v.inserted_at};
+	});
+var _user$project$Ports$replyWithUnredChatMessageWithPic = _elm_lang$core$Native_Platform.incomingPort(
+	'replyWithUnredChatMessageWithPic',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (id) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (sender_id) {
+					return A2(
+						_elm_lang$core$Json_Decode$andThen,
+						function (receiver_id) {
+							return A2(
+								_elm_lang$core$Json_Decode$andThen,
+								function (body) {
+									return A2(
+										_elm_lang$core$Json_Decode$andThen,
+										function (sender_is_organization) {
+											return A2(
+												_elm_lang$core$Json_Decode$andThen,
+												function (receiver_is_organization) {
+													return A2(
+														_elm_lang$core$Json_Decode$andThen,
+														function (inserted_at) {
+															return A2(
+																_elm_lang$core$Json_Decode$andThen,
+																function (sender_picture_uri) {
+																	return _elm_lang$core$Json_Decode$succeed(
+																		{id: id, sender_id: sender_id, receiver_id: receiver_id, body: body, sender_is_organization: sender_is_organization, receiver_is_organization: receiver_is_organization, inserted_at: inserted_at, sender_picture_uri: sender_picture_uri});
+																},
+																A2(_elm_lang$core$Json_Decode$field, 'sender_picture_uri', _elm_lang$core$Json_Decode$string));
+														},
+														A2(_elm_lang$core$Json_Decode$field, 'inserted_at', _elm_lang$core$Json_Decode$string));
+												},
+												A2(_elm_lang$core$Json_Decode$field, 'receiver_is_organization', _elm_lang$core$Json_Decode$bool));
+										},
+										A2(_elm_lang$core$Json_Decode$field, 'sender_is_organization', _elm_lang$core$Json_Decode$bool));
+								},
+								A2(_elm_lang$core$Json_Decode$field, 'body', _elm_lang$core$Json_Decode$string));
+						},
+						A2(_elm_lang$core$Json_Decode$field, 'receiver_id', _elm_lang$core$Json_Decode$int));
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'sender_id', _elm_lang$core$Json_Decode$int));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int)));
+var _user$project$Ports$submitChatMessageToChannel = _elm_lang$core$Native_Platform.outgoingPort(
+	'submitChatMessageToChannel',
+	function (v) {
+		return {body: v.body, from: v.from, receiver_is_organization: v.receiver_is_organization, sender_is_organization: v.sender_is_organization, to: v.to, token: v.token};
+	});
+var _user$project$Ports$incomingChatMessage = _elm_lang$core$Native_Platform.incomingPort(
+	'incomingChatMessage',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (id) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (sender_id) {
+					return A2(
+						_elm_lang$core$Json_Decode$andThen,
+						function (receiver_id) {
+							return A2(
+								_elm_lang$core$Json_Decode$andThen,
+								function (body) {
+									return A2(
+										_elm_lang$core$Json_Decode$andThen,
+										function (sender_is_organization) {
+											return A2(
+												_elm_lang$core$Json_Decode$andThen,
+												function (receiver_is_organization) {
+													return A2(
+														_elm_lang$core$Json_Decode$andThen,
+														function (inserted_at) {
+															return _elm_lang$core$Json_Decode$succeed(
+																{id: id, sender_id: sender_id, receiver_id: receiver_id, body: body, sender_is_organization: sender_is_organization, receiver_is_organization: receiver_is_organization, inserted_at: inserted_at});
+														},
+														A2(_elm_lang$core$Json_Decode$field, 'inserted_at', _elm_lang$core$Json_Decode$string));
+												},
+												A2(_elm_lang$core$Json_Decode$field, 'receiver_is_organization', _elm_lang$core$Json_Decode$bool));
+										},
+										A2(_elm_lang$core$Json_Decode$field, 'sender_is_organization', _elm_lang$core$Json_Decode$bool));
+								},
+								A2(_elm_lang$core$Json_Decode$field, 'body', _elm_lang$core$Json_Decode$string));
+						},
+						A2(_elm_lang$core$Json_Decode$field, 'receiver_id', _elm_lang$core$Json_Decode$int));
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'sender_id', _elm_lang$core$Json_Decode$int));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int)));
+var _user$project$Ports$chatMessageSubmitError = _elm_lang$core$Native_Platform.incomingPort(
+	'chatMessageSubmitError',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (uri) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (error) {
+					return _elm_lang$core$Json_Decode$succeed(
+						{uri: uri, error: error});
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'uri', _elm_lang$core$Json_Decode$string)));
+var _user$project$Ports$submitPicturesToFirebase = _elm_lang$core$Native_Platform.outgoingPort(
+	'submitPicturesToFirebase',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$replyWithIdeaPictureUris = _elm_lang$core$Native_Platform.incomingPort(
+	'replyWithIdeaPictureUris',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (uri) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (error) {
+					return _elm_lang$core$Json_Decode$succeed(
+						{uri: uri, error: error});
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'uri', _elm_lang$core$Json_Decode$string)));
+var _user$project$Ports$getIdeaPicName = _elm_lang$core$Native_Platform.incomingPort(
+	'getIdeaPicName',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (fileName) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (error) {
+					return _elm_lang$core$Json_Decode$succeed(
+						{fileName: fileName, error: error});
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'fileName', _elm_lang$core$Json_Decode$string)));
+var _user$project$Ports$submitVideoFileToFirebase = _elm_lang$core$Native_Platform.outgoingPort(
+	'submitVideoFileToFirebase',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$replyWithIdeaVideoFileUri = _elm_lang$core$Native_Platform.incomingPort(
+	'replyWithIdeaVideoFileUri',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (uri) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (error) {
+					return _elm_lang$core$Json_Decode$succeed(
+						{uri: uri, error: error});
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'uri', _elm_lang$core$Json_Decode$string)));
+var _user$project$Ports$getIdeaVideoName = _elm_lang$core$Native_Platform.incomingPort(
+	'getIdeaVideoName',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (fileName) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (error) {
+					return _elm_lang$core$Json_Decode$succeed(
+						{fileName: fileName, error: error});
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'fileName', _elm_lang$core$Json_Decode$string)));
+var _user$project$Ports$submitMediaFileToFirebase = _elm_lang$core$Native_Platform.outgoingPort(
+	'submitMediaFileToFirebase',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$replyWithPostMediaFileUri = _elm_lang$core$Native_Platform.incomingPort(
+	'replyWithPostMediaFileUri',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (uri) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (error) {
+					return _elm_lang$core$Json_Decode$succeed(
+						{uri: uri, error: error});
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'uri', _elm_lang$core$Json_Decode$string)));
+var _user$project$Ports$getPostImageName = _elm_lang$core$Native_Platform.incomingPort(
+	'getPostImageName',
+	A2(
+		_elm_lang$core$Json_Decode$andThen,
+		function (fileName) {
+			return A2(
+				_elm_lang$core$Json_Decode$andThen,
+				function (error) {
+					return _elm_lang$core$Json_Decode$succeed(
+						{fileName: fileName, error: error});
+				},
+				A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+		},
+		A2(_elm_lang$core$Json_Decode$field, 'fileName', _elm_lang$core$Json_Decode$string)));
+var _user$project$Ports$reverseBackgroundImage = _elm_lang$core$Native_Platform.outgoingPort(
+	'reverseBackgroundImage',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$setWhiteBackground = _elm_lang$core$Native_Platform.outgoingPort(
+	'setWhiteBackground',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$showPromoRegistrationConfirmDialog = _elm_lang$core$Native_Platform.outgoingPort(
+	'showPromoRegistrationConfirmDialog',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$initPostMediaBtn = _elm_lang$core$Native_Platform.outgoingPort(
+	'initPostMediaBtn',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$initIdeaMediaBtns = _elm_lang$core$Native_Platform.outgoingPort(
+	'initIdeaMediaBtns',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$initFakeInterOpForLocationSwitch = _elm_lang$core$Native_Platform.outgoingPort(
+	'initFakeInterOpForLocationSwitch',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$sendFakeInterOpResponseForLocationSwitch = _elm_lang$core$Native_Platform.incomingPort('sendFakeInterOpResponseForLocationSwitch', _elm_lang$core$Json_Decode$string);
+var _user$project$Ports$initFakeInterOp3 = _elm_lang$core$Native_Platform.outgoingPort(
+	'initFakeInterOp3',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$sendFakeInterOpResponse3 = _elm_lang$core$Native_Platform.incomingPort('sendFakeInterOpResponse3', _elm_lang$core$Json_Decode$string);
+var _user$project$Ports$initFakeInterOp2 = _elm_lang$core$Native_Platform.outgoingPort(
+	'initFakeInterOp2',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$sendFakeInterOpResponse2 = _elm_lang$core$Native_Platform.incomingPort('sendFakeInterOpResponse2', _elm_lang$core$Json_Decode$string);
+var _user$project$Ports$initFakeInterOp = _elm_lang$core$Native_Platform.outgoingPort(
+	'initFakeInterOp',
+	function (v) {
+		return v;
+	});
+var _user$project$Ports$sendFakeInterOpResponse = _elm_lang$core$Native_Platform.incomingPort('sendFakeInterOpResponse', _elm_lang$core$Json_Decode$string);
+var _user$project$Ports$PostImageChooserData = F2(
+	function (a, b) {
+		return {fileName: a, error: b};
+	});
+var _user$project$Ports$MediaFileChooserData = F2(
+	function (a, b) {
+		return {fileName: a, error: b};
+	});
+var _user$project$Ports$PostMediaUriData = F2(
+	function (a, b) {
+		return {uri: a, error: b};
+	});
+var _user$project$Ports$NewChatMessageWrapper = F6(
+	function (a, b, c, d, e, f) {
+		return {body: a, from: b, receiver_is_organization: c, sender_is_organization: d, to: e, token: f};
+	});
+var _user$project$Ports$MarkMessageAsRedWrapper = F2(
+	function (a, b) {
+		return {message_id: a, token: b};
+	});
+var _user$project$Ports$ChatMessageSenderData = F4(
+	function (a, b, c, d) {
+		return {message_id: a, receiver_id: b, receiver_is_org: c, receiver_name: d};
+	});
+var _user$project$Ports$NDADataWrapper = F5(
+	function (a, b, c, d, e) {
+		return {companyName: a, innovatorName: b, ideaName: c, langString: d, customNda: e};
+	});

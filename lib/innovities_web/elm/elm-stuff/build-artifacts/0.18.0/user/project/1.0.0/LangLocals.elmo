@@ -1,0 +1,327 @@
+var _user$project$LangLocals$locals = {
+	ctor: '::',
+	_0: A2(_user$project$Models$MapItem, 'Idea generators', 'Գաղափար գեներացնողներ'),
+	_1: {
+		ctor: '::',
+		_0: A2(_user$project$Models$MapItem, 'Organizations', 'Կազմակերպություններ'),
+		_1: {
+			ctor: '::',
+			_0: A2(_user$project$Models$MapItem, 'Pricing ', 'Գնացուցակ '),
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$Models$MapItem, 'About us', 'Մեր մասին'),
+				_1: {
+					ctor: '::',
+					_0: A2(_user$project$Models$MapItem, 'Contact', 'Հետադարձ կապ'),
+					_1: {
+						ctor: '::',
+						_0: A2(_user$project$Models$MapItem, 'GET STARTED!', 'Գրանցվել'),
+						_1: {
+							ctor: '::',
+							_0: A2(_user$project$Models$MapItem, 'LOG IN', 'Մուտք գործել'),
+							_1: {
+								ctor: '::',
+								_0: A2(_user$project$Models$MapItem, 'Innovities is a social platform where innovative ideas are found by those who need them.', 'Innovities հարթակը նախատեսված է նորարարական լուծումներ ունեցող օգտատերերի և իրենց բիզնեսի համար նոր լուծումներ փնտրող կազմակերպությունների համար:'),
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$Models$MapItem, 'For Idea generators', 'Գաղափար գեներացնողների համար'),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Models$MapItem, 'Free plan', 'Անվճար փաթեթ'),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$Models$MapItem, 'Basic', 'Հիմնական'),
+											_1: {
+												ctor: '::',
+												_0: A2(_user$project$Models$MapItem, 'Plus', 'Պլյուս'),
+												_1: {
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'Premium', 'Պրեմիում'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'save', 'խնայեք'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Region', 'Տարածաշրջան'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Current continent', 'Ընթացիկ մայրցամաք'),
+																_1: {
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'Worldwide', 'Ամբողջ աշխարհ'),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Subscribe', 'Բաժանորդագրվել'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Looking for more options?', 'Ցանկանու՞մ եք լրացուցիչ հնարավորություններ:'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'Contact us', 'Կապվեք մեզ հետ'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'For organizations', 'Կազմակերպությունների համար'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'Enterprise', 'Ձեռնարկություն'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'short version', 'հակիրճ տարբերակ'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'complete version', 'ամբողջական տարբերակ'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'Tons of innovative ideas are born every day, even every hour, but are quite often not put into action as the right users in need of them are not easy to be found, or idea generators do not know how or whom to approach. On the other hand, there are a lot of companies/organizations seeking/looking for fresh, innovative ideas or solutions, but have limited resources and/or do not know where to find them.', 'Ամեն օր, նույնիսկ ամեն ժամ հազարավոր նորարարական գաղափարներ են ծնվում, բայց շատ հաճախ չեն իրականանում, քանի որ հեշտ չէ գտնել նրանց, ով ունի հենց այդ ուծման կարիքը, կամ գաղափարներ գեներացնողները չգիտեն՝ ինչպես և ում առաջարկել դրանք: Մյուս կողմից, մեծ թվով կազմակերպություններ կան, որոնք փնտրում են նորարարական/թարմ գաղափարներ կամ լուծումներ, բայց ունեն սահմանափակ ռեսուրսներ և/կամ չգիտեն՝ որտեղ գտնեն այդ գաղափարները:'),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_user$project$Models$MapItem, 'That\'s where our platform provides a helping hand. Innovities is here to help connect both idea generators and companies who are looking for them.', 'Հենց այստեղ է, որ մեր հարթակը օգնության է հասնում: Innovities-ն օգնում է նորարարական լուծումներ ունեցող օգտատերերին և կազմակերպություններին գտնել իրար:'),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(_user$project$Models$MapItem, 'You have a great idea or you need a solution for your business? Get registered and be a part of the world where ideas can turn into solution.', 'Ունեք հետաքրքիր գաղափար, կամ Ձեր բիզնեսի համար հարկավոր են թարմ լուծումնե՞ր: Գրանցվեք և այն աշխարկի մի մասը, որտեղ գաղափարները կարող են վերածվել իրականության:'),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(_user$project$Models$MapItem, 'First name', 'Անուն'),
+																												_1: {
+																													ctor: '::',
+																													_0: A2(_user$project$Models$MapItem, 'Message', 'Հաղորդագրություն'),
+																													_1: {
+																														ctor: '::',
+																														_0: A2(_user$project$Models$MapItem, 'Send', 'Ուղարկել'),
+																														_1: {
+																															ctor: '::',
+																															_0: A2(_user$project$Models$MapItem, 'All rights reserved. Terms of Service.', 'Բոլոր իրավունքները պաշտպանված են: Ծառայությունների մատուցման պայմաններ:'),
+																															_1: {
+																																ctor: '::',
+																																_0: A2(_user$project$Models$MapItem, 'Settings and Privacy', 'Կարգավորումներ և Գաղտնիություն'),
+																																_1: {
+																																	ctor: '::',
+																																	_0: A2(_user$project$Models$MapItem, 'Help Center', 'Օգնության կենտրոն'),
+																																	_1: {
+																																		ctor: '::',
+																																		_0: A2(_user$project$Models$MapItem, 'Sign out', 'Դուրս գալ'),
+																																		_1: {
+																																			ctor: '::',
+																																			_0: A2(_user$project$Models$MapItem, 'Connections', 'Կոնտակտներ'),
+																																			_1: {
+																																				ctor: '::',
+																																				_0: A2(_user$project$Models$MapItem, 'Proposals', 'Առաջարկներ'),
+																																				_1: {
+																																					ctor: '::',
+																																					_0: A2(_user$project$Models$MapItem, 'Photo/Video', 'Նկար/Վիդեո'),
+																																					_1: {
+																																						ctor: '::',
+																																						_0: A2(_user$project$Models$MapItem, 'Suggestions', 'Առաջարկություններ'),
+																																						_1: {
+																																							ctor: '::',
+																																							_0: A2(_user$project$Models$MapItem, 'Edit profile', 'Խմբագրել պրոֆիլը'),
+																																							_1: {
+																																								ctor: '::',
+																																								_0: A2(_user$project$Models$MapItem, 'Share profile', 'Կիսվել պրոֆիլով'),
+																																								_1: {
+																																									ctor: '::',
+																																									_0: A2(_user$project$Models$MapItem, 'Industry', 'Ոլորտ'),
+																																									_1: {
+																																										ctor: '::',
+																																										_0: A2(_user$project$Models$MapItem, 'Industries we are interested in', 'Ոլորտներ՝ որոնցով մենք հետաքրքրված ենք'),
+																																										_1: {
+																																											ctor: '::',
+																																											_0: A2(_user$project$Models$MapItem, 'Education', 'Կրթություն'),
+																																											_1: {
+																																												ctor: '::',
+																																												_0: A2(_user$project$Models$MapItem, 'Experience', 'Փորձ'),
+																																												_1: {
+																																													ctor: '::',
+																																													_0: A2(_user$project$Models$MapItem, 'Generated ideas', 'Գեներացված գաղափարներ'),
+																																													_1: {
+																																														ctor: '::',
+																																														_0: A2(_user$project$Models$MapItem, 'Us', 'Մենք'),
+																																														_1: {
+																																															ctor: '::',
+																																															_0: A2(_user$project$Models$MapItem, 'Me', 'Ես'),
+																																															_1: {
+																																																ctor: '::',
+																																																_0: A2(_user$project$Models$MapItem, 'Follow', 'Հետևել'),
+																																																_1: {
+																																																	ctor: '::',
+																																																	_0: A2(_user$project$Models$MapItem, 'Share', 'Կիսվել'),
+																																																	_1: {
+																																																		ctor: '::',
+																																																		_0: A2(_user$project$Models$MapItem, 'Post', 'Գրառել'),
+																																																		_1: {
+																																																			ctor: '::',
+																																																			_0: A2(_user$project$Models$MapItem, 'Post an Idea', 'Գաղափար տեղադրել'),
+																																																			_1: {
+																																																				ctor: '::',
+																																																				_0: A2(_user$project$Models$MapItem, 'Company', 'Կազմակերպություն'),
+																																																				_1: {
+																																																					ctor: '::',
+																																																					_0: A2(_user$project$Models$MapItem, 'User name', 'Օգտատիրոջ անուն'),
+																																																					_1: {
+																																																						ctor: '::',
+																																																						_0: A2(_user$project$Models$MapItem, 'I agree to the Terms of Service and understand the Privacy statement.', 'Համաձայն եմ ծառայությունների մատուցման պայմաններին և հասկանում եմ գաղտնիության քաղաքականությունը:'),
+																																																						_1: {
+																																																							ctor: '::',
+																																																							_0: A2(_user$project$Models$MapItem, 'Company Name', 'Կազմակերպության անուն'),
+																																																							_1: {
+																																																								ctor: '::',
+																																																								_0: A2(_user$project$Models$MapItem, 'Password', 'Գաղտնաբառ'),
+																																																								_1: {
+																																																									ctor: '::',
+																																																									_0: A2(_user$project$Models$MapItem, 'E-mail', 'Էլ. հասցե'),
+																																																									_1: {
+																																																										ctor: '::',
+																																																										_0: A2(_user$project$Models$MapItem, 'Sign-Up', 'Գրանցվել'),
+																																																										_1: {
+																																																											ctor: '::',
+																																																											_0: A2(_user$project$Models$MapItem, 'Idea Generator', 'Գաղափար գեներացնող'),
+																																																											_1: {
+																																																												ctor: '::',
+																																																												_0: A2(_user$project$Models$MapItem, 'Name Surname', 'Անուն Ազգանուն'),
+																																																												_1: {
+																																																													ctor: '::',
+																																																													_0: A2(_user$project$Models$MapItem, 'Username', 'Օգտատիրոջ անուն'),
+																																																													_1: {
+																																																														ctor: '::',
+																																																														_0: A2(_user$project$Models$MapItem, 'Name', 'Անուն'),
+																																																														_1: {
+																																																															ctor: '::',
+																																																															_0: A2(_user$project$Models$MapItem, 'Surname', 'Ազգանուն'),
+																																																															_1: {
+																																																																ctor: '::',
+																																																																_0: A2(_user$project$Models$MapItem, 'Photo', 'Նկար'),
+																																																																_1: {
+																																																																	ctor: '::',
+																																																																	_0: A2(_user$project$Models$MapItem, 'Phone number', 'Հեռախոսահամար'),
+																																																																	_1: {
+																																																																		ctor: '::',
+																																																																		_0: A2(_user$project$Models$MapItem, 'Email address', 'Էլ. հասցե'),
+																																																																		_1: {
+																																																																			ctor: '::',
+																																																																			_0: A2(_user$project$Models$MapItem, 'About Me', 'Իմ մասին'),
+																																																																			_1: {
+																																																																				ctor: '::',
+																																																																				_0: A2(_user$project$Models$MapItem, 'Country', 'Երկիր'),
+																																																																				_1: {
+																																																																					ctor: '::',
+																																																																					_0: A2(_user$project$Models$MapItem, 'Change Password', 'Փոխեք գաղտնաբառը'),
+																																																																					_1: {
+																																																																						ctor: '::',
+																																																																						_0: A2(_user$project$Models$MapItem, 'Confirm Password', 'Հաստատել գաղտնաբառը'),
+																																																																						_1: {
+																																																																							ctor: '::',
+																																																																							_0: A2(_user$project$Models$MapItem, 'Select your tarriff plan', 'Ընտրեք Ձեր սակագնային փաթեթը'),
+																																																																							_1: {
+																																																																								ctor: '::',
+																																																																								_0: A2(_user$project$Models$MapItem, 'Select Payment Method', 'Ընտրեք վճարման եղանակը'),
+																																																																								_1: {
+																																																																									ctor: '::',
+																																																																									_0: A2(_user$project$Models$MapItem, 'Logo', 'Լոգո'),
+																																																																									_1: {
+																																																																										ctor: '::',
+																																																																										_0: A2(_user$project$Models$MapItem, 'Website address', 'Կայք'),
+																																																																										_1: {
+																																																																											ctor: '::',
+																																																																											_0: A2(_user$project$Models$MapItem, 'About Us', 'Մեր մասին'),
+																																																																											_1: {ctor: '[]'}
+																																																																										}
+																																																																									}
+																																																																								}
+																																																																							}
+																																																																						}
+																																																																					}
+																																																																				}
+																																																																			}
+																																																																		}
+																																																																	}
+																																																																}
+																																																															}
+																																																														}
+																																																													}
+																																																												}
+																																																											}
+																																																										}
+																																																									}
+																																																								}
+																																																							}
+																																																						}
+																																																					}
+																																																				}
+																																																			}
+																																																		}
+																																																	}
+																																																}
+																																															}
+																																														}
+																																													}
+																																												}
+																																											}
+																																										}
+																																									}
+																																								}
+																																							}
+																																						}
+																																					}
+																																				}
+																																			}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$LangLocals$getLocal = F2(
+	function (key, model) {
+		var local_list = A2(
+			_elm_lang$core$List$filter,
+			function (i) {
+				return _elm_lang$core$Native_Utils.eq(i.key, key);
+			},
+			_user$project$LangLocals$locals);
+		var local = function () {
+			var _p0 = _elm_lang$core$List$head(local_list);
+			if (_p0.ctor === 'Just') {
+				return _p0._0;
+			} else {
+				return A2(_user$project$Models$MapItem, '', '');
+			}
+		}();
+		var o = function () {
+			var _p1 = model.language;
+			if (_p1.ctor === 'Eng') {
+				return local.key;
+			} else {
+				return local.value;
+			}
+		}();
+		return o;
+	});

@@ -1,0 +1,200 @@
+var _user$project$Routes$NotFoundRoute = {ctor: 'NotFoundRoute'};
+var _user$project$Routes$DashboardRoute = {ctor: 'DashboardRoute'};
+var _user$project$Routes$AdminRoute = {ctor: 'AdminRoute'};
+var _user$project$Routes$HomeRoute = {ctor: 'HomeRoute'};
+var _user$project$Routes$matchers = _evancz$url_parser$UrlParser$oneOf(
+	{
+		ctor: '::',
+		_0: A2(_evancz$url_parser$UrlParser$map, _user$project$Routes$HomeRoute, _evancz$url_parser$UrlParser$top),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_evancz$url_parser$UrlParser$map,
+				_user$project$Routes$HomeRoute,
+				_evancz$url_parser$UrlParser$s('innovators')),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_evancz$url_parser$UrlParser$map,
+					_user$project$Routes$HomeRoute,
+					_evancz$url_parser$UrlParser$s('organizations')),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_evancz$url_parser$UrlParser$map,
+						_user$project$Routes$HomeRoute,
+						_evancz$url_parser$UrlParser$s('innovators-pricing')),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_evancz$url_parser$UrlParser$map,
+							_user$project$Routes$HomeRoute,
+							_evancz$url_parser$UrlParser$s('organizations-pricing')),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_evancz$url_parser$UrlParser$map,
+								_user$project$Routes$HomeRoute,
+								_evancz$url_parser$UrlParser$s('about-us')),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_evancz$url_parser$UrlParser$map,
+									_user$project$Routes$HomeRoute,
+									_evancz$url_parser$UrlParser$s('contacts')),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_evancz$url_parser$UrlParser$map,
+										_user$project$Routes$HomeRoute,
+										_evancz$url_parser$UrlParser$s('faq')),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_evancz$url_parser$UrlParser$map,
+											_user$project$Routes$HomeRoute,
+											_evancz$url_parser$UrlParser$s('innovators-t')),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_evancz$url_parser$UrlParser$map,
+												_user$project$Routes$HomeRoute,
+												_evancz$url_parser$UrlParser$s('organizations-t')),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_evancz$url_parser$UrlParser$map,
+													_user$project$Routes$HomeRoute,
+													_evancz$url_parser$UrlParser$s('innovators-pricing-t')),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_evancz$url_parser$UrlParser$map,
+														_user$project$Routes$HomeRoute,
+														_evancz$url_parser$UrlParser$s('organizations-pricing-t')),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_evancz$url_parser$UrlParser$map,
+															_user$project$Routes$HomeRoute,
+															_evancz$url_parser$UrlParser$s('about-us-t')),
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_evancz$url_parser$UrlParser$map,
+																_user$project$Routes$HomeRoute,
+																_evancz$url_parser$UrlParser$s('contacts-t')),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_evancz$url_parser$UrlParser$map,
+																	_user$project$Routes$HomeRoute,
+																	_evancz$url_parser$UrlParser$s('faq-t')),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_evancz$url_parser$UrlParser$map,
+																		_user$project$Routes$AdminRoute,
+																		_evancz$url_parser$UrlParser$s('admin_panel')),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_evancz$url_parser$UrlParser$map,
+																			_user$project$Routes$HomeRoute,
+																			_evancz$url_parser$UrlParser$s('menu-m')),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_evancz$url_parser$UrlParser$map,
+																				_user$project$Routes$HomeRoute,
+																				_evancz$url_parser$UrlParser$s('innovators-m')),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_evancz$url_parser$UrlParser$map,
+																					_user$project$Routes$HomeRoute,
+																					_evancz$url_parser$UrlParser$s('organizations-m')),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_evancz$url_parser$UrlParser$map,
+																						_user$project$Routes$HomeRoute,
+																						_evancz$url_parser$UrlParser$s('tarrif-plans-m')),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_evancz$url_parser$UrlParser$map,
+																							_user$project$Routes$HomeRoute,
+																							_evancz$url_parser$UrlParser$s('innovators-pricing-m')),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(
+																								_evancz$url_parser$UrlParser$map,
+																								_user$project$Routes$HomeRoute,
+																								_evancz$url_parser$UrlParser$s('organizations-pricing-m')),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(
+																									_evancz$url_parser$UrlParser$map,
+																									_user$project$Routes$HomeRoute,
+																									_evancz$url_parser$UrlParser$s('about-us-m')),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(
+																										_evancz$url_parser$UrlParser$map,
+																										_user$project$Routes$HomeRoute,
+																										_evancz$url_parser$UrlParser$s('contacts-m')),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(
+																											_evancz$url_parser$UrlParser$map,
+																											_user$project$Routes$HomeRoute,
+																											_evancz$url_parser$UrlParser$s('faq-m')),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(
+																												_evancz$url_parser$UrlParser$map,
+																												_user$project$Routes$DashboardRoute,
+																												_evancz$url_parser$UrlParser$s('dashboard')),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(
+																													_evancz$url_parser$UrlParser$map,
+																													_user$project$Routes$DashboardRoute,
+																													_evancz$url_parser$UrlParser$s('profile')),
+																												_1: {ctor: '[]'}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	});
+var _user$project$Routes$parseLocation = function (location) {
+	var _p0 = A2(_evancz$url_parser$UrlParser$parseHash, _user$project$Routes$matchers, location);
+	if (_p0.ctor === 'Just') {
+		return _p0._0;
+	} else {
+		return _user$project$Routes$NotFoundRoute;
+	}
+};

@@ -1,0 +1,682 @@
+var _user$project$Models$Model = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return function (m) {
+													return function (n) {
+														return function (o) {
+															return function (p) {
+																return function (q) {
+																	return function (r) {
+																		return function (s) {
+																			return function (t) {
+																				return function (u) {
+																					return function (v) {
+																						return function (w) {
+																							return function (x) {
+																								return function (y) {
+																									return function (z) {
+																										return function (_1) {
+																											return function (_2) {
+																												return function (_3) {
+																													return function (_4) {
+																														return function (_5) {
+																															return function (_6) {
+																																return function (_7) {
+																																	return function (_8) {
+																																		return function (_9) {
+																																			return function (_10) {
+																																				return function (_11) {
+																																					return function (_12) {
+																																						return function (_13) {
+																																							return function (_14) {
+																																								return function (_15) {
+																																									return function (_16) {
+																																										return function (_17) {
+																																											return function (_18) {
+																																												return function (_19) {
+																																													return function (_20) {
+																																														return function (_21) {
+																																															return function (_22) {
+																																																return function (_23) {
+																																																	return function (_24) {
+																																																		return function (_25) {
+																																																			return function (_26) {
+																																																				return function (_27) {
+																																																					return function (_28) {
+																																																						return function (_29) {
+																																																							return function (_30) {
+																																																								return function (_31) {
+																																																									return function (_32) {
+																																																										return function (_33) {
+																																																											return function (_34) {
+																																																												return function (_35) {
+																																																													return function (_36) {
+																																																														return function (_37) {
+																																																															return function (_38) {
+																																																																return function (_39) {
+																																																																	return function (_40) {
+																																																																		return function (_41) {
+																																																																			return function (_42) {
+																																																																				return function (_43) {
+																																																																					return function (_44) {
+																																																																						return function (_45) {
+																																																																							return function (_46) {
+																																																																								return function (_47) {
+																																																																									return function (_48) {
+																																																																										return function (_49) {
+																																																																											return function (_50) {
+																																																																												return function (_51) {
+																																																																													return function (_52) {
+																																																																														return function (_53) {
+																																																																															return function (_54) {
+																																																																																return function (_55) {
+																																																																																	return function (_56) {
+																																																																																		return function (_57) {
+																																																																																			return {route: a, pricingOpened: b, getStartedOpened: c, loginOpened: d, registerIdeaGeneratorOpened: e, registerCompanyOpened: f, landingUsername: g, landingEmail: h, landingCompany: i, landingShortIdea: j, landingSignUpMobileVisible: k, landingUsernameError: l, landingEmailError: m, landingCompanyError: n, landingShortIdeaError: o, landingPromoRegisterError: p, landingInputFieldsVisible: q, adminPanelSignInError: r, adminPanelRegDataList: s, adminPanelFirstPassword: t, adminPanelSecondPassword: u, adminPanelSignInError: v, adminPanelSignedIn: w, mobileGetStartedOpened: x, mobileRegisterCompanyOpened: y, mobileRegisterIdeaGeneratorOpened: z, mobileDefaultView: _1, mobileMenuView: _2, mobileIdeaGeneratorsView: _3, mobileOrganizationsView: _4, mobilePricingToggleOpen: _5, mobilePricingIdeaGeneratorsView: _6, mobilePricingOrganizationsView: _7, mobileAboutUsView: _8, mobileContactView: _9, mobileFaqView: _10, mobileTarrifPlansView: _11, companyUnderRegistration: _12, innovatorUnderRegistration: _13, loggedInData: _14, topInnovators: _15, topOrganizations: _16, loggingInMember: _17, loggedInMember: _18, dashboardOptionsVisible: _19, dashboardMobilePage: _20, currentInnovatorExtended: _21, currentOrganizationExtended: _22, selectedInnovatorsPlan: _23, selectedOrganizationsPlan: _24, contactUsData: _25, postData: _26, postList: _27, newIdeaData: _28, newChatMessageData: _29, chatWindowOpened: _30, currentChatHistory: _31, pendingUnredMessages: _32, newMessagesNotifsVisible: _33, suggestedUsers: _34, innovatorSettingsFieldsEditable: _35, innovatorSettingsFields: _36, tariffPlanSubError: _37, organizationSettingsFields: _38, organizationSettingsFieldsEditable: _39, notifications: _40, newNotificationsVisible: _41, language: _42, currentPostComments: _43, currentCommentData: _44, currentPostWithComments: _45, searchedData: _46, searchProgress: _47, desktopPage: _48, seeOtherInnovator: _49, seeOtherOrganization: _50, connections: _51, mobileSearchVisible: _52, viewingCurrentIdea: _53, viewingCurrentFullIdea: _54, mobilePageHistory: _55, pageHistory: _56, signedNDAs: _57};
+																																																																																		};
+																																																																																	};
+																																																																																};
+																																																																															};
+																																																																														};
+																																																																													};
+																																																																												};
+																																																																											};
+																																																																										};
+																																																																									};
+																																																																								};
+																																																																							};
+																																																																						};
+																																																																					};
+																																																																				};
+																																																																			};
+																																																																		};
+																																																																	};
+																																																																};
+																																																															};
+																																																														};
+																																																													};
+																																																												};
+																																																											};
+																																																										};
+																																																									};
+																																																								};
+																																																							};
+																																																						};
+																																																					};
+																																																				};
+																																																			};
+																																																		};
+																																																	};
+																																																};
+																																															};
+																																														};
+																																													};
+																																												};
+																																											};
+																																										};
+																																									};
+																																								};
+																																							};
+																																						};
+																																					};
+																																				};
+																																			};
+																																		};
+																																	};
+																																};
+																															};
+																														};
+																													};
+																												};
+																											};
+																										};
+																									};
+																								};
+																							};
+																						};
+																					};
+																				};
+																			};
+																		};
+																	};
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$SignedNDA = F5(
+	function (a, b, c, d, e) {
+		return {idea_id: a, idea_name: b, idea_industry: c, idea_price: d, signing_date: e};
+	});
+var _user$project$Models$UserIdentifierWrapper = F3(
+	function (a, b, c) {
+		return {id: a, is_org: b, token: c};
+	});
+var _user$project$Models$CacheDataWrapper = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return function (m) {
+													return function (n) {
+														return function (o) {
+															return function (p) {
+																return function (q) {
+																	return function (r) {
+																		return {loggedInMember: a, dashboardMobilePage: b, currentInnovatorExtended: c, currentOrganizationExtended: d, postList: e, currentChatHistory: f, pendingUnredMessages: g, suggestedUsers: h, notifications: i, language: j, desktopPage: k, seeOtherInnovator: l, seeOtherOrganization: m, viewingCurrentIdea: n, viewingCurrentFullIdea: o, mobilePageHistory: p, pageHistory: q, signedNDAs: r};
+																	};
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$NDAFullDataWrapper = F7(
+	function (a, b, c, d, e, f, g) {
+		return {author_id: a, author_is_org: b, idea_id: c, recipient_id: d, recipient_is_org: e, token: f, is_default_nda: g};
+	});
+var _user$project$Models$AcceptRejectFullDescWrapper = F3(
+	function (a, b, c) {
+		return {notif_id: a, res_code: b, token: c};
+	});
+var _user$project$Models$FullDescReqWrapper = F7(
+	function (a, b, c, d, e, f, g) {
+		return {notification_type_code: a, requested_idea_id: b, addressed_to: c, addressed_to_is_org: d, requested_from: e, requested_from_is_org: f, token: g};
+	});
+var _user$project$Models$SearchProgress = F2(
+	function (a, b) {
+		return {typedSearch: a, progressStatus: b};
+	});
+var _user$project$Models$ProcessedSearchDataWrapper = F4(
+	function (a, b, c, d) {
+		return {innovators: a, organizations: b, ideas: c, posts: d};
+	});
+var _user$project$Models$SearchData = F4(
+	function (a, b, c, d) {
+		return {query: a, token: b, user_id: c, user_is_org: d};
+	});
+var _user$project$Models$IdeaData = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return {id: a, short_description: b, idea_name: c, industry: d, tags: e, price: f, picture_uris: g, video_uri: h, innovator_id: i, innovator_name: j, innovator_pic: k};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$FullIdeaData = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return function (m) {
+													return function (n) {
+														return function (o) {
+															return {id: a, short_description: b, idea_name: c, industry: d, tags: e, price: f, picture_uris: g, video_uri: h, innovator_id: i, innovator_name: j, innovator_pic: k, long_description: l, has_nda: m, is_default_nda: n, custom_nda: o};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$PostCommentData = F7(
+	function (a, b, c, d, e, f, g) {
+		return {author_id: a, author_is_org: b, author_name: c, body: d, input_date: e, post_id: f, token: g};
+	});
+var _user$project$Models$MapItem = F2(
+	function (a, b) {
+		return {key: a, value: b};
+	});
+var _user$project$Models$NotificationItem = F5(
+	function (a, b, c, d, e) {
+		return {id: a, title: b, body: c, notificationType: d, requestedIdeaId: e};
+	});
+var _user$project$Models$OrganizationSettingsFields = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return function (m) {
+													return function (n) {
+														return function (o) {
+															return function (p) {
+																return function (q) {
+																	return function (r) {
+																		return {id: a, name: b, pic_uri: c, country: d, email: e, complete_ideas_count: f, organizations_plan_id: g, description: h, webpage: i, about_us: j, industry: k, interested_industries: l, username: m, phone: n, changePassword: o, pic_name: p, error: q, token: r};
+																	};
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$OrganizationSettingsFieldsEditable = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return {name: a, country: b, email: c, description: d, webpage: e, about_us: f, industry: g, interested_industries: h, username: i, phone: j, changePassword: k};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$TariffPlanSubscriptionData = F4(
+	function (a, b, c, d) {
+		return {id: a, is_organization: b, tariff_plan_name: c, token: d};
+	});
+var _user$project$Models$InnovatorSettingsFields = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return function (m) {
+													return function (n) {
+														return function (o) {
+															return function (p) {
+																return function (q) {
+																	return function (r) {
+																		return function (s) {
+																			return {id: a, name: b, surname: c, pic_uri: d, rating: e, country: f, email: g, ideas_count: h, innovators_plan_id: i, description: j, about_me: k, education: l, experience: m, username: n, phone: o, changePassword: p, pic_name: q, error: r, token: s};
+																		};
+																	};
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$InnovatorSettingsFieldsEditable = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return {username: a, name: b, surname: c, phone: d, email: e, about: f, education: g, experience: h, country: i, changePassword: j};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$ConnectionData = F5(
+	function (a, b, c, d, e) {
+		return {sender_id: a, sender_is_organization: b, receiver_id: c, receiver_is_organization: d, token: e};
+	});
+var _user$project$Models$SuggestedUser = F4(
+	function (a, b, c, d) {
+		return {id: a, name: b, description: c, picture: d};
+	});
+var _user$project$Models$UnredChatMessagesRequestWrapper = F3(
+	function (a, b, c) {
+		return {receiver_id: a, receiver_is_organization: b, token: c};
+	});
+var _user$project$Models$ChatHistoryRequestWrapper = F5(
+	function (a, b, c, d, e) {
+		return {to_id: a, from_id: b, to_is_organization: c, from_is_organization: d, token: e};
+	});
+var _user$project$Models$NewChatMessageData = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {to_id: a, from_id: b, sender_is_organization: c, receiver_is_organization: d, body: e, receiver_name: f, error: g, token: h};
+	});
+var _user$project$Models$NewIdeaData = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return function (m) {
+													return function (n) {
+														return function (o) {
+															return function (p) {
+																return {ideaName: a, industry: b, tags: c, shortDescription: d, ideaPrice: e, longDescription: f, pictureUris: g, videoUri: h, error: i, token: j, innovator_id: k, videoName: l, pictureNames: m, hasNda: n, isDefaultNda: o, customNda: p};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$ExtendedPostData = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {author_name: a, author_desc: b, author_pic: c, author_id: d, post_id: e, post_media_file: f, post_message: g, post_likes: h};
+	});
+var _user$project$Models$PostData = F7(
+	function (a, b, c, d, e, f, g) {
+		return {innovator_id: a, organization_id: b, message: c, mediaFileName: d, mediaFileUri: e, error: f, token: g};
+	});
+var _user$project$Models$SimpleResponse = F2(
+	function (a, b) {
+		return {success: a, error: b};
+	});
+var _user$project$Models$ContactUsData = F4(
+	function (a, b, c, d) {
+		return {name: a, email: b, message: c, error: d};
+	});
+var _user$project$Models$InnovatorExtended = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return function (m) {
+													return function (n) {
+														return function (o) {
+															return {id: a, name: b, pic_uri: c, rating: d, country: e, email: f, ideas_count: g, innovators_plan_id: h, description: i, about_me: j, education: k, experience: l, username: m, phone: n, connections_count: o};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$OrganizationExtended = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return function (m) {
+													return function (n) {
+														return function (o) {
+															return function (p) {
+																return {id: a, name: b, pic_uri: c, country: d, email: e, complete_ideas_count: f, organizations_plan_id: g, description: h, webpage: i, about_us: j, industry: k, interested_industries: l, username: m, phone: n, rating: o, connections_count: p};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Models$GetInnovatorDataResponseWrapper = F2(
+	function (a, b) {
+		return {innovator_data: a, token: b};
+	});
+var _user$project$Models$GetOrganizationDataResponseWrapper = F2(
+	function (a, b) {
+		return {organization_data: a, token: b};
+	});
+var _user$project$Models$GetDataRequestStruct = F2(
+	function (a, b) {
+		return {id: a, token: b};
+	});
+var _user$project$Models$LoggedInMemberWrapper = F2(
+	function (a, b) {
+		return {login_data: a, error: b};
+	});
+var _user$project$Models$LoggedInMember = F5(
+	function (a, b, c, d, e) {
+		return {id: a, name: b, email: c, isOrganization: d, token: e};
+	});
+var _user$project$Models$LoggingInMember = F3(
+	function (a, b, c) {
+		return {email: a, password: b, loginError: c};
+	});
+var _user$project$Models$TopMembers = F2(
+	function (a, b) {
+		return {organizations: a, innovators: b};
+	});
+var _user$project$Models$ChatMessageReceiverData = F3(
+	function (a, b, c) {
+		return {id: a, name: b, is_organization: c};
+	});
+var _user$project$Models$TopInnovator = F5(
+	function (a, b, c, d, e) {
+		return {id: a, name: b, pic_uri: c, rating: d, country: e};
+	});
+var _user$project$Models$TopOrganization = F4(
+	function (a, b, c, d) {
+		return {id: a, name: b, pic_uri: c, country: d};
+	});
+var _user$project$Models$DataRegisteredWrapper = F2(
+	function (a, b) {
+		return {reg_data: a, error: b};
+	});
+var _user$project$Models$DataRegistered = F4(
+	function (a, b, c, d) {
+		return {id: a, name: b, email: c, token: d};
+	});
+var _user$project$Models$CompanyRegistration = F7(
+	function (a, b, c, d, e, f, g) {
+		return {name: a, email: b, password: c, country: d, termsOfServiceAgreemant: e, receiveNewsletterAgreement: f, registrationError: g};
+	});
+var _user$project$Models$InnovatorRegistration = F7(
+	function (a, b, c, d, e, f, g) {
+		return {full_name: a, email: b, password: c, country: d, termsOfServiceAgreemant: e, receiveNewsletterAgreement: f, registrationError: g};
+	});
+var _user$project$Models$AdminPanelSignInData = F2(
+	function (a, b) {
+		return {first_password: a, second_password: b};
+	});
+var _user$project$Models$RegisteredDataList = F2(
+	function (a, b) {
+		return {reg_data: a, error: b};
+	});
+var _user$project$Models$PromoRegData = F7(
+	function (a, b, c, d, e, f, g) {
+		return {id: a, full_name: b, email: c, prefered_organization: d, idea_id: e, short_description: f, register_date: g};
+	});
+var _user$project$Models$PromoRegistration = F5(
+	function (a, b, c, d, e) {
+		return {full_name: a, email: b, prefered_organization: c, short_description: d, error: e};
+	});
+var _user$project$Models$IncomingChatMessage = F7(
+	function (a, b, c, d, e, f, g) {
+		return {id: a, sender_id: b, receiver_id: c, body: d, sender_is_organization: e, receiver_is_organization: f, inserted_at: g};
+	});
+var _user$project$Models$IncomingUnredChatMessage = F8(
+	function (a, b, c, d, e, f, g, h) {
+		return {id: a, sender_id: b, receiver_id: c, body: d, sender_is_organization: e, receiver_is_organization: f, inserted_at: g, sender_picture_uri: h};
+	});
+var _user$project$Models$SignOutResponse = function (a) {
+	return {response: a};
+};
+var _user$project$Models$Loaded = {ctor: 'Loaded'};
+var _user$project$Models$Loading = {ctor: 'Loading'};
+var _user$project$Models$Idle = {ctor: 'Idle'};
+var _user$project$Models$Arm = {ctor: 'Arm'};
+var _user$project$Models$Eng = {ctor: 'Eng'};
+var _user$project$Models$PremiumInnovator = {ctor: 'PremiumInnovator'};
+var _user$project$Models$PlusInnovator = {ctor: 'PlusInnovator'};
+var _user$project$Models$BasicInnovator = {ctor: 'BasicInnovator'};
+var _user$project$Models$FreeInnovator = {ctor: 'FreeInnovator'};
+var _user$project$Models$NotSelectedForInnovators = {ctor: 'NotSelectedForInnovators'};
+var _user$project$Models$MaxOrganization = {ctor: 'MaxOrganization'};
+var _user$project$Models$PremiumOrganization = {ctor: 'PremiumOrganization'};
+var _user$project$Models$PlusOrganization = {ctor: 'PlusOrganization'};
+var _user$project$Models$BasicOrganization = {ctor: 'BasicOrganization'};
+var _user$project$Models$NotSelectedForOrganizations = {ctor: 'NotSelectedForOrganizations'};
+var _user$project$Models$NDAsPage = {ctor: 'NDAsPage'};
+var _user$project$Models$ViewFullIdeaPage = {ctor: 'ViewFullIdeaPage'};
+var _user$project$Models$ViewIdeaPage = {ctor: 'ViewIdeaPage'};
+var _user$project$Models$SeeOtherOrganizationPage = {ctor: 'SeeOtherOrganizationPage'};
+var _user$project$Models$SeeOtherInnovatorPage = {ctor: 'SeeOtherInnovatorPage'};
+var _user$project$Models$SearchPage = {ctor: 'SearchPage'};
+var _user$project$Models$TariffPlansPage = {ctor: 'TariffPlansPage'};
+var _user$project$Models$SettingsPage = {ctor: 'SettingsPage'};
+var _user$project$Models$NewIdeaPage = {ctor: 'NewIdeaPage'};
+var _user$project$Models$ProfilePage = {ctor: 'ProfilePage'};
+var _user$project$Models$NewsfeedPage = {ctor: 'NewsfeedPage'};
+var _user$project$Models$HomePage = {ctor: 'HomePage'};
+var _user$project$Models$MobileNDAsPage = {ctor: 'MobileNDAsPage'};
+var _user$project$Models$MobileViewFullIdeaPage = {ctor: 'MobileViewFullIdeaPage'};
+var _user$project$Models$MobileViewIdeaPage = {ctor: 'MobileViewIdeaPage'};
+var _user$project$Models$MobileSeeOtherOrganizationPage = {ctor: 'MobileSeeOtherOrganizationPage'};
+var _user$project$Models$MobileSeeOtherInnovatorPage = {ctor: 'MobileSeeOtherInnovatorPage'};
+var _user$project$Models$MobileSearchPage = {ctor: 'MobileSearchPage'};
+var _user$project$Models$MobilePostAnIdeaPage = {ctor: 'MobilePostAnIdeaPage'};
+var _user$project$Models$MobileSettingsPage = {ctor: 'MobileSettingsPage'};
+var _user$project$Models$MobileProfilePage = {ctor: 'MobileProfilePage'};
+var _user$project$Models$MobileNewsfeedPage = {ctor: 'MobileNewsfeedPage'};
+var _user$project$Models$MobileHomePage = {ctor: 'MobileHomePage'};
+var _user$project$Models$Closed = {ctor: 'Closed'};
+var _user$project$Models$Opened = {ctor: 'Opened'};

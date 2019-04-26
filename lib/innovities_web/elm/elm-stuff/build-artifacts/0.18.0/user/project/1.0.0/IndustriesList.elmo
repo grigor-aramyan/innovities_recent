@@ -1,0 +1,461 @@
+var _user$project$IndustriesList$industries = A2(
+	_elm_lang$core$Basics_ops['++'],
+	{
+		ctor: '::',
+		_0: '',
+		_1: {
+			ctor: '::',
+			_0: 'Accounting/Financial & Banking Services',
+			_1: {
+				ctor: '::',
+				_0: 'Airlines/Aviation/Aerospace',
+				_1: {
+					ctor: '::',
+					_0: 'Alternative Medicine',
+					_1: {
+						ctor: '::',
+						_0: 'Animation',
+						_1: {
+							ctor: '::',
+							_0: 'Apparel/Fashion',
+							_1: {
+								ctor: '::',
+								_0: 'Architecture/Planning',
+								_1: {
+									ctor: '::',
+									_0: 'Artificial Intelligence/AI',
+									_1: {
+										ctor: '::',
+										_0: 'Arts/Crafts',
+										_1: {
+											ctor: '::',
+											_0: 'Augmented, Mixed & Virtual Reality/AR, MR, VR',
+											_1: {
+												ctor: '::',
+												_0: 'Automotive',
+												_1: {
+													ctor: '::',
+													_0: 'Biotechnology/Greentech',
+													_1: {
+														ctor: '::',
+														_0: 'Broadcast Media',
+														_1: {
+															ctor: '::',
+															_0: 'Building Materials',
+															_1: {
+																ctor: '::',
+																_0: 'Business Supplies/Equipment',
+																_1: {
+																	ctor: '::',
+																	_0: 'Capital Markets/Hedge Fund/Private Equity',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Chemicals',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Civil Engineering',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Computer Games',
+																				_1: {
+																					ctor: '::',
+																					_0: 'Computer Hardware',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Computer Software/Engineering',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Computer/Network Security',
+																							_1: {ctor: '[]'}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	A2(
+		_elm_lang$core$Basics_ops['++'],
+		{
+			ctor: '::',
+			_0: 'Construction',
+			_1: {
+				ctor: '::',
+				_0: 'Consumer Electronics',
+				_1: {
+					ctor: '::',
+					_0: 'Consumer Goods',
+					_1: {
+						ctor: '::',
+						_0: 'Consumer Services',
+						_1: {
+							ctor: '::',
+							_0: 'Cosmetics',
+							_1: {
+								ctor: '::',
+								_0: 'Dairy',
+								_1: {
+									ctor: '::',
+									_0: 'Defense/Space',
+									_1: {
+										ctor: '::',
+										_0: 'Design',
+										_1: {
+											ctor: '::',
+											_0: 'Education/E-Learning',
+											_1: {
+												ctor: '::',
+												_0: 'Electrical/Electronic Manufacturing',
+												_1: {
+													ctor: '::',
+													_0: 'Entertainment/Movie Production',
+													_1: {
+														ctor: '::',
+														_0: 'Environmental Services',
+														_1: {
+															ctor: '::',
+															_0: 'Events Services',
+															_1: {
+																ctor: '::',
+																_0: 'Facilities Services',
+																_1: {
+																	ctor: '::',
+																	_0: 'Farming',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Fine Art',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Fishery',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Food/Beverages',
+																				_1: {
+																					ctor: '::',
+																					_0: 'Furniture',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Gambling/Casinos',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Glass/Ceramics/Concrete',
+																							_1: {
+																								ctor: '::',
+																								_0: 'Graphic Design/Web Design',
+																								_1: {
+																									ctor: '::',
+																									_0: 'Health/Fitness',
+																									_1: {
+																										ctor: '::',
+																										_0: 'Hospital/Health Care',
+																										_1: {
+																											ctor: '::',
+																											_0: 'Human Resources/HR',
+																											_1: {ctor: '[]'}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			{
+				ctor: '::',
+				_0: 'Import/Export',
+				_1: {
+					ctor: '::',
+					_0: 'Industrial Automation',
+					_1: {
+						ctor: '::',
+						_0: 'Information Services',
+						_1: {
+							ctor: '::',
+							_0: 'Information Technology/IT',
+							_1: {
+								ctor: '::',
+								_0: 'Insurance',
+								_1: {
+									ctor: '::',
+									_0: 'International Trade/Development',
+									_1: {
+										ctor: '::',
+										_0: 'Internet',
+										_1: {
+											ctor: '::',
+											_0: 'Legal Services',
+											_1: {
+												ctor: '::',
+												_0: 'Leisure/Travel/Hospitality',
+												_1: {
+													ctor: '::',
+													_0: 'Library',
+													_1: {
+														ctor: '::',
+														_0: 'Logistics/Procurement',
+														_1: {
+															ctor: '::',
+															_0: 'Luxury Goods/Jewelry',
+															_1: {
+																ctor: '::',
+																_0: 'Machinery',
+																_1: {
+																	ctor: '::',
+																	_0: 'Maritime',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Marketing/Advertising & PR/Sales',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Mechanical or Industrial Engineering',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Media Production',
+																				_1: {
+																					ctor: '::',
+																					_0: 'Medical Equipment',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Military Industry',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Mining/Metals',
+																							_1: {
+																								ctor: '::',
+																								_0: 'Motion Pictures/Film',
+																								_1: {
+																									ctor: '::',
+																									_0: 'Museums/Institutions',
+																									_1: {ctor: '[]'}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				{
+					ctor: '::',
+					_0: 'Music',
+					_1: {
+						ctor: '::',
+						_0: 'Nanotechnology',
+						_1: {
+							ctor: '::',
+							_0: 'Newspapers/Journalism',
+							_1: {
+								ctor: '::',
+								_0: 'Non-Profit/Volunteering',
+								_1: {
+									ctor: '::',
+									_0: 'Oil/Energy/Solar/Greentech',
+									_1: {
+										ctor: '::',
+										_0: 'Package/Freight Delivery',
+										_1: {
+											ctor: '::',
+											_0: 'Packaging/Containers',
+											_1: {
+												ctor: '::',
+												_0: 'Paper/Forest Products',
+												_1: {
+													ctor: '::',
+													_0: 'Performing Arts',
+													_1: {
+														ctor: '::',
+														_0: 'Pharmaceuticals',
+														_1: {
+															ctor: '::',
+															_0: 'Philanthropy',
+															_1: {
+																ctor: '::',
+																_0: 'Photography',
+																_1: {
+																	ctor: '::',
+																	_0: 'Plastics',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Political Organization',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Printing',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Professional Training',
+																				_1: {
+																					ctor: '::',
+																					_0: 'Program Development',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Public Safety',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Publishing/Online Publishing',
+																							_1: {
+																								ctor: '::',
+																								_0: 'Railroad Manufacture',
+																								_1: {
+																									ctor: '::',
+																									_0: 'Ranching',
+																									_1: {
+																										ctor: '::',
+																										_0: 'Real Estate',
+																										_1: {
+																											ctor: '::',
+																											_0: 'Recreational Facilities/Services',
+																											_1: {ctor: '[]'}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				{
+					ctor: '::',
+					_0: 'Renewables/Environment',
+					_1: {
+						ctor: '::',
+						_0: 'Restaurants and Bars',
+						_1: {
+							ctor: '::',
+							_0: 'Retail',
+							_1: {
+								ctor: '::',
+								_0: 'Security/Investigations',
+								_1: {
+									ctor: '::',
+									_0: 'Semiconductors',
+									_1: {
+										ctor: '::',
+										_0: 'Shipbuilding',
+										_1: {
+											ctor: '::',
+											_0: 'Sports',
+											_1: {
+												ctor: '::',
+												_0: 'Supermarkets',
+												_1: {
+													ctor: '::',
+													_0: 'Telecommunications',
+													_1: {
+														ctor: '::',
+														_0: 'Textiles',
+														_1: {
+															ctor: '::',
+															_0: 'Tobacco',
+															_1: {
+																ctor: '::',
+																_0: 'Transportation',
+																_1: {
+																	ctor: '::',
+																	_0: 'Utilities',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Venture Capital/VC',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Veterinary',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Warehousing',
+																				_1: {
+																					ctor: '::',
+																					_0: 'Wholesale',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Wine/Spirits',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Wireless',
+																							_1: {
+																								ctor: '::',
+																								_0: 'Writing/Editing',
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}))));

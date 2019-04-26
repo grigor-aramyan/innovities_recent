@@ -1,0 +1,2202 @@
+var _user$project$CountriesList$countriesMap = A2(
+	_elm_lang$core$Basics_ops['++'],
+	{
+		ctor: '::',
+		_0: A2(_user$project$Models$MapItem, 'Angola', 'Անգոլա'),
+		_1: {
+			ctor: '::',
+			_0: A2(_user$project$Models$MapItem, 'Cameroon', 'Կամերուն'),
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$Models$MapItem, 'Central African Republic', 'Կենտրոնաաֆրիկյան Հանրապետություն'),
+				_1: {
+					ctor: '::',
+					_0: A2(_user$project$Models$MapItem, 'Chad', 'Չադ'),
+					_1: {
+						ctor: '::',
+						_0: A2(_user$project$Models$MapItem, 'Congo', 'Կոնգոյի Հանրապետություն'),
+						_1: {
+							ctor: '::',
+							_0: A2(_user$project$Models$MapItem, 'Congo, The Democratic Republic of the', 'Կոնգոյի Դեմոկրատական Հանրապետություն'),
+							_1: {
+								ctor: '::',
+								_0: A2(_user$project$Models$MapItem, 'Equatorial Guinea', 'Հասարակածային Գվինեա'),
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$Models$MapItem, 'Gabon', 'Գաբոն'),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Models$MapItem, 'Sao Tome and Principe', 'Սան Տոմե և Պրինսիպի'),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$Models$MapItem, 'South Sudan', 'Հարավային Սուդան'),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	A2(
+		_elm_lang$core$Basics_ops['++'],
+		{
+			ctor: '::',
+			_0: A2(_user$project$Models$MapItem, 'Burundi', 'Բուրունդի'),
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$Models$MapItem, 'Comoros', 'Կոմորյան կղզիներ'),
+				_1: {
+					ctor: '::',
+					_0: A2(_user$project$Models$MapItem, 'Djibouti', 'Ջիբութի'),
+					_1: {
+						ctor: '::',
+						_0: A2(_user$project$Models$MapItem, 'Eritrea', 'Էրիթրեա'),
+						_1: {
+							ctor: '::',
+							_0: A2(_user$project$Models$MapItem, 'Ethiopia', 'Եթովպիա'),
+							_1: {
+								ctor: '::',
+								_0: A2(_user$project$Models$MapItem, 'Kenya', 'Քենիա'),
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$Models$MapItem, 'Madagascar', 'Մադագասկար'),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Models$MapItem, 'Malawi', 'Մալավի'),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$Models$MapItem, 'Mauritius', 'Մավրիկիոս'),
+											_1: {
+												ctor: '::',
+												_0: A2(_user$project$Models$MapItem, 'Mayotte', 'Մայոտ'),
+												_1: {
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'Mozambique', 'Մոզամբիկ'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'Reunion', 'Ռեյունիոն'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Rwanda', 'Ռուանդա'),
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			{
+				ctor: '::',
+				_0: A2(_user$project$Models$MapItem, 'Seychelles', 'Սեյշելյան կղզիներ'),
+				_1: {
+					ctor: '::',
+					_0: A2(_user$project$Models$MapItem, 'Somalia', 'Սոմալի'),
+					_1: {
+						ctor: '::',
+						_0: A2(_user$project$Models$MapItem, 'Tanzania, United Republic of', 'Տանզանիա'),
+						_1: {
+							ctor: '::',
+							_0: A2(_user$project$Models$MapItem, 'Uganda', 'Ուգանդա'),
+							_1: {
+								ctor: '::',
+								_0: A2(_user$project$Models$MapItem, 'Zambia', 'Զամբիա'),
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$Models$MapItem, 'Zimbabwe', 'Զիմբաբվե'),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Models$MapItem, 'Algeria', 'Ալժիր'),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$Models$MapItem, 'Egypt', 'Եգիպտոս'),
+											_1: {
+												ctor: '::',
+												_0: A2(_user$project$Models$MapItem, 'Libya', 'Լիբիա'),
+												_1: {
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'Morocco', 'Մարոկկո'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'Sudan', 'Սուդան'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Tunisia', 'Թունիս'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Western Sahara', 'Արևմտյան Սահարա'),
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				{
+					ctor: '::',
+					_0: A2(_user$project$Models$MapItem, 'Botswana', 'Բոտսվանա'),
+					_1: {
+						ctor: '::',
+						_0: A2(_user$project$Models$MapItem, 'Lesotho', 'Լեսոթո'),
+						_1: {
+							ctor: '::',
+							_0: A2(_user$project$Models$MapItem, 'Namibia', 'Նամիբիա'),
+							_1: {
+								ctor: '::',
+								_0: A2(_user$project$Models$MapItem, 'South Africa', 'Հարավաֆրիկյան Հանրապետություն'),
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$Models$MapItem, 'Swaziland', 'Սվազիլենդ'),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Models$MapItem, 'Benin', 'Բենին'),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$Models$MapItem, 'Burkina Faso', 'Բուրկինա Ֆասո'),
+											_1: {
+												ctor: '::',
+												_0: A2(_user$project$Models$MapItem, 'Cape Verde', 'Կաբո Վերդե'),
+												_1: {
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'Côte D\'Ivoire', 'Կոտ դ\'Իվուար'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'Gambia', 'Գամբիա'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Ghana', 'Գանա'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Guinea', 'Գվինեա'),
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					{
+						ctor: '::',
+						_0: A2(_user$project$Models$MapItem, 'Guinea-Bissau', 'Գվինեա Բիսաու'),
+						_1: {
+							ctor: '::',
+							_0: A2(_user$project$Models$MapItem, 'Liberia', 'Լիբերիա'),
+							_1: {
+								ctor: '::',
+								_0: A2(_user$project$Models$MapItem, 'Mali', 'Մալի'),
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$Models$MapItem, 'Mauritania', 'Մավրիտանիա'),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Models$MapItem, 'Niger', 'Նիգեր'),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$Models$MapItem, 'Nigeria', 'Նիգերիա'),
+											_1: {
+												ctor: '::',
+												_0: A2(_user$project$Models$MapItem, 'Senegal', 'Սենեգալ'),
+												_1: {
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'Sierra Leone', 'Սյեռա Լեոնե'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'Togo', 'Տոգո'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Anguilla', 'Անգիլիա'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Antigua and Barbuda', 'Անտիգուա և Բարբուդա'),
+																_1: {
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'Aruba', 'Արուբա'),
+																	_1: {ctor: '[]'}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						{
+							ctor: '::',
+							_0: A2(_user$project$Models$MapItem, 'Bahamas', 'Բահամյան կղզիներ'),
+							_1: {
+								ctor: '::',
+								_0: A2(_user$project$Models$MapItem, 'Barbados', 'Բարբադոս'),
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$Models$MapItem, 'Cayman Islands', 'Կայմանյան կղզիներ'),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Models$MapItem, 'Cuba', 'Կուբա'),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$Models$MapItem, 'Dominica', 'Դոմինիկա'),
+											_1: {
+												ctor: '::',
+												_0: A2(_user$project$Models$MapItem, 'Dominican Republic', 'Դոմինիկյան Հանրապետություն'),
+												_1: {
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'Grenada', 'Գրենադա'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'Guadeloupe', 'Գվադելուպա'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Haiti', 'Հայիթի'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Jamaica', 'Ճամայկա'),
+																_1: {
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'Martinique', 'Մարտինկա'),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Montserrat', 'Մոնթսերատ'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Netherlands Antilles', 'Նիդերլանդական Անտիլներ'),
+																			_1: {ctor: '[]'}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							{
+								ctor: '::',
+								_0: A2(_user$project$Models$MapItem, 'Puerto Rico', 'Պուերտո Ռիկո'),
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$Models$MapItem, 'Saint Kitts and Nevis', 'Սենթ Քիթս'),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Models$MapItem, 'Saint Lucia', 'Սենթ Լյուսիա'),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$Models$MapItem, 'Saint Vincent and the Grenadines', 'Սենտ Վինսենթ և Գերնադիններ'),
+											_1: {
+												ctor: '::',
+												_0: A2(_user$project$Models$MapItem, 'Trinidad and Tobago', 'Տրինիդադ եւ Տոբագո'),
+												_1: {
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'Turks and Caicos Islands', 'Թըրքս և Կայկոս կղզիներ'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'Virgin Islands, British', 'Բրիտանական Վիրջինյան կղզիներ'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Virgin Islands, U.S.', 'Վիրջինյան կղզիներ, ԱՄՆ'),
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								{
+									ctor: '::',
+									_0: A2(_user$project$Models$MapItem, 'Belize', 'Բելիզ'),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Models$MapItem, 'Costa Rica', 'Կոստա Ռիկա'),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$Models$MapItem, 'El Salvador', 'Սալվադոր'),
+											_1: {
+												ctor: '::',
+												_0: A2(_user$project$Models$MapItem, 'Guatemala', 'Գվատեմալա'),
+												_1: {
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'Honduras', 'Հոնդուրաս'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'Nicaragua', 'Նիկարագուա'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Panama', 'Պանամա'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Bermuda', 'Բերմուդյան կղզիներ'),
+																_1: {
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'Canada', 'Կանադա'),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Greenland', 'Գրենլանդիա'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Mexico', 'Մեքսիկա'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'United States', 'Ամերիկայի Միացյալ Նահանգներ'),
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								},
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									{
+										ctor: '::',
+										_0: A2(_user$project$Models$MapItem, 'Alabama', 'Ալաբամա'),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$Models$MapItem, 'Alaska', 'Ալյասկա'),
+											_1: {
+												ctor: '::',
+												_0: A2(_user$project$Models$MapItem, 'Arizona', 'Արիզոնա'),
+												_1: {
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'Arkansas', 'Արկանզաս'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'California', 'Կալիֆորնիա'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Colorado', 'Կոլորադո'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Connecticut', 'Կոնեկտիկուտ'),
+																_1: {
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'Delaware', 'Դելավեր'),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Florida', 'Ֆլորիդա'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Georgia', 'Ջորջիա'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'Hawaii', 'Հավայի'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'Idaho', 'Այդահո'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'Illinois', 'Իլինոյս'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Indiana', 'Ինդիանա'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Iowa', 'Այովա'),
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										{
+											ctor: '::',
+											_0: A2(_user$project$Models$MapItem, 'Kansas', 'Կանզաս'),
+											_1: {
+												ctor: '::',
+												_0: A2(_user$project$Models$MapItem, 'Kentucky', 'Կենտուկի'),
+												_1: {
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'Louisiana', 'Լուիզիանա'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'Maine', 'Մեն'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Maryland', 'Մերիլենդ'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Massachusetts', 'Մասաչուսեթս'),
+																_1: {
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'Michigan', 'Միչիգան'),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Minnesota', 'Մինեսոտա'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Mississippi', 'Միսսիսիպի'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'Missouri', 'Միսսուրի'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'Montana', 'Մոնտանա'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'Nebraska', 'Նեբրասկա'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Nevada', 'Նևադա'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'New Hampshire', 'Նյու Հեմպշիր'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'New Jersey', 'Նյու Ջերսի'),
+																									_1: {ctor: '[]'}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										},
+										A2(
+											_elm_lang$core$Basics_ops['++'],
+											{
+												ctor: '::',
+												_0: A2(_user$project$Models$MapItem, 'New Mexico', 'Նոր Մեքսիկո'),
+												_1: {
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'New York', 'Նյու Յորք'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'North Carolina', 'Հյուսիսային Կարոլինա'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'North Dakota', 'Հյուսիսային Դակոտա'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Ohio', 'Օհայո'),
+																_1: {
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'Oklahoma', 'Օկլահոմա'),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Oregon', 'Օրեգոն'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Pennsylvania', 'Փենսիլվանիա'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'Rhode Island', 'Ռոդ Այլենդ'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'South Carolina', 'Հարավային Կարոլինա'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'South Dakota', 'Հարավային Դակոտա'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Tennessee', 'Թենեսի'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Texas', 'Տեխաս'),
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											},
+											A2(
+												_elm_lang$core$Basics_ops['++'],
+												{
+													ctor: '::',
+													_0: A2(_user$project$Models$MapItem, 'Utah', 'Յուտա'),
+													_1: {
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'Vermont', 'Վերմոնտ'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Virginia', 'Վիրջինիա'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Washington', 'Վաշինգտոն'),
+																_1: {
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'West Virginia', 'Արևմտյան Վիրջինիա'),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Wisconsin', 'Վիսկոնսին'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Wyoming', 'Վայոմինգ'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'Argentina', 'Արգենտինա'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'Bolivia', 'Բոլիվիա'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'Brazil', 'Բրազիլիա'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Chile', 'Չիլի'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Colombia', 'Կոլումբիա'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'Ecuador', 'Էկվադոր'),
+																									_1: {ctor: '[]'}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												},
+												A2(
+													_elm_lang$core$Basics_ops['++'],
+													{
+														ctor: '::',
+														_0: A2(_user$project$Models$MapItem, 'Falkland Islands (Malvinas)', 'Ֆոլկլենդյան կղզիներ'),
+														_1: {
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'French Guiana', 'Ֆրանսիական Գվիանա'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Guyana', 'Գայանա'),
+																_1: {
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'Paraguay', 'Պարագվայ'),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Peru', 'Պերու'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Suriname', 'Սուրինամ'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'Uruguay', 'Ուրուգվայ'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'Venezuela', 'Վենեսուելա'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'American Samoa', 'Ամերիկյան Սամոա'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Australia', 'Ավստրալիա'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Cook Islands', 'Կուկի կղզիներ'),
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													},
+													A2(
+														_elm_lang$core$Basics_ops['++'],
+														{
+															ctor: '::',
+															_0: A2(_user$project$Models$MapItem, 'Fiji', 'Ֆիջի'),
+															_1: {
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'French Polynesia', 'Ֆրանսիական Պոլինեզիա'),
+																_1: {
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'Guam', 'Գուամ'),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Kiribati', 'Կիրիբատի'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Marshall Islands', 'Մարշալյան կղզիներ'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'Micronesia, Federated States of', 'Միկրոնեզիայի Դաշնային Նահանգներ'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'Nauru', 'Նաուրու'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'New Caledonia', 'Նոր Կալեդոնիա'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'New Zealand', 'Նոր Զելանդիա'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Niue', 'Նյուեյ'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'Northern Mariana Islands', 'Հյուսիսային Մարիանյան կղզիներ'),
+																									_1: {ctor: '[]'}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														},
+														A2(
+															_elm_lang$core$Basics_ops['++'],
+															{
+																ctor: '::',
+																_0: A2(_user$project$Models$MapItem, 'Palau', 'Պալաու'),
+																_1: {
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'Papua New Guinea', 'Պապուա Նոր Գվինեա'),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Pitcairn Islands', 'Փիթքերն կղզիներ'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Samoa', 'Սամոա'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'Solomon Islands', 'Սողոմոնյան Կղզիներ'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'Tokelau', 'Տոկելաու'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'Tonga', 'Տոնգա'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Tuvalu', 'Թուվալու'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Vanuatu', 'Վանուատու'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'Wallis and Futuna', 'Ուոլիս և Ֆուտունա'),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_user$project$Models$MapItem, 'Armenia', 'Հայաստան'),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(_user$project$Models$MapItem, 'Azerbaijan', 'Ադրբեջան'),
+																											_1: {ctor: '[]'}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															},
+															A2(
+																_elm_lang$core$Basics_ops['++'],
+																{
+																	ctor: '::',
+																	_0: A2(_user$project$Models$MapItem, 'Belarus', 'Բելառուս'),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Kazakhstan', 'Ղազախստան'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Kyrgyzstan', 'Ղրղզստան'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'Tajikistan', 'Տաջիկստան'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'Turkmenistan', 'Թուրքմենստան'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'Uzbekistan', 'Ուզբեկստան'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'China', 'Չինաստան'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Hong Kong', 'Հոնկոնգ'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'Japan', 'Ճապոնիա'),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_user$project$Models$MapItem, 'Korea, Democratic People\'s Republic of', 'Հյուսիսային Կորեա'),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(_user$project$Models$MapItem, 'Korea, Republic of', 'Հարավային Կորեա'),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(_user$project$Models$MapItem, 'Macau', 'Մակաո'),
+																												_1: {ctor: '[]'}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																},
+																A2(
+																	_elm_lang$core$Basics_ops['++'],
+																	{
+																		ctor: '::',
+																		_0: A2(_user$project$Models$MapItem, 'Mongolia', 'Մոնղոլիա'),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Taiwan', 'Թայվան'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'Russian Federation', 'Ռուսաստանի Դաշնություն'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'Central District', 'Կենտրոնական Շրջան'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'Southern District', 'Հարավային Շրջան'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Northwestern District', 'Հյուսիս-արևմտյան Շրջան'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Far Eastern District', 'Հեռավոր-արևելյան Շրջան'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'Siberian District', 'Սիբիրյան Շրջան'),
+																									_1: {ctor: '[]'}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	},
+																	A2(
+																		_elm_lang$core$Basics_ops['++'],
+																		{
+																			ctor: '::',
+																			_0: A2(_user$project$Models$MapItem, 'Urals District', 'Ուրալյան Շրջան'),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'Volga District', 'Մերձվոլգայան Շրջան'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'Bahrain', 'Բահրեյն'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'Iraq', 'Իրաք'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Israel', 'Իսրայել'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Jordan', 'Հորդանան'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'Kuwait', 'Քուվեյթ'),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_user$project$Models$MapItem, 'Lebanon', 'Լիբանան'),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(_user$project$Models$MapItem, 'Oman', 'Օման'),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(_user$project$Models$MapItem, 'Palestinian Territory', 'Պաղեստին'),
+																												_1: {
+																													ctor: '::',
+																													_0: A2(_user$project$Models$MapItem, 'Qatar', 'Կատար'),
+																													_1: {
+																														ctor: '::',
+																														_0: A2(_user$project$Models$MapItem, 'Saudi Arabia', 'Սաուդյան Արաբիա'),
+																														_1: {
+																															ctor: '::',
+																															_0: A2(_user$project$Models$MapItem, 'Syrian Arab Republic', 'Սիրիա'),
+																															_1: {ctor: '[]'}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		},
+																		A2(
+																			_elm_lang$core$Basics_ops['++'],
+																			{
+																				ctor: '::',
+																				_0: A2(_user$project$Models$MapItem, 'United Arab Emirates', 'Արաբական Միացյալ Էմիրություններ'),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'Yemen', 'Եմեն'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'Afghanistan', 'Աֆղանստան'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Bangladesh', 'Բանգլադեշ'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Bhutan', 'Բութան'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'India', 'Հնդկաստան'),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_user$project$Models$MapItem, 'Iran, Islamic Republic of', 'Իրանի Իսլամական Հանրապետություն'),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(_user$project$Models$MapItem, 'Maldives', 'Մալդիվներ'),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(_user$project$Models$MapItem, 'Nepal', 'Նեպալ'),
+																												_1: {
+																													ctor: '::',
+																													_0: A2(_user$project$Models$MapItem, 'Pakistan', 'Պակիստան'),
+																													_1: {
+																														ctor: '::',
+																														_0: A2(_user$project$Models$MapItem, 'Sri Lanka', 'Շրի Լանկա'),
+																														_1: {ctor: '[]'}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			},
+																			A2(
+																				_elm_lang$core$Basics_ops['++'],
+																				{
+																					ctor: '::',
+																					_0: A2(_user$project$Models$MapItem, 'Brunei Darussalam', 'Բրունեյ'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'Cambodia', 'Կամբոջա'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Christmas Island', 'Ծննդյան կղզի'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Cocos (Keeling) Islands', 'Կոկոսյան կղզիներ'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'Indonesia', 'Ինդոնեզիա'),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_user$project$Models$MapItem, 'Lao People\'s Democratic Republic', 'Լաոս'),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(_user$project$Models$MapItem, 'Malaysia', 'Մալայզիա'),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(_user$project$Models$MapItem, 'Myanmar', 'Մյանմա'),
+																												_1: {
+																													ctor: '::',
+																													_0: A2(_user$project$Models$MapItem, 'Philippines', 'Ֆիլիպիններ'),
+																													_1: {
+																														ctor: '::',
+																														_0: A2(_user$project$Models$MapItem, 'Singapore', 'Սինգապուր'),
+																														_1: {
+																															ctor: '::',
+																															_0: A2(_user$project$Models$MapItem, 'Thailand', 'Թաիլանդ'),
+																															_1: {ctor: '[]'}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				},
+																				A2(
+																					_elm_lang$core$Basics_ops['++'],
+																					{
+																						ctor: '::',
+																						_0: A2(_user$project$Models$MapItem, 'Timor-Leste', 'Արևելյան Թիմոր'),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Vietnam', 'Վիետնամ'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Cyprus', 'Կիպրոս'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'Georgia', 'Վրաստան'),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_user$project$Models$MapItem, 'Turkey', 'Թուրքիա'),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(_user$project$Models$MapItem, 'Bulgaria', 'Բուլղարիա'),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(_user$project$Models$MapItem, 'Czech Republic', 'Չեխիա'),
+																												_1: {
+																													ctor: '::',
+																													_0: A2(_user$project$Models$MapItem, 'Hungary', 'Հունգարիա'),
+																													_1: {
+																														ctor: '::',
+																														_0: A2(_user$project$Models$MapItem, 'Moldova, Republic of', 'Մոլդովա'),
+																														_1: {
+																															ctor: '::',
+																															_0: A2(_user$project$Models$MapItem, 'Poland', 'Լեհաստան'),
+																															_1: {
+																																ctor: '::',
+																																_0: A2(_user$project$Models$MapItem, 'Romania', 'Ռումինիա'),
+																																_1: {ctor: '[]'}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					},
+																					A2(
+																						_elm_lang$core$Basics_ops['++'],
+																						{
+																							ctor: '::',
+																							_0: A2(_user$project$Models$MapItem, 'Slovakia', 'Սլովակիա'),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Ukraine', 'Ուկրաինա'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'Denmark', 'Դանիա'),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_user$project$Models$MapItem, 'Estonia', 'Էստոնիա'),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(_user$project$Models$MapItem, 'Faroe Islands', 'Ֆարերյան կղզիներ'),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(_user$project$Models$MapItem, 'Finland', 'Ֆինլանդիա'),
+																												_1: {
+																													ctor: '::',
+																													_0: A2(_user$project$Models$MapItem, 'Iceland', 'Իսլանդիա'),
+																													_1: {
+																														ctor: '::',
+																														_0: A2(_user$project$Models$MapItem, 'Ireland', 'Իռլանդիա'),
+																														_1: {
+																															ctor: '::',
+																															_0: A2(_user$project$Models$MapItem, 'Latvia', 'Լատվիա'),
+																															_1: {
+																																ctor: '::',
+																																_0: A2(_user$project$Models$MapItem, 'Lithuania', 'Լիտվա'),
+																																_1: {
+																																	ctor: '::',
+																																	_0: A2(_user$project$Models$MapItem, 'Norway', 'Նորվեգիա'),
+																																	_1: {
+																																		ctor: '::',
+																																		_0: A2(_user$project$Models$MapItem, 'Sweden', 'Շվեդիա'),
+																																		_1: {
+																																			ctor: '::',
+																																			_0: A2(_user$project$Models$MapItem, 'United Kingdom', 'Միացյալ Թագավորություն'),
+																																			_1: {ctor: '[]'}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						},
+																						A2(
+																							_elm_lang$core$Basics_ops['++'],
+																							{
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Albania', 'Ալբանիա'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'Andorra', 'Անդորրա'),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_user$project$Models$MapItem, 'Bosnia and Herzegovina', 'Բոսնիա և Հերցեգովինա'),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(_user$project$Models$MapItem, 'Croatia', 'Խորվաթիա'),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(_user$project$Models$MapItem, 'Gibraltar', 'Ջիբրալթար'),
+																												_1: {
+																													ctor: '::',
+																													_0: A2(_user$project$Models$MapItem, 'Greece', 'Հունաստան'),
+																													_1: {
+																														ctor: '::',
+																														_0: A2(_user$project$Models$MapItem, 'Holy See (Vatican City State)', 'Վատիկան'),
+																														_1: {
+																															ctor: '::',
+																															_0: A2(_user$project$Models$MapItem, 'Italy', 'Իտալիա'),
+																															_1: {
+																																ctor: '::',
+																																_0: A2(_user$project$Models$MapItem, 'Macedonia', 'Մակեդոնիա'),
+																																_1: {
+																																	ctor: '::',
+																																	_0: A2(_user$project$Models$MapItem, 'Malta', 'Մալթա'),
+																																	_1: {
+																																		ctor: '::',
+																																		_0: A2(_user$project$Models$MapItem, 'Monaco', 'Մոնակո'),
+																																		_1: {
+																																			ctor: '::',
+																																			_0: A2(_user$project$Models$MapItem, 'Montenegro', 'Չեռնոգորիա'),
+																																			_1: {ctor: '[]'}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							},
+																							{
+																								ctor: '::',
+																								_0: A2(_user$project$Models$MapItem, 'Portugal', 'Պորտուգալիա'),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(_user$project$Models$MapItem, 'San Marino', 'Սան Մարինո'),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_user$project$Models$MapItem, 'Serbia', 'Սերբիա'),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(_user$project$Models$MapItem, 'Slovenia', 'Սլովենիա'),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(_user$project$Models$MapItem, 'Spain', 'Իսպանիա'),
+																												_1: {
+																													ctor: '::',
+																													_0: A2(_user$project$Models$MapItem, 'Austria', 'Ավստրիա'),
+																													_1: {
+																														ctor: '::',
+																														_0: A2(_user$project$Models$MapItem, 'Belgium', 'Բելգիա'),
+																														_1: {
+																															ctor: '::',
+																															_0: A2(_user$project$Models$MapItem, 'France', 'Ֆրանսիա'),
+																															_1: {
+																																ctor: '::',
+																																_0: A2(_user$project$Models$MapItem, 'Germany', 'Գերմանիա'),
+																																_1: {
+																																	ctor: '::',
+																																	_0: A2(_user$project$Models$MapItem, 'Liechtenstein', 'Լիխտենշտեյն'),
+																																	_1: {
+																																		ctor: '::',
+																																		_0: A2(_user$project$Models$MapItem, 'Luxembourg', 'Լյուքսեմբուրգ'),
+																																		_1: {
+																																			ctor: '::',
+																																			_0: A2(_user$project$Models$MapItem, 'Netherlands', 'Նիդերլանդներ'),
+																																			_1: {
+																																				ctor: '::',
+																																				_0: A2(_user$project$Models$MapItem, 'Switzerland', 'Շվեյցարիա'),
+																																				_1: {ctor: '[]'}
+																																			}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							})))))))))))))))))))))));
+var _user$project$CountriesList$countriesArmSorted = function () {
+	var countriesArm = _elm_lang$core$List$sort(
+		A2(
+			_elm_lang$core$List$map,
+			function (c) {
+				return c.value;
+			},
+			_user$project$CountriesList$countriesMap));
+	return countriesArm;
+}();
+var _user$project$CountriesList$getArmLocal = function (countryEng) {
+	var locals_list = A2(
+		_elm_lang$core$List$filter,
+		function (c) {
+			return _elm_lang$core$Native_Utils.eq(c.key, countryEng);
+		},
+		_user$project$CountriesList$countriesMap);
+	var local = function () {
+		var _p0 = _elm_lang$core$List$head(locals_list);
+		if (_p0.ctor === 'Just') {
+			return _p0._0;
+		} else {
+			return A2(_user$project$Models$MapItem, '', '');
+		}
+	}();
+	return local.value;
+};
+var _user$project$CountriesList$getEngLocal = function (countryArm) {
+	var locals_list = A2(
+		_elm_lang$core$List$filter,
+		function (c) {
+			return _elm_lang$core$Native_Utils.eq(c.value, countryArm);
+		},
+		_user$project$CountriesList$countriesMap);
+	var local = function () {
+		var _p1 = _elm_lang$core$List$head(locals_list);
+		if (_p1.ctor === 'Just') {
+			return _p1._0;
+		} else {
+			return A2(_user$project$Models$MapItem, '', '');
+		}
+	}();
+	return local.key;
+};
+var _user$project$CountriesList$countries = _elm_lang$core$List$sort(
+	A2(
+		_elm_lang$core$Basics_ops['++'],
+		{
+			ctor: '::',
+			_0: 'Angola',
+			_1: {
+				ctor: '::',
+				_0: 'Cameroon',
+				_1: {
+					ctor: '::',
+					_0: 'Central African Republic',
+					_1: {
+						ctor: '::',
+						_0: 'Chad',
+						_1: {
+							ctor: '::',
+							_0: 'Congo',
+							_1: {
+								ctor: '::',
+								_0: 'Congo, The Democratic Republic of the',
+								_1: {
+									ctor: '::',
+									_0: 'Equatorial Guinea',
+									_1: {
+										ctor: '::',
+										_0: 'Gabon',
+										_1: {
+											ctor: '::',
+											_0: 'Sao Tome and Principe',
+											_1: {
+												ctor: '::',
+												_0: 'South Sudan',
+												_1: {
+													ctor: '::',
+													_0: 'Burundi',
+													_1: {
+														ctor: '::',
+														_0: 'Comoros',
+														_1: {
+															ctor: '::',
+															_0: 'Djibouti',
+															_1: {
+																ctor: '::',
+																_0: 'Eritrea',
+																_1: {
+																	ctor: '::',
+																	_0: 'Ethiopia',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Kenya',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Madagascar',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Malawi',
+																				_1: {
+																					ctor: '::',
+																					_0: 'Mauritius',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Mayotte',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Mozambique',
+																							_1: {
+																								ctor: '::',
+																								_0: 'Reunion',
+																								_1: {
+																									ctor: '::',
+																									_0: 'Rwanda',
+																									_1: {
+																										ctor: '::',
+																										_0: 'Seychelles',
+																										_1: {
+																											ctor: '::',
+																											_0: 'Somalia',
+																											_1: {
+																												ctor: '::',
+																												_0: 'Tanzania, United Republic of',
+																												_1: {
+																													ctor: '::',
+																													_0: 'Uganda',
+																													_1: {
+																														ctor: '::',
+																														_0: 'Zambia',
+																														_1: {
+																															ctor: '::',
+																															_0: 'Zimbabwe',
+																															_1: {
+																																ctor: '::',
+																																_0: 'Algeria',
+																																_1: {
+																																	ctor: '::',
+																																	_0: 'Egypt',
+																																	_1: {
+																																		ctor: '::',
+																																		_0: 'Libya',
+																																		_1: {
+																																			ctor: '::',
+																																			_0: 'Morocco',
+																																			_1: {
+																																				ctor: '::',
+																																				_0: 'Sudan',
+																																				_1: {
+																																					ctor: '::',
+																																					_0: 'Tunisia',
+																																					_1: {
+																																						ctor: '::',
+																																						_0: 'Western Sahara',
+																																						_1: {
+																																							ctor: '::',
+																																							_0: 'Botswana',
+																																							_1: {
+																																								ctor: '::',
+																																								_0: 'Lesotho',
+																																								_1: {
+																																									ctor: '::',
+																																									_0: 'Namibia',
+																																									_1: {ctor: '[]'}
+																																								}
+																																							}
+																																						}
+																																					}
+																																				}
+																																			}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			{
+				ctor: '::',
+				_0: 'South Africa',
+				_1: {
+					ctor: '::',
+					_0: 'Swaziland',
+					_1: {
+						ctor: '::',
+						_0: 'Benin',
+						_1: {
+							ctor: '::',
+							_0: 'Burkina Faso',
+							_1: {
+								ctor: '::',
+								_0: 'Cape Verde',
+								_1: {
+									ctor: '::',
+									_0: 'Côte D\'Ivoire',
+									_1: {
+										ctor: '::',
+										_0: 'Gambia',
+										_1: {
+											ctor: '::',
+											_0: 'Ghana',
+											_1: {
+												ctor: '::',
+												_0: 'Guinea',
+												_1: {
+													ctor: '::',
+													_0: 'Guinea-Bissau',
+													_1: {
+														ctor: '::',
+														_0: 'Liberia',
+														_1: {
+															ctor: '::',
+															_0: 'Mali',
+															_1: {
+																ctor: '::',
+																_0: 'Mauritania',
+																_1: {
+																	ctor: '::',
+																	_0: 'Niger',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Nigeria',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Senegal',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Sierra Leone',
+																				_1: {
+																					ctor: '::',
+																					_0: 'Togo',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Anguilla',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Antigua and Barbuda',
+																							_1: {
+																								ctor: '::',
+																								_0: 'Aruba',
+																								_1: {
+																									ctor: '::',
+																									_0: 'Bahamas',
+																									_1: {
+																										ctor: '::',
+																										_0: 'Barbados',
+																										_1: {
+																											ctor: '::',
+																											_0: 'Cayman Islands',
+																											_1: {
+																												ctor: '::',
+																												_0: 'Cuba',
+																												_1: {
+																													ctor: '::',
+																													_0: 'Dominica',
+																													_1: {
+																														ctor: '::',
+																														_0: 'Dominican Republic',
+																														_1: {
+																															ctor: '::',
+																															_0: 'Grenada',
+																															_1: {
+																																ctor: '::',
+																																_0: 'Guadeloupe',
+																																_1: {
+																																	ctor: '::',
+																																	_0: 'Haiti',
+																																	_1: {
+																																		ctor: '::',
+																																		_0: 'Jamaica',
+																																		_1: {
+																																			ctor: '::',
+																																			_0: 'Martinique',
+																																			_1: {
+																																				ctor: '::',
+																																				_0: 'Montserrat',
+																																				_1: {
+																																					ctor: '::',
+																																					_0: 'Netherlands Antilles',
+																																					_1: {
+																																						ctor: '::',
+																																						_0: 'Puerto Rico',
+																																						_1: {
+																																							ctor: '::',
+																																							_0: 'Saint Kitts and Nevis',
+																																							_1: {
+																																								ctor: '::',
+																																								_0: 'Saint Lucia',
+																																								_1: {ctor: '[]'}
+																																							}
+																																						}
+																																					}
+																																				}
+																																			}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				{
+					ctor: '::',
+					_0: 'Saint Vincent and the Grenadines',
+					_1: {
+						ctor: '::',
+						_0: 'Trinidad and Tobago',
+						_1: {
+							ctor: '::',
+							_0: 'Turks and Caicos Islands',
+							_1: {
+								ctor: '::',
+								_0: 'Virgin Islands, British',
+								_1: {
+									ctor: '::',
+									_0: 'Virgin Islands, U.S.',
+									_1: {
+										ctor: '::',
+										_0: 'Belize',
+										_1: {
+											ctor: '::',
+											_0: 'Costa Rica',
+											_1: {
+												ctor: '::',
+												_0: 'El Salvador',
+												_1: {
+													ctor: '::',
+													_0: 'Guatemala',
+													_1: {
+														ctor: '::',
+														_0: 'Honduras',
+														_1: {
+															ctor: '::',
+															_0: 'Nicaragua',
+															_1: {
+																ctor: '::',
+																_0: 'Panama',
+																_1: {
+																	ctor: '::',
+																	_0: 'Bermuda',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Canada',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Greenland',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Mexico',
+																				_1: {
+																					ctor: '::',
+																					_0: 'United States',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Argentina',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Bolivia',
+																							_1: {
+																								ctor: '::',
+																								_0: 'Brazil',
+																								_1: {
+																									ctor: '::',
+																									_0: 'Chile',
+																									_1: {
+																										ctor: '::',
+																										_0: 'Colombia',
+																										_1: {
+																											ctor: '::',
+																											_0: 'Ecuador',
+																											_1: {
+																												ctor: '::',
+																												_0: 'Falkland Islands (Malvinas)',
+																												_1: {
+																													ctor: '::',
+																													_0: 'French Guiana',
+																													_1: {
+																														ctor: '::',
+																														_0: 'Guyana',
+																														_1: {
+																															ctor: '::',
+																															_0: 'Paraguay',
+																															_1: {
+																																ctor: '::',
+																																_0: 'Peru',
+																																_1: {
+																																	ctor: '::',
+																																	_0: 'Suriname',
+																																	_1: {
+																																		ctor: '::',
+																																		_0: 'Uruguay',
+																																		_1: {
+																																			ctor: '::',
+																																			_0: 'Venezuela',
+																																			_1: {
+																																				ctor: '::',
+																																				_0: 'American Samoa',
+																																				_1: {ctor: '[]'}
+																																			}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					{
+						ctor: '::',
+						_0: 'Australia',
+						_1: {
+							ctor: '::',
+							_0: 'Cook Islands',
+							_1: {
+								ctor: '::',
+								_0: 'Fiji',
+								_1: {
+									ctor: '::',
+									_0: 'French Polynesia',
+									_1: {
+										ctor: '::',
+										_0: 'Guam',
+										_1: {
+											ctor: '::',
+											_0: 'Kiribati',
+											_1: {
+												ctor: '::',
+												_0: 'Marshall Islands',
+												_1: {
+													ctor: '::',
+													_0: 'Micronesia, Federated States of',
+													_1: {
+														ctor: '::',
+														_0: 'Nauru',
+														_1: {
+															ctor: '::',
+															_0: 'New Caledonia',
+															_1: {
+																ctor: '::',
+																_0: 'New Zealand',
+																_1: {
+																	ctor: '::',
+																	_0: 'Niue',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Northern Mariana Islands',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Palau',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Papua New Guinea',
+																				_1: {
+																					ctor: '::',
+																					_0: 'Pitcairn Islands',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Samoa',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Solomon Islands',
+																							_1: {
+																								ctor: '::',
+																								_0: 'Tokelau',
+																								_1: {
+																									ctor: '::',
+																									_0: 'Tonga',
+																									_1: {
+																										ctor: '::',
+																										_0: 'Tuvalu',
+																										_1: {
+																											ctor: '::',
+																											_0: 'Vanuatu',
+																											_1: {
+																												ctor: '::',
+																												_0: 'Wallis and Futuna',
+																												_1: {
+																													ctor: '::',
+																													_0: 'Armenia',
+																													_1: {
+																														ctor: '::',
+																														_0: 'Azerbaijan',
+																														_1: {
+																															ctor: '::',
+																															_0: 'Belarus',
+																															_1: {
+																																ctor: '::',
+																																_0: 'Kazakhstan',
+																																_1: {
+																																	ctor: '::',
+																																	_0: 'Kyrgyzstan',
+																																	_1: {
+																																		ctor: '::',
+																																		_0: 'Tajikistan',
+																																		_1: {
+																																			ctor: '::',
+																																			_0: 'Turkmenistan',
+																																			_1: {
+																																				ctor: '::',
+																																				_0: 'Uzbekistan',
+																																				_1: {
+																																					ctor: '::',
+																																					_0: 'China',
+																																					_1: {
+																																						ctor: '::',
+																																						_0: 'Hong Kong',
+																																						_1: {
+																																							ctor: '::',
+																																							_0: 'Japan',
+																																							_1: {ctor: '[]'}
+																																						}
+																																					}
+																																				}
+																																			}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						{
+							ctor: '::',
+							_0: 'Korea, Democratic People\'s Republic of',
+							_1: {
+								ctor: '::',
+								_0: 'Korea, Republic of',
+								_1: {
+									ctor: '::',
+									_0: 'Macau',
+									_1: {
+										ctor: '::',
+										_0: 'Mongolia',
+										_1: {
+											ctor: '::',
+											_0: 'Taiwan',
+											_1: {
+												ctor: '::',
+												_0: 'Russian Federation',
+												_1: {
+													ctor: '::',
+													_0: 'Bahrain',
+													_1: {
+														ctor: '::',
+														_0: 'Iraq',
+														_1: {
+															ctor: '::',
+															_0: 'Israel',
+															_1: {
+																ctor: '::',
+																_0: 'Jordan',
+																_1: {
+																	ctor: '::',
+																	_0: 'Kuwait',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Lebanon',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Oman',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Palestinian Territory',
+																				_1: {
+																					ctor: '::',
+																					_0: 'Qatar',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Saudi Arabia',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Syrian Arab Republic',
+																							_1: {
+																								ctor: '::',
+																								_0: 'United Arab Emirates',
+																								_1: {
+																									ctor: '::',
+																									_0: 'Yemen',
+																									_1: {
+																										ctor: '::',
+																										_0: 'Afghanistan',
+																										_1: {
+																											ctor: '::',
+																											_0: 'Bangladesh',
+																											_1: {
+																												ctor: '::',
+																												_0: 'Bhutan',
+																												_1: {
+																													ctor: '::',
+																													_0: 'India',
+																													_1: {
+																														ctor: '::',
+																														_0: 'Iran, Islamic Republic of',
+																														_1: {
+																															ctor: '::',
+																															_0: 'Maldives',
+																															_1: {
+																																ctor: '::',
+																																_0: 'Nepal',
+																																_1: {
+																																	ctor: '::',
+																																	_0: 'Pakistan',
+																																	_1: {
+																																		ctor: '::',
+																																		_0: 'Sri Lanka',
+																																		_1: {
+																																			ctor: '::',
+																																			_0: 'Brunei Darussalam',
+																																			_1: {
+																																				ctor: '::',
+																																				_0: 'Cambodia',
+																																				_1: {
+																																					ctor: '::',
+																																					_0: 'Christmas Island',
+																																					_1: {
+																																						ctor: '::',
+																																						_0: 'Cocos (Keeling) Islands',
+																																						_1: {ctor: '[]'}
+																																					}
+																																				}
+																																			}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							{
+								ctor: '::',
+								_0: 'Indonesia',
+								_1: {
+									ctor: '::',
+									_0: 'Lao People\'s Democratic Republic',
+									_1: {
+										ctor: '::',
+										_0: 'Malaysia',
+										_1: {
+											ctor: '::',
+											_0: 'Myanmar',
+											_1: {
+												ctor: '::',
+												_0: 'Philippines',
+												_1: {
+													ctor: '::',
+													_0: 'Singapore',
+													_1: {
+														ctor: '::',
+														_0: 'Thailand',
+														_1: {
+															ctor: '::',
+															_0: 'Timor-Leste',
+															_1: {
+																ctor: '::',
+																_0: 'Vietnam',
+																_1: {
+																	ctor: '::',
+																	_0: 'Cyprus',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Georgia',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Turkey',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Bulgaria',
+																				_1: {
+																					ctor: '::',
+																					_0: 'Czech Republic',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Hungary',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Moldova, Republic of',
+																							_1: {
+																								ctor: '::',
+																								_0: 'Poland',
+																								_1: {
+																									ctor: '::',
+																									_0: 'Romania',
+																									_1: {
+																										ctor: '::',
+																										_0: 'Slovakia',
+																										_1: {
+																											ctor: '::',
+																											_0: 'Ukraine',
+																											_1: {
+																												ctor: '::',
+																												_0: 'Denmark',
+																												_1: {
+																													ctor: '::',
+																													_0: 'Estonia',
+																													_1: {
+																														ctor: '::',
+																														_0: 'Faroe Islands',
+																														_1: {
+																															ctor: '::',
+																															_0: 'Finland',
+																															_1: {
+																																ctor: '::',
+																																_0: 'Iceland',
+																																_1: {
+																																	ctor: '::',
+																																	_0: 'Ireland',
+																																	_1: {
+																																		ctor: '::',
+																																		_0: 'Latvia',
+																																		_1: {
+																																			ctor: '::',
+																																			_0: 'Lithuania',
+																																			_1: {
+																																				ctor: '::',
+																																				_0: 'Norway',
+																																				_1: {
+																																					ctor: '::',
+																																					_0: 'Sweden',
+																																					_1: {
+																																						ctor: '::',
+																																						_0: 'United Kingdom',
+																																						_1: {
+																																							ctor: '::',
+																																							_0: 'Albania',
+																																							_1: {
+																																								ctor: '::',
+																																								_0: 'Andorra',
+																																								_1: {
+																																									ctor: '::',
+																																									_0: 'Bosnia and Herzegovina',
+																																									_1: {
+																																										ctor: '::',
+																																										_0: 'Croatia',
+																																										_1: {
+																																											ctor: '::',
+																																											_0: 'Gibraltar',
+																																											_1: {
+																																												ctor: '::',
+																																												_0: 'Greece',
+																																												_1: {ctor: '[]'}
+																																											}
+																																										}
+																																									}
+																																								}
+																																							}
+																																						}
+																																					}
+																																				}
+																																			}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							{
+								ctor: '::',
+								_0: 'Holy See (Vatican City State)',
+								_1: {
+									ctor: '::',
+									_0: 'Italy',
+									_1: {
+										ctor: '::',
+										_0: 'Macedonia',
+										_1: {
+											ctor: '::',
+											_0: 'Malta',
+											_1: {
+												ctor: '::',
+												_0: 'Monaco',
+												_1: {
+													ctor: '::',
+													_0: 'Montenegro',
+													_1: {
+														ctor: '::',
+														_0: 'Portugal',
+														_1: {
+															ctor: '::',
+															_0: 'San Marino',
+															_1: {
+																ctor: '::',
+																_0: 'Serbia',
+																_1: {
+																	ctor: '::',
+																	_0: 'Slovenia',
+																	_1: {
+																		ctor: '::',
+																		_0: 'Spain',
+																		_1: {
+																			ctor: '::',
+																			_0: 'Austria',
+																			_1: {
+																				ctor: '::',
+																				_0: 'Belgium',
+																				_1: {
+																					ctor: '::',
+																					_0: 'France',
+																					_1: {
+																						ctor: '::',
+																						_0: 'Germany',
+																						_1: {
+																							ctor: '::',
+																							_0: 'Liechtenstein',
+																							_1: {
+																								ctor: '::',
+																								_0: 'Luxembourg',
+																								_1: {
+																									ctor: '::',
+																									_0: 'Netherlands',
+																									_1: {
+																										ctor: '::',
+																										_0: 'Switzerland',
+																										_1: {ctor: '[]'}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							})))))));

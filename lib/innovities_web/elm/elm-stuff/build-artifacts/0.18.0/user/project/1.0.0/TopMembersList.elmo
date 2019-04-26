@@ -1,0 +1,1899 @@
+var _user$project$TopMembersList$ratingStarsView = F2(
+	function (rating, leftFloat) {
+		var lefted = leftFloat ? {ctor: '_Tuple2', _0: 'float', _1: 'left'} : {ctor: '_Tuple2', _0: 'float', _1: 'none'};
+		var styledDefault = _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'color', _1: 'white'},
+				_1: {ctor: '[]'}
+			});
+		var styled = _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+				_1: {ctor: '[]'}
+			});
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$style(
+					{
+						ctor: '::',
+						_0: lefted,
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'margin-down', _1: '0.8em'},
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$span,
+					{
+						ctor: '::',
+						_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'star'),
+						_1: {
+							ctor: '::',
+							_0: (_elm_lang$core$Native_Utils.cmp(rating, 1) > -1) ? styled : styledDefault,
+							_1: {ctor: '[]'}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$span,
+						{
+							ctor: '::',
+							_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'star'),
+							_1: {
+								ctor: '::',
+								_0: (_elm_lang$core$Native_Utils.cmp(rating, 2) > -1) ? styled : styledDefault,
+								_1: {ctor: '[]'}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$span,
+							{
+								ctor: '::',
+								_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'star'),
+								_1: {
+									ctor: '::',
+									_0: (_elm_lang$core$Native_Utils.cmp(rating, 3) > -1) ? styled : styledDefault,
+									_1: {ctor: '[]'}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$span,
+								{
+									ctor: '::',
+									_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'star'),
+									_1: {
+										ctor: '::',
+										_0: (_elm_lang$core$Native_Utils.cmp(rating, 4) > -1) ? styled : styledDefault,
+										_1: {ctor: '[]'}
+									}
+								},
+								{ctor: '[]'}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$span,
+									{
+										ctor: '::',
+										_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'star'),
+										_1: {
+											ctor: '::',
+											_0: (_elm_lang$core$Native_Utils.cmp(rating, 5) > -1) ? styled : styledDefault,
+											_1: {ctor: '[]'}
+										}
+									},
+									{ctor: '[]'}),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				}
+			});
+	});
+var _user$project$TopMembersList$addressView = F2(
+	function (country, forInnovators) {
+		var centerAlign = _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'margin-down', _1: '0.8em'},
+				_1: {ctor: '[]'}
+			});
+		var rightFloat = _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'float', _1: 'right'},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'margin-down', _1: '0.8em'},
+						_1: {ctor: '[]'}
+					}
+				}
+			});
+		return A2(
+			_elm_lang$html$Html$div,
+			{
+				ctor: '::',
+				_0: forInnovators ? rightFloat : centerAlign,
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$span,
+					{
+						ctor: '::',
+						_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'location'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+									_1: {ctor: '[]'}
+								}),
+							_1: {ctor: '[]'}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$span,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'font-size', _1: 'small'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text(country),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			});
+	});
+var _user$project$TopMembersList$innovatorsListItemMobile = F8(
+	function (model, id, firstOne, name, bio, rating, country, picUri) {
+		var receiverData = A3(_user$project$Models$ChatMessageReceiverData, id, name, false);
+		var pic = _elm_lang$core$String$isEmpty(picUri) ? 'https://www.bea-sensors.com/wp/wp-content/uploads/2016/10/user_profile_male.jpg' : picUri;
+		var bioLength = 200;
+		var bioProcessed = (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$String$length(bio),
+			bioLength) > 0) ? A2(
+			_elm_lang$core$Basics_ops['++'],
+			A3(_elm_lang$core$String$slice, 0, bioLength, bio),
+			'...') : bio;
+		var leftMargined = firstOne ? {ctor: '_Tuple2', _0: 'margin-left', _1: '0'} : {ctor: '_Tuple2', _0: 'margin-left', _1: '1em'};
+		var currentUser = model.loggedInMember;
+		var mailVisibility = _elm_lang$core$Native_Utils.eq(currentUser.id, 0) ? {ctor: '_Tuple2', _0: 'visibility', _1: 'hidden'} : {ctor: '_Tuple2', _0: 'visibility', _1: 'visible'};
+		return A2(
+			_elm_lang$html$Html$li,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$style(
+					{
+						ctor: '::',
+						_0: leftMargined,
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'float', _1: 'left'},
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('tarrifBorderedItem'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'width', _1: '40vw'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'height', _1: '67.5vh'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$img,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$style(
+									{
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0'},
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('marginedUpRoundedImage'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$src(pic),
+										_1: {ctor: '[]'}
+									}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$p,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$style(
+											{
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'font-size', _1: '90%'},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+														_1: {ctor: '[]'}
+													}
+												}
+											}),
+										_1: {ctor: '[]'}
+									}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text(name),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(_user$project$TopMembersList$addressView, country, false),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$p,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$style(
+													{
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'font-size', _1: '75%'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+																_1: {ctor: '[]'}
+															}
+														}
+													}),
+												_1: {ctor: '[]'}
+											}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text(bioProcessed),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$TopMembersList$ratingStarsView, rating, false),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$div,
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$style(
+														{
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'background', _1: 'darkslategray'},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '1em'},
+																_1: {ctor: '[]'}
+															}
+														}),
+													_1: {ctor: '[]'}
+												},
+												{
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$a,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$style(
+																{
+																	ctor: '::',
+																	_0: mailVisibility,
+																	_1: {ctor: '[]'}
+																}),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$html$Html_Events$onClick(
+																	_user$project$Messages$OnToggleChatWindow(
+																		_elm_lang$core$Maybe$Just(receiverData))),
+																_1: {ctor: '[]'}
+															}
+														},
+														{
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$span,
+																{
+																	ctor: '::',
+																	_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'icon: mail'),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Attributes$style(
+																			{
+																				ctor: '::',
+																				_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
+																},
+																{ctor: '[]'}),
+															_1: {ctor: '[]'}
+														}),
+													_1: {ctor: '[]'}
+												}),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			});
+	});
+var _user$project$TopMembersList$innovatorsListMobile = function (model) {
+	var topInnovators = model.topInnovators;
+	var innovator1 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(topInnovators),
+		0) > 0) ? _user$project$Utils$makeRealInnovator(
+		_elm_lang$core$List$head(topInnovators)) : _user$project$Utils$defaultInnovator;
+	var remaining = A2(_elm_lang$core$List$drop, 1, topInnovators);
+	var innovator2 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(remaining),
+		0) > 0) ? _user$project$Utils$makeRealInnovator(
+		_elm_lang$core$List$head(remaining)) : _user$project$Utils$defaultInnovator;
+	var vis = model.mobileIdeaGeneratorsView ? {ctor: '_Tuple2', _0: 'display', _1: 'initial'} : {ctor: '_Tuple2', _0: 'display', _1: 'none'};
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('innovators'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('responsiveVisibilityMobile'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$style(
+						{
+							ctor: '::',
+							_0: vis,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'position', _1: 'absolute'},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'bottom', _1: '10px'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'left', _1: '0'},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '-5em'},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$ul,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('tarrifPlansStyle'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$style(
+							{
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'width', _1: '100vw'},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '4em'},
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: A8(_user$project$TopMembersList$innovatorsListItemMobile, model, innovator1.id, true, innovator1.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', innovator1.rating, innovator1.country, innovator1.pic_uri),
+					_1: {
+						ctor: '::',
+						_0: A8(_user$project$TopMembersList$innovatorsListItemMobile, model, innovator2.id, false, innovator2.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', innovator2.rating, innovator2.country, innovator2.pic_uri),
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$TopMembersList$innovatorsListItemTab = F7(
+	function (model, id, name, bio, rating, country, picUri) {
+		var receiverData = A3(_user$project$Models$ChatMessageReceiverData, id, name, false);
+		var pic = _elm_lang$core$String$isEmpty(picUri) ? 'https://www.bea-sensors.com/wp/wp-content/uploads/2016/10/user_profile_male.jpg' : picUri;
+		var bioLength = 230;
+		var processedBio = (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$String$length(bio),
+			bioLength) > 0) ? A2(
+			_elm_lang$core$Basics_ops['++'],
+			A3(_elm_lang$core$String$slice, 0, bioLength, bio),
+			'...') : bio;
+		var currentUser = model.loggedInMember;
+		var mailVisibility = _elm_lang$core$Native_Utils.eq(currentUser.id, 0) ? {ctor: '_Tuple2', _0: 'visibility', _1: 'hidden'} : {ctor: '_Tuple2', _0: 'visibility', _1: 'visible'};
+		return A2(
+			_elm_lang$html$Html$li,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$style(
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'float', _1: 'left'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '1em'},
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('tarrifBorderedItem'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'width', _1: '26vw'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'height', _1: '23em'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$a,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$style(
+									{
+										ctor: '::',
+										_0: mailVisibility,
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onClick(
+										_user$project$Messages$OnToggleChatWindow(
+											_elm_lang$core$Maybe$Just(receiverData))),
+									_1: {ctor: '[]'}
+								}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$span,
+									{
+										ctor: '::',
+										_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'icon: mail'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$style(
+												{
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.4em'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'float', _1: 'left'},
+															_1: {ctor: '[]'}
+														}
+													}
+												}),
+											_1: {ctor: '[]'}
+										}
+									},
+									{ctor: '[]'}),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$img,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$style(
+										{
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '-2em'},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '1.5em'},
+												_1: {ctor: '[]'}
+											}
+										}),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('marginedUpRoundedImage'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$src(pic),
+											_1: {ctor: '[]'}
+										}
+									}
+								},
+								{ctor: '[]'}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$p,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$style(
+												{
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'font-size', _1: '100%'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+															_1: {ctor: '[]'}
+														}
+													}
+												}),
+											_1: {ctor: '[]'}
+										}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(name),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$p,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$style(
+													{
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'font-size', _1: '80%'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+																_1: {ctor: '[]'}
+															}
+														}
+													}),
+												_1: {ctor: '[]'}
+											}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text(processedBio),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$TopMembersList$ratingStarsView, rating, true),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$TopMembersList$addressView, country, true),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			});
+	});
+var _user$project$TopMembersList$innovatorsListItem = F7(
+	function (model, id, name, bio, rating, country, picUri) {
+		var receiverData = A3(_user$project$Models$ChatMessageReceiverData, id, name, false);
+		var pic = _elm_lang$core$String$isEmpty(picUri) ? 'https://www.bea-sensors.com/wp/wp-content/uploads/2016/10/user_profile_male.jpg' : picUri;
+		var currentUser = model.loggedInMember;
+		var mailVisibility = _elm_lang$core$Native_Utils.eq(currentUser.id, 0) ? {ctor: '_Tuple2', _0: 'visibility', _1: 'hidden'} : {ctor: '_Tuple2', _0: 'visibility', _1: 'visible'};
+		return A2(
+			_elm_lang$html$Html$li,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$style(
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'float', _1: 'left'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '3em'},
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('tarrifBorderedItem'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'width', _1: '16em'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'height', _1: '23em'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$a,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$style(
+									{
+										ctor: '::',
+										_0: mailVisibility,
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onClick(
+										_user$project$Messages$OnToggleChatWindow(
+											_elm_lang$core$Maybe$Just(receiverData))),
+									_1: {ctor: '[]'}
+								}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$span,
+									{
+										ctor: '::',
+										_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'icon: mail; ratio: 2'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$style(
+												{
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.4em'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'float', _1: 'left'},
+															_1: {ctor: '[]'}
+														}
+													}
+												}),
+											_1: {ctor: '[]'}
+										}
+									},
+									{ctor: '[]'}),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$img,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('marginedUpRoundedImage'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$src(pic),
+										_1: {ctor: '[]'}
+									}
+								},
+								{ctor: '[]'}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$p,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$style(
+												{
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'font-size', _1: '110%'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+															_1: {ctor: '[]'}
+														}
+													}
+												}),
+											_1: {ctor: '[]'}
+										}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(name),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$p,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$style(
+													{
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'font-size', _1: 'small'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+																_1: {ctor: '[]'}
+															}
+														}
+													}),
+												_1: {ctor: '[]'}
+											}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text(bio),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$TopMembersList$ratingStarsView, rating, true),
+										_1: {
+											ctor: '::',
+											_0: A2(_user$project$TopMembersList$addressView, country, true),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			});
+	});
+var _user$project$TopMembersList$innovatorsListTab = function (model) {
+	var topInnovators = model.topInnovators;
+	var innovator1 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(topInnovators),
+		0) > 0) ? _user$project$Utils$makeRealInnovator(
+		_elm_lang$core$List$head(topInnovators)) : _user$project$Utils$defaultInnovator;
+	var remaining = A2(_elm_lang$core$List$drop, 1, topInnovators);
+	var innovator2 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(remaining),
+		0) > 0) ? _user$project$Utils$makeRealInnovator(
+		_elm_lang$core$List$head(remaining)) : _user$project$Utils$defaultInnovator;
+	var remaining2 = A2(_elm_lang$core$List$drop, 1, remaining);
+	var innovator3 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(remaining2),
+		0) > 0) ? _user$project$Utils$makeRealInnovator(
+		_elm_lang$core$List$head(remaining2)) : _user$project$Utils$defaultInnovator;
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('innovators-t'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('responsiveVisibilityTab'),
+				_1: {ctor: '[]'}
+			}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h3,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$style(
+						{
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '5em'},
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Innovators'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$ul,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('tarrifPlansStyle'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'width', _1: '100vw'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '4em'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A7(_user$project$TopMembersList$innovatorsListItemTab, model, innovator1.id, innovator1.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', innovator1.rating, innovator1.country, innovator1.pic_uri),
+						_1: {
+							ctor: '::',
+							_0: A7(_user$project$TopMembersList$innovatorsListItemTab, model, innovator2.id, innovator2.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', innovator2.rating, innovator2.country, innovator2.pic_uri),
+							_1: {
+								ctor: '::',
+								_0: A7(_user$project$TopMembersList$innovatorsListItemTab, model, innovator3.id, innovator3.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', innovator3.rating, innovator3.country, innovator3.pic_uri),
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$TopMembersList$innovatorsList = function (model) {
+	var topInnovators = model.topInnovators;
+	var innovator1 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(topInnovators),
+		0) > 0) ? _user$project$Utils$makeRealInnovator(
+		_elm_lang$core$List$head(topInnovators)) : _user$project$Utils$defaultInnovator;
+	var remaining = A2(_elm_lang$core$List$drop, 1, topInnovators);
+	var innovator2 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(remaining),
+		0) > 0) ? _user$project$Utils$makeRealInnovator(
+		_elm_lang$core$List$head(remaining)) : _user$project$Utils$defaultInnovator;
+	var remaining2 = A2(_elm_lang$core$List$drop, 1, remaining);
+	var innovator3 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(remaining2),
+		0) > 0) ? _user$project$Utils$makeRealInnovator(
+		_elm_lang$core$List$head(remaining2)) : _user$project$Utils$defaultInnovator;
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('innovators'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('responsiveVisibility'),
+				_1: {ctor: '[]'}
+			}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h3,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$style(
+						{
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '5em'},
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Innovators'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$ul,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('tarrifPlansStyle'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'width', _1: '75%'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '4em'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A7(_user$project$TopMembersList$innovatorsListItem, model, innovator1.id, innovator1.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', innovator1.rating, innovator1.country, innovator1.pic_uri),
+						_1: {
+							ctor: '::',
+							_0: A7(_user$project$TopMembersList$innovatorsListItem, model, innovator2.id, innovator2.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', innovator2.rating, innovator2.country, innovator2.pic_uri),
+							_1: {
+								ctor: '::',
+								_0: A7(_user$project$TopMembersList$innovatorsListItem, model, innovator3.id, innovator3.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', innovator3.rating, innovator3.country, innovator3.pic_uri),
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$TopMembersList$organizationsListItemMobile = F7(
+	function (model, id, firstOne, name, bio, country, picUri) {
+		var receiverData = A3(_user$project$Models$ChatMessageReceiverData, id, name, true);
+		var pic = _elm_lang$core$String$isEmpty(picUri) ? 'https://conferencesolutions.com/wp-content/uploads/2017/03/logo-1.png' : picUri;
+		var bioLength = 200;
+		var bioProcessed = (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$String$length(bio),
+			bioLength) > 0) ? A2(
+			_elm_lang$core$Basics_ops['++'],
+			A3(_elm_lang$core$String$slice, 0, bioLength, bio),
+			'...') : bio;
+		var leftMargined = firstOne ? {ctor: '_Tuple2', _0: 'margin-left', _1: '0'} : {ctor: '_Tuple2', _0: 'margin-left', _1: '1em'};
+		var currentUser = model.loggedInMember;
+		var mailVisibility = _elm_lang$core$Native_Utils.eq(currentUser.id, 0) ? {ctor: '_Tuple2', _0: 'visibility', _1: 'hidden'} : {ctor: '_Tuple2', _0: 'visibility', _1: 'visible'};
+		return A2(
+			_elm_lang$html$Html$li,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$style(
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'float', _1: 'left'},
+						_1: {
+							ctor: '::',
+							_0: leftMargined,
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('tarrifBorderedItem'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'width', _1: '40vw'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'height', _1: '64vh'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$img,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$style(
+									{
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0'},
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('marginedUpRoundedImage'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$src(pic),
+										_1: {ctor: '[]'}
+									}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$p,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$style(
+											{
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'font-size', _1: '90%'},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+														_1: {ctor: '[]'}
+													}
+												}
+											}),
+										_1: {ctor: '[]'}
+									}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text(name),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$p,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$style(
+												{
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'font-size', _1: '75%'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+															_1: {ctor: '[]'}
+														}
+													}
+												}),
+											_1: {ctor: '[]'}
+										}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(bioProcessed),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$TopMembersList$addressView, country, false),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$div,
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$style(
+													{
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'background', _1: 'darkslategray'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '1em'},
+															_1: {ctor: '[]'}
+														}
+													}),
+												_1: {ctor: '[]'}
+											},
+											{
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$a,
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$style(
+															{
+																ctor: '::',
+																_0: mailVisibility,
+																_1: {ctor: '[]'}
+															}),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$html$Html_Events$onClick(
+																_user$project$Messages$OnToggleChatWindow(
+																	_elm_lang$core$Maybe$Just(receiverData))),
+															_1: {ctor: '[]'}
+														}
+													},
+													{
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$span,
+															{
+																ctor: '::',
+																_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'icon: mail'),
+																_1: {
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Attributes$style(
+																		{
+																			ctor: '::',
+																			_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {ctor: '[]'}
+																}
+															},
+															{ctor: '[]'}),
+														_1: {ctor: '[]'}
+													}),
+												_1: {ctor: '[]'}
+											}),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			});
+	});
+var _user$project$TopMembersList$organizationsListMobile = function (model) {
+	var vis = model.mobileOrganizationsView ? {ctor: '_Tuple2', _0: 'display', _1: 'initial'} : {ctor: '_Tuple2', _0: 'display', _1: 'none'};
+	var topOrganizations = model.topOrganizations;
+	var organization1 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(topOrganizations),
+		0) > 0) ? _user$project$Utils$makeRealOrganization(
+		_elm_lang$core$List$head(topOrganizations)) : _user$project$Utils$defaultOrganization;
+	var remaining = A2(_elm_lang$core$List$drop, 1, topOrganizations);
+	var organization2 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(remaining),
+		0) > 0) ? _user$project$Utils$makeRealOrganization(
+		_elm_lang$core$List$head(remaining)) : _user$project$Utils$defaultOrganization;
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('organizations'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('responsiveVisibilityMobile'),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$style(
+						{
+							ctor: '::',
+							_0: vis,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'position', _1: 'absolute'},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'bottom', _1: '10px'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'left', _1: '0'},
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$ul,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('tarrifPlansStyle'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$style(
+							{
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'width', _1: '100vw'},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '4em'},
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: A7(_user$project$TopMembersList$organizationsListItemMobile, model, organization1.id, true, organization1.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', organization1.country, organization1.pic_uri),
+					_1: {
+						ctor: '::',
+						_0: A7(_user$project$TopMembersList$organizationsListItemMobile, model, organization2.id, false, organization2.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', organization2.country, organization2.pic_uri),
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$TopMembersList$organizationsListItemTab = F6(
+	function (model, id, name, bio, country, picUri) {
+		var receiverData = A3(_user$project$Models$ChatMessageReceiverData, id, name, true);
+		var pic = _elm_lang$core$String$isEmpty(picUri) ? 'https://conferencesolutions.com/wp-content/uploads/2017/03/logo-1.png' : picUri;
+		var bioLength = 190;
+		var bioProcessed = (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$String$length(bio),
+			bioLength) > 0) ? A2(
+			_elm_lang$core$Basics_ops['++'],
+			A3(_elm_lang$core$String$slice, 0, bioLength, bio),
+			'...') : bio;
+		var currentUser = model.loggedInMember;
+		var mailVisibility = _elm_lang$core$Native_Utils.eq(currentUser.id, 0) ? {ctor: '_Tuple2', _0: 'visibility', _1: 'hidden'} : {ctor: '_Tuple2', _0: 'visibility', _1: 'visible'};
+		return A2(
+			_elm_lang$html$Html$li,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$style(
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'float', _1: 'left'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '1em'},
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('tarrifBorderedItem'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'width', _1: '26vw'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'height', _1: '23em'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$a,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$style(
+									{
+										ctor: '::',
+										_0: mailVisibility,
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onClick(
+										_user$project$Messages$OnToggleChatWindow(
+											_elm_lang$core$Maybe$Just(receiverData))),
+									_1: {ctor: '[]'}
+								}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$span,
+									{
+										ctor: '::',
+										_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'icon: mail'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$style(
+												{
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.4em'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'float', _1: 'left'},
+															_1: {ctor: '[]'}
+														}
+													}
+												}),
+											_1: {ctor: '[]'}
+										}
+									},
+									{ctor: '[]'}),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$img,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$style(
+										{
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '-2em'},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '1.5em'},
+												_1: {ctor: '[]'}
+											}
+										}),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('marginedUpRoundedImage'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$src(pic),
+											_1: {ctor: '[]'}
+										}
+									}
+								},
+								{ctor: '[]'}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$p,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$style(
+												{
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'font-size', _1: '100%'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+															_1: {ctor: '[]'}
+														}
+													}
+												}),
+											_1: {ctor: '[]'}
+										}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(name),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$p,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$style(
+													{
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'font-size', _1: '90%'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+																_1: {ctor: '[]'}
+															}
+														}
+													}),
+												_1: {ctor: '[]'}
+											}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text(bioProcessed),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$TopMembersList$addressView, country, false),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			});
+	});
+var _user$project$TopMembersList$organizationsListItem = F6(
+	function (model, id, name, bio, country, picUri) {
+		var receiverData = A3(_user$project$Models$ChatMessageReceiverData, id, name, true);
+		var pic = _elm_lang$core$String$isEmpty(picUri) ? 'https://conferencesolutions.com/wp-content/uploads/2017/03/logo-1.png' : picUri;
+		var currentUser = model.loggedInMember;
+		var mailVisibility = _elm_lang$core$Native_Utils.eq(currentUser.id, 0) ? {ctor: '_Tuple2', _0: 'visibility', _1: 'hidden'} : {ctor: '_Tuple2', _0: 'visibility', _1: 'visible'};
+		return A2(
+			_elm_lang$html$Html$li,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$style(
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'float', _1: 'left'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '3em'},
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('tarrifBorderedItem'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'width', _1: '16em'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'height', _1: '23em'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$a,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$style(
+									{
+										ctor: '::',
+										_0: mailVisibility,
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onClick(
+										_user$project$Messages$OnToggleChatWindow(
+											_elm_lang$core$Maybe$Just(receiverData))),
+									_1: {ctor: '[]'}
+								}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$span,
+									{
+										ctor: '::',
+										_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'icon: mail; ratio: 2'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$style(
+												{
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.4em'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'float', _1: 'left'},
+															_1: {ctor: '[]'}
+														}
+													}
+												}),
+											_1: {ctor: '[]'}
+										}
+									},
+									{ctor: '[]'}),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$img,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('marginedUpRoundedImage'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$src(pic),
+										_1: {ctor: '[]'}
+									}
+								},
+								{ctor: '[]'}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$p,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$style(
+												{
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'font-size', _1: '110%'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+															_1: {ctor: '[]'}
+														}
+													}
+												}),
+											_1: {ctor: '[]'}
+										}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(name),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$p,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('smallWhiteCentered'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$style(
+													{
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'font-size', _1: 'small'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'margin-left', _1: '0.8em'},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'margin-right', _1: '0.8em'},
+																_1: {ctor: '[]'}
+															}
+														}
+													}),
+												_1: {ctor: '[]'}
+											}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text(bio),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$TopMembersList$addressView, country, false),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			});
+	});
+var _user$project$TopMembersList$organizationsListTab = function (model) {
+	var topOrganizations = model.topOrganizations;
+	var organization1 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(topOrganizations),
+		0) > 0) ? _user$project$Utils$makeRealOrganization(
+		_elm_lang$core$List$head(topOrganizations)) : _user$project$Utils$defaultOrganization;
+	var remaining = A2(_elm_lang$core$List$drop, 1, topOrganizations);
+	var organization2 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(remaining),
+		0) > 0) ? _user$project$Utils$makeRealOrganization(
+		_elm_lang$core$List$head(remaining)) : _user$project$Utils$defaultOrganization;
+	var remaining2 = A2(_elm_lang$core$List$drop, 1, remaining);
+	var organization3 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(remaining2),
+		0) > 0) ? _user$project$Utils$makeRealOrganization(
+		_elm_lang$core$List$head(remaining2)) : _user$project$Utils$defaultOrganization;
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('organizations-t'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('responsiveVisibilityTab'),
+				_1: {ctor: '[]'}
+			}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h3,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$style(
+						{
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '5em'},
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Organisations'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$ul,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('tarrifPlansStyle'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'width', _1: '100vw'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '4em'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A6(_user$project$TopMembersList$organizationsListItemTab, model, organization1.id, organization1.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', organization1.country, organization1.pic_uri),
+						_1: {
+							ctor: '::',
+							_0: A6(_user$project$TopMembersList$organizationsListItemTab, model, organization2.id, organization2.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', organization2.country, organization2.pic_uri),
+							_1: {
+								ctor: '::',
+								_0: A6(_user$project$TopMembersList$organizationsListItemTab, model, organization3.id, organization3.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', organization3.country, organization3.pic_uri),
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$TopMembersList$organizationsList = function (model) {
+	var topOrganizations = model.topOrganizations;
+	var organization1 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(topOrganizations),
+		0) > 0) ? _user$project$Utils$makeRealOrganization(
+		_elm_lang$core$List$head(topOrganizations)) : _user$project$Utils$defaultOrganization;
+	var remaining = A2(_elm_lang$core$List$drop, 1, topOrganizations);
+	var organization2 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(remaining),
+		0) > 0) ? _user$project$Utils$makeRealOrganization(
+		_elm_lang$core$List$head(remaining)) : _user$project$Utils$defaultOrganization;
+	var remaining2 = A2(_elm_lang$core$List$drop, 1, remaining);
+	var organization3 = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(remaining2),
+		0) > 0) ? _user$project$Utils$makeRealOrganization(
+		_elm_lang$core$List$head(remaining2)) : _user$project$Utils$defaultOrganization;
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('organizations'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$class('responsiveVisibility'),
+				_1: {ctor: '[]'}
+			}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h3,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$style(
+						{
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'color', _1: 'gold'},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '5em'},
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Organisations'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$ul,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('tarrifPlansStyle'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'width', _1: '75%'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'margin-top', _1: '4em'},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A6(_user$project$TopMembersList$organizationsListItem, model, organization1.id, organization1.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', organization1.country, organization1.pic_uri),
+						_1: {
+							ctor: '::',
+							_0: A6(_user$project$TopMembersList$organizationsListItem, model, organization2.id, organization2.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', organization2.country, organization2.pic_uri),
+							_1: {
+								ctor: '::',
+								_0: A6(_user$project$TopMembersList$organizationsListItem, model, organization3.id, organization3.name, 'He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and fishery rihgts at once. He was the more ready to do this becuase the rights had becom much less valuable, and he had indeed the vaguest idea where the wood and river in quedtion were.', organization3.country, organization3.pic_uri),
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			}
+		});
+};

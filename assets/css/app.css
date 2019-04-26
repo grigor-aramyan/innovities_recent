@@ -1,0 +1,106 @@
+/* This file is for your main application css. */
+
+.headerStyle {
+  margin-bottom: 2em;
+  /*background-color: black;*/
+}
+
+.headerLogo {
+  /* 12em 4em */
+  width: 7em;
+  height: 3em;
+  display: inline-block;
+  margin-bottom: 1em;
+  background-image: url("/images/logo.png");
+  background-size: 7em 3em;
+}
+
+.whiteDividerStyle {
+  width: 5em;
+  height: 0.1em;
+  display: inline-block;
+  margin: 0em;
+  /*margin-bottom: 1em;*/
+  background-image: url("/images/white_divider.png");
+  background-size: 5em 0.1em;
+}
+
+.boldDividerStyle {
+  width: 5em;
+  height: 0.1em;
+  display: inline-block;
+  margin: 0em;
+  /*margin-bottom: 1em;*/
+  background-image: url("/images/bold_divider.png");
+  background-size: 5em 0.1em;
+}
+
+p, h, div, li a, li a:hover, li a:visited {
+  color: white;
+}
+
+.wantMoreStyle {
+  height: 4em;
+  width: 21em;
+  border: 0.1em solid gold;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.subscribeButtonStyle {
+  background: gold;
+  color: black;
+  font-weight: bold;
+  font-size: 110%;
+  border: none;
+  margin: auto;
+}
+
+.headerNavigationBar {
+  color: gold;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-size: 1.3em;
+}
+
+.backgroundImageStyle {
+  /*z-index: 2;*/
+  /*width: 600em;
+  height: 33em;
+  display: inline-block;*/
+  background-image: url("/images/constellation.png");
+  /*background-size: 600em 33em;
+  width: 99%;*/
+
+  min-width: 100%;
+  min-height: 100%;
+  /*position: fixed;
+  top: 10;
+  left: 10;
+  right: 500;*/
+  /*margin: none;*/
+}
+
+.marginedUpRoundedImage {
+  border-radius: 50%;
+  width: 45%;
+  height: auto;
+  margin-top: -3.7em;
+  margin-right: 2.5em;
+}
+
+.smallWhiteCentered {
+  text-align: center;
+  color: white;
+}
+
+.marginedSkyblue {
+  text-align: center;
+  color: skyblue;
+  margin-top: -1em;
+}
+
+.infoInArmeniaStyle {
+  font-size: 20%;
+  font-weight: normal;
+}

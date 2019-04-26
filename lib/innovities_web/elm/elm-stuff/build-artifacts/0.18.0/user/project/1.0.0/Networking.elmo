@@ -1,0 +1,2339 @@
+var _user$project$Networking$promoDataDecoder = function () {
+	var decoder = A6(
+		_elm_lang$core$Json_Decode$map5,
+		_user$project$Models$PromoRegistration,
+		A2(_elm_lang$core$Json_Decode$field, 'full_name', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'email', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'prefered_organization', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'short_description', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'data',
+			_1: {ctor: '[]'}
+		},
+		decoder);
+}();
+var _user$project$Networking$promoRegDataDecoder = function () {
+	var decoder = A8(
+		_elm_lang$core$Json_Decode$map7,
+		_user$project$Models$PromoRegData,
+		A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int),
+		A2(_elm_lang$core$Json_Decode$field, 'full_name', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'email', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'prefered_organization', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'idea_id', _elm_lang$core$Json_Decode$int),
+		A2(_elm_lang$core$Json_Decode$field, 'short_description', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'register_date', _elm_lang$core$Json_Decode$string));
+	return decoder;
+}();
+var _user$project$Networking$signInDataDecoder = function () {
+	var decoder = A3(
+		_elm_lang$core$Json_Decode$map2,
+		_user$project$Models$RegisteredDataList,
+		A2(
+			_elm_lang$core$Json_Decode$field,
+			'reg_data',
+			_elm_lang$core$Json_Decode$list(_user$project$Networking$promoRegDataDecoder)),
+		A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'data',
+			_1: {ctor: '[]'}
+		},
+		decoder);
+}();
+var _user$project$Networking$dataDecoder = function () {
+	var decoder = A5(
+		_elm_lang$core$Json_Decode$map4,
+		_user$project$Models$DataRegistered,
+		A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int),
+		A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'email', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'token', _elm_lang$core$Json_Decode$string));
+	return decoder;
+}();
+var _user$project$Networking$registeredDataDecoder = function () {
+	var decoder = A3(
+		_elm_lang$core$Json_Decode$map2,
+		_user$project$Models$DataRegisteredWrapper,
+		A2(_elm_lang$core$Json_Decode$field, 'reg_data', _user$project$Networking$dataDecoder),
+		A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'data',
+			_1: {ctor: '[]'}
+		},
+		decoder);
+}();
+var _user$project$Networking$innovatorDecoder = function () {
+	var decoder = A6(
+		_elm_lang$core$Json_Decode$map5,
+		_user$project$Models$TopInnovator,
+		A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int),
+		A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'pic_uri', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'rating', _elm_lang$core$Json_Decode$int),
+		A2(_elm_lang$core$Json_Decode$field, 'country', _elm_lang$core$Json_Decode$string));
+	return _elm_lang$core$Json_Decode$list(decoder);
+}();
+var _user$project$Networking$organizationDecoder = function () {
+	var decoder = A5(
+		_elm_lang$core$Json_Decode$map4,
+		_user$project$Models$TopOrganization,
+		A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int),
+		A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'pic_uri', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'country', _elm_lang$core$Json_Decode$string));
+	return _elm_lang$core$Json_Decode$list(decoder);
+}();
+var _user$project$Networking$topMembersDecoder = function () {
+	var decoder = A3(
+		_elm_lang$core$Json_Decode$map2,
+		_user$project$Models$TopMembers,
+		A2(_elm_lang$core$Json_Decode$field, 'organizations', _user$project$Networking$organizationDecoder),
+		A2(_elm_lang$core$Json_Decode$field, 'innovators', _user$project$Networking$innovatorDecoder));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'data',
+			_1: {ctor: '[]'}
+		},
+		decoder);
+}();
+var _user$project$Networking$memberDataDecoder = function () {
+	var decoder = A6(
+		_elm_lang$core$Json_Decode$map5,
+		_user$project$Models$LoggedInMember,
+		A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int),
+		A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'email', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'isOrganization', _elm_lang$core$Json_Decode$bool),
+		A2(_elm_lang$core$Json_Decode$field, 'token', _elm_lang$core$Json_Decode$string));
+	return decoder;
+}();
+var _user$project$Networking$loginDataDecoder = function () {
+	var decoder = A3(
+		_elm_lang$core$Json_Decode$map2,
+		_user$project$Models$LoggedInMemberWrapper,
+		A2(_elm_lang$core$Json_Decode$field, 'login_data', _user$project$Networking$memberDataDecoder),
+		A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'data',
+			_1: {ctor: '[]'}
+		},
+		decoder);
+}();
+var _user$project$Networking$signOutResponseDecoder = function () {
+	var decoder = A2(
+		_elm_lang$core$Json_Decode$map,
+		_user$project$Models$SignOutResponse,
+		A2(_elm_lang$core$Json_Decode$field, 'response', _elm_lang$core$Json_Decode$string));
+	return decoder;
+}();
+var _user$project$Networking$innovatorExtendedDecoder = function () {
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'connections_count',
+		_elm_lang$core$Json_Decode$int,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'phone',
+			_elm_lang$core$Json_Decode$string,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'username',
+				_elm_lang$core$Json_Decode$string,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'experience',
+					_elm_lang$core$Json_Decode$string,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'education',
+						_elm_lang$core$Json_Decode$string,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'about_me',
+							_elm_lang$core$Json_Decode$string,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'description',
+								_elm_lang$core$Json_Decode$string,
+								A3(
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+									'innovators_plan_id',
+									_elm_lang$core$Json_Decode$int,
+									A3(
+										_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+										'ideas_count',
+										_elm_lang$core$Json_Decode$int,
+										A3(
+											_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+											'email',
+											_elm_lang$core$Json_Decode$string,
+											A3(
+												_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+												'country',
+												_elm_lang$core$Json_Decode$string,
+												A3(
+													_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+													'rating',
+													_elm_lang$core$Json_Decode$int,
+													A3(
+														_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+														'pic_uri',
+														_elm_lang$core$Json_Decode$string,
+														A3(
+															_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+															'name',
+															_elm_lang$core$Json_Decode$string,
+															A3(
+																_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+																'id',
+																_elm_lang$core$Json_Decode$int,
+																_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$InnovatorExtended))))))))))))))));
+	return decoder;
+}();
+var _user$project$Networking$innovatorExtendedWrapperDecoder = function () {
+	var decoder = A3(
+		_elm_lang$core$Json_Decode$map2,
+		_user$project$Models$GetInnovatorDataResponseWrapper,
+		A2(_elm_lang$core$Json_Decode$field, 'innovator_data', _user$project$Networking$innovatorExtendedDecoder),
+		A2(_elm_lang$core$Json_Decode$field, 'token', _elm_lang$core$Json_Decode$string));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'data',
+			_1: {ctor: '[]'}
+		},
+		decoder);
+}();
+var _user$project$Networking$organizationExtendedDecoder = function () {
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'connections_count',
+		_elm_lang$core$Json_Decode$int,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'rating',
+			_elm_lang$core$Json_Decode$int,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'phone',
+				_elm_lang$core$Json_Decode$string,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'username',
+					_elm_lang$core$Json_Decode$string,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'interested_industries',
+						_elm_lang$core$Json_Decode$string,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'industry',
+							_elm_lang$core$Json_Decode$string,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'about_us',
+								_elm_lang$core$Json_Decode$string,
+								A3(
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+									'webpage',
+									_elm_lang$core$Json_Decode$string,
+									A3(
+										_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+										'description',
+										_elm_lang$core$Json_Decode$string,
+										A3(
+											_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+											'organizations_plan_id',
+											_elm_lang$core$Json_Decode$int,
+											A3(
+												_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+												'complete_ideas_count',
+												_elm_lang$core$Json_Decode$int,
+												A3(
+													_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+													'email',
+													_elm_lang$core$Json_Decode$string,
+													A3(
+														_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+														'country',
+														_elm_lang$core$Json_Decode$string,
+														A3(
+															_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+															'pic_uri',
+															_elm_lang$core$Json_Decode$string,
+															A3(
+																_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+																'name',
+																_elm_lang$core$Json_Decode$string,
+																A3(
+																	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+																	'id',
+																	_elm_lang$core$Json_Decode$int,
+																	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$OrganizationExtended)))))))))))))))));
+	return decoder;
+}();
+var _user$project$Networking$organizationExtendedWrapperDecoder = function () {
+	var decoder = A3(
+		_elm_lang$core$Json_Decode$map2,
+		_user$project$Models$GetOrganizationDataResponseWrapper,
+		A2(_elm_lang$core$Json_Decode$field, 'organization_data', _user$project$Networking$organizationExtendedDecoder),
+		A2(_elm_lang$core$Json_Decode$field, 'token', _elm_lang$core$Json_Decode$string));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'data',
+			_1: {ctor: '[]'}
+		},
+		decoder);
+}();
+var _user$project$Networking$simpleResponseDecoder = function () {
+	var decoder = A3(
+		_elm_lang$core$Json_Decode$map2,
+		_user$project$Models$SimpleResponse,
+		A2(_elm_lang$core$Json_Decode$field, 'success', _elm_lang$core$Json_Decode$string),
+		A2(_elm_lang$core$Json_Decode$field, 'error', _elm_lang$core$Json_Decode$string));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'response',
+			_1: {ctor: '[]'}
+		},
+		decoder);
+}();
+var _user$project$Networking$extendedPostsListDecoder = function () {
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'post_likes',
+		_elm_lang$core$Json_Decode$int,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'post_message',
+			_elm_lang$core$Json_Decode$string,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'post_media_file',
+				_elm_lang$core$Json_Decode$string,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'post_id',
+					_elm_lang$core$Json_Decode$int,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'author_id',
+						_elm_lang$core$Json_Decode$int,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'author_pic',
+							_elm_lang$core$Json_Decode$string,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'author_desc',
+								_elm_lang$core$Json_Decode$string,
+								A3(
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+									'author_name',
+									_elm_lang$core$Json_Decode$string,
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$ExtendedPostData)))))))));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'response',
+			_1: {
+				ctor: '::',
+				_0: 'posts',
+				_1: {ctor: '[]'}
+			}
+		},
+		_elm_lang$core$Json_Decode$list(decoder));
+}();
+var _user$project$Networking$chatHistoryDecoder = function () {
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'inserted_at',
+		_elm_lang$core$Json_Decode$string,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'receiver_is_organization',
+			_elm_lang$core$Json_Decode$bool,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'sender_is_organization',
+				_elm_lang$core$Json_Decode$bool,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'body',
+					_elm_lang$core$Json_Decode$string,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'receiver_id',
+						_elm_lang$core$Json_Decode$int,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'sender_id',
+							_elm_lang$core$Json_Decode$int,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'id',
+								_elm_lang$core$Json_Decode$int,
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$IncomingChatMessage))))))));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'response',
+			_1: {
+				ctor: '::',
+				_0: 'messages',
+				_1: {ctor: '[]'}
+			}
+		},
+		_elm_lang$core$Json_Decode$list(decoder));
+}();
+var _user$project$Networking$unredMessagesDecoder = function () {
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'sender_picture_uri',
+		_elm_lang$core$Json_Decode$string,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'inserted_at',
+			_elm_lang$core$Json_Decode$string,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'receiver_is_organization',
+				_elm_lang$core$Json_Decode$bool,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'sender_is_organization',
+					_elm_lang$core$Json_Decode$bool,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'body',
+						_elm_lang$core$Json_Decode$string,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'receiver_id',
+							_elm_lang$core$Json_Decode$int,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'sender_id',
+								_elm_lang$core$Json_Decode$int,
+								A3(
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+									'id',
+									_elm_lang$core$Json_Decode$int,
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$IncomingUnredChatMessage)))))))));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'response',
+			_1: {
+				ctor: '::',
+				_0: 'unreds',
+				_1: {ctor: '[]'}
+			}
+		},
+		_elm_lang$core$Json_Decode$list(decoder));
+}();
+var _user$project$Networking$suggestionsDecoder = function () {
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'picture',
+		_elm_lang$core$Json_Decode$string,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'description',
+			_elm_lang$core$Json_Decode$string,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'name',
+				_elm_lang$core$Json_Decode$string,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'id',
+					_elm_lang$core$Json_Decode$int,
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$SuggestedUser)))));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'response',
+			_1: {
+				ctor: '::',
+				_0: 'suggestions',
+				_1: {ctor: '[]'}
+			}
+		},
+		_elm_lang$core$Json_Decode$list(decoder));
+}();
+var _user$project$Networking$notificationsListDecoder = function () {
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'requestedIdeaId',
+		_elm_lang$core$Json_Decode$int,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'notificationType',
+			_elm_lang$core$Json_Decode$string,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'body',
+				_elm_lang$core$Json_Decode$string,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'title',
+					_elm_lang$core$Json_Decode$string,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'id',
+						_elm_lang$core$Json_Decode$int,
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$NotificationItem))))));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'response',
+			_1: {
+				ctor: '::',
+				_0: 'notifications',
+				_1: {ctor: '[]'}
+			}
+		},
+		_elm_lang$core$Json_Decode$list(decoder));
+}();
+var _user$project$Networking$postCommentDataDecoder = function () {
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'token',
+		_elm_lang$core$Json_Decode$string,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'post_id',
+			_elm_lang$core$Json_Decode$int,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'input_date',
+				_elm_lang$core$Json_Decode$string,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'body',
+					_elm_lang$core$Json_Decode$string,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'author_name',
+						_elm_lang$core$Json_Decode$string,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'author_is_org',
+							_elm_lang$core$Json_Decode$bool,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'author_id',
+								_elm_lang$core$Json_Decode$int,
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$PostCommentData))))))));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'response',
+			_1: {ctor: '[]'}
+		},
+		decoder);
+}();
+var _user$project$Networking$postCommentsDecoder = function () {
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'token',
+		_elm_lang$core$Json_Decode$string,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'post_id',
+			_elm_lang$core$Json_Decode$int,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'input_date',
+				_elm_lang$core$Json_Decode$string,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'body',
+					_elm_lang$core$Json_Decode$string,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'author_name',
+						_elm_lang$core$Json_Decode$string,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'author_is_org',
+							_elm_lang$core$Json_Decode$bool,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'author_id',
+								_elm_lang$core$Json_Decode$int,
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$PostCommentData))))))));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'response',
+			_1: {
+				ctor: '::',
+				_0: 'comments',
+				_1: {ctor: '[]'}
+			}
+		},
+		_elm_lang$core$Json_Decode$list(decoder));
+}();
+var _user$project$Networking$processedSearchDataDecoder = function () {
+	var idea_decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'innovator_pic',
+		_elm_lang$core$Json_Decode$string,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'innovator_name',
+			_elm_lang$core$Json_Decode$string,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'innovator_id',
+				_elm_lang$core$Json_Decode$int,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'video_uri',
+					_elm_lang$core$Json_Decode$string,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'picture_uris',
+						_elm_lang$core$Json_Decode$string,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'price',
+							_elm_lang$core$Json_Decode$string,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'tags',
+								_elm_lang$core$Json_Decode$string,
+								A3(
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+									'industry',
+									_elm_lang$core$Json_Decode$string,
+									A3(
+										_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+										'idea_name',
+										_elm_lang$core$Json_Decode$string,
+										A3(
+											_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+											'short_description',
+											_elm_lang$core$Json_Decode$string,
+											A3(
+												_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+												'id',
+												_elm_lang$core$Json_Decode$int,
+												_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$IdeaData))))))))))));
+	var post_decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'post_likes',
+		_elm_lang$core$Json_Decode$int,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'post_message',
+			_elm_lang$core$Json_Decode$string,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'post_media_file',
+				_elm_lang$core$Json_Decode$string,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'post_id',
+					_elm_lang$core$Json_Decode$int,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'author_id',
+						_elm_lang$core$Json_Decode$int,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'author_pic',
+							_elm_lang$core$Json_Decode$string,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'author_desc',
+								_elm_lang$core$Json_Decode$string,
+								A3(
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+									'author_name',
+									_elm_lang$core$Json_Decode$string,
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$ExtendedPostData)))))))));
+	var organization_decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'connections_count',
+		_elm_lang$core$Json_Decode$int,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'rating',
+			_elm_lang$core$Json_Decode$int,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'phone',
+				_elm_lang$core$Json_Decode$string,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'username',
+					_elm_lang$core$Json_Decode$string,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'interested_industries',
+						_elm_lang$core$Json_Decode$string,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'industry',
+							_elm_lang$core$Json_Decode$string,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'about_us',
+								_elm_lang$core$Json_Decode$string,
+								A3(
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+									'webpage',
+									_elm_lang$core$Json_Decode$string,
+									A3(
+										_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+										'description',
+										_elm_lang$core$Json_Decode$string,
+										A3(
+											_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+											'organizations_plan_id',
+											_elm_lang$core$Json_Decode$int,
+											A3(
+												_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+												'complete_ideas_count',
+												_elm_lang$core$Json_Decode$int,
+												A3(
+													_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+													'email',
+													_elm_lang$core$Json_Decode$string,
+													A3(
+														_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+														'country',
+														_elm_lang$core$Json_Decode$string,
+														A3(
+															_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+															'pic_uri',
+															_elm_lang$core$Json_Decode$string,
+															A3(
+																_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+																'name',
+																_elm_lang$core$Json_Decode$string,
+																A3(
+																	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+																	'id',
+																	_elm_lang$core$Json_Decode$int,
+																	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$OrganizationExtended)))))))))))))))));
+	var innovator_decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'connections_count',
+		_elm_lang$core$Json_Decode$int,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'phone',
+			_elm_lang$core$Json_Decode$string,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'username',
+				_elm_lang$core$Json_Decode$string,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'experience',
+					_elm_lang$core$Json_Decode$string,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'education',
+						_elm_lang$core$Json_Decode$string,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'about_me',
+							_elm_lang$core$Json_Decode$string,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'description',
+								_elm_lang$core$Json_Decode$string,
+								A3(
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+									'innovators_plan_id',
+									_elm_lang$core$Json_Decode$int,
+									A3(
+										_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+										'ideas_count',
+										_elm_lang$core$Json_Decode$int,
+										A3(
+											_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+											'email',
+											_elm_lang$core$Json_Decode$string,
+											A3(
+												_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+												'country',
+												_elm_lang$core$Json_Decode$string,
+												A3(
+													_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+													'rating',
+													_elm_lang$core$Json_Decode$int,
+													A3(
+														_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+														'pic_uri',
+														_elm_lang$core$Json_Decode$string,
+														A3(
+															_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+															'name',
+															_elm_lang$core$Json_Decode$string,
+															A3(
+																_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+																'id',
+																_elm_lang$core$Json_Decode$int,
+																_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$InnovatorExtended))))))))))))))));
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'posts',
+		_elm_lang$core$Json_Decode$list(post_decoder),
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'ideas',
+			_elm_lang$core$Json_Decode$list(idea_decoder),
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'organizations',
+				_elm_lang$core$Json_Decode$list(organization_decoder),
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'innovators',
+					_elm_lang$core$Json_Decode$list(innovator_decoder),
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$ProcessedSearchDataWrapper)))));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'response',
+			_1: {ctor: '[]'}
+		},
+		decoder);
+}();
+var _user$project$Networking$fullIdeaDataDecoder = function () {
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'custom_nda',
+		_elm_lang$core$Json_Decode$string,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'is_default_nda',
+			_elm_lang$core$Json_Decode$bool,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'has_nda',
+				_elm_lang$core$Json_Decode$bool,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'long_description',
+					_elm_lang$core$Json_Decode$string,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'innovator_pic',
+						_elm_lang$core$Json_Decode$string,
+						A3(
+							_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+							'innovator_name',
+							_elm_lang$core$Json_Decode$string,
+							A3(
+								_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+								'innovator_id',
+								_elm_lang$core$Json_Decode$int,
+								A3(
+									_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+									'video_uri',
+									_elm_lang$core$Json_Decode$string,
+									A3(
+										_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+										'picture_uris',
+										_elm_lang$core$Json_Decode$string,
+										A3(
+											_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+											'price',
+											_elm_lang$core$Json_Decode$string,
+											A3(
+												_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+												'tags',
+												_elm_lang$core$Json_Decode$string,
+												A3(
+													_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+													'industry',
+													_elm_lang$core$Json_Decode$string,
+													A3(
+														_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+														'idea_name',
+														_elm_lang$core$Json_Decode$string,
+														A3(
+															_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+															'short_description',
+															_elm_lang$core$Json_Decode$string,
+															A3(
+																_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+																'id',
+																_elm_lang$core$Json_Decode$int,
+																_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$FullIdeaData))))))))))))))));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'response',
+			_1: {ctor: '[]'}
+		},
+		decoder);
+}();
+var _user$project$Networking$signedNdasListDecoder = function () {
+	var decoder = A3(
+		_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+		'signing_date',
+		_elm_lang$core$Json_Decode$string,
+		A3(
+			_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+			'idea_price',
+			_elm_lang$core$Json_Decode$string,
+			A3(
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+				'idea_industry',
+				_elm_lang$core$Json_Decode$string,
+				A3(
+					_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+					'idea_name',
+					_elm_lang$core$Json_Decode$string,
+					A3(
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+						'idea_id',
+						_elm_lang$core$Json_Decode$int,
+						_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Models$SignedNDA))))));
+	return A2(
+		_elm_lang$core$Json_Decode$at,
+		{
+			ctor: '::',
+			_0: 'response',
+			_1: {
+				ctor: '::',
+				_0: 'ndas',
+				_1: {ctor: '[]'}
+			}
+		},
+		_elm_lang$core$Json_Decode$list(decoder));
+}();
+var _user$project$Networking$signInDataEncoder = function (signInData) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'first_password',
+				_1: _elm_lang$core$Json_Encode$string(signInData.first_password)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'second_password',
+					_1: _elm_lang$core$Json_Encode$string(signInData.second_password)
+				},
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$Networking$promoDataEncoder = function (promoData) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'full_name',
+				_1: _elm_lang$core$Json_Encode$string(promoData.full_name)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'email',
+					_1: _elm_lang$core$Json_Encode$string(promoData.email)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'prefered_organization',
+						_1: _elm_lang$core$Json_Encode$string(promoData.prefered_organization)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'short_description',
+							_1: _elm_lang$core$Json_Encode$string(promoData.short_description)
+						},
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$innovatorRegisterDataEncoder = F2(
+	function (tarrifPlan, regData) {
+		return _elm_lang$core$Json_Encode$object(
+			{
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'full_name',
+					_1: _elm_lang$core$Json_Encode$string(regData.full_name)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'email',
+						_1: _elm_lang$core$Json_Encode$string(regData.email)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'password',
+							_1: _elm_lang$core$Json_Encode$string(regData.password)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'country',
+								_1: _elm_lang$core$Json_Encode$string(regData.country)
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'receive_newsletter',
+									_1: _elm_lang$core$Json_Encode$bool(regData.receiveNewsletterAgreement)
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'tariff_plan',
+										_1: _elm_lang$core$Json_Encode$string(tarrifPlan)
+									},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}
+			});
+	});
+var _user$project$Networking$organizationRegisterDataEncoder = F2(
+	function (tarrifPlan, regData) {
+		return _elm_lang$core$Json_Encode$object(
+			{
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'name',
+					_1: _elm_lang$core$Json_Encode$string(regData.name)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'email',
+						_1: _elm_lang$core$Json_Encode$string(regData.email)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'password',
+							_1: _elm_lang$core$Json_Encode$string(regData.password)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'country',
+								_1: _elm_lang$core$Json_Encode$string(regData.country)
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'receive_newsletter',
+									_1: _elm_lang$core$Json_Encode$bool(regData.receiveNewsletterAgreement)
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'tariff_plan',
+										_1: _elm_lang$core$Json_Encode$string(tarrifPlan)
+									},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}
+			});
+	});
+var _user$project$Networking$loginDataEncoder = function (loginData) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'email',
+				_1: _elm_lang$core$Json_Encode$string(loginData.email)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'password',
+					_1: _elm_lang$core$Json_Encode$string(loginData.password)
+				},
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$Networking$tokenEncoder = function (token) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'token',
+				_1: _elm_lang$core$Json_Encode$string(token)
+			},
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Networking$getMemberDataStructEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'id',
+				_1: _elm_lang$core$Json_Encode$int(data.id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'token',
+					_1: _elm_lang$core$Json_Encode$string(data.token)
+				},
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$Networking$contactUsFormEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'name',
+				_1: _elm_lang$core$Json_Encode$string(data.name)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'email',
+					_1: _elm_lang$core$Json_Encode$string(data.email)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'message',
+						_1: _elm_lang$core$Json_Encode$string(data.message)
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _user$project$Networking$postDataEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'message',
+				_1: _elm_lang$core$Json_Encode$string(data.message)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'media_file_uri',
+					_1: _elm_lang$core$Json_Encode$string(data.mediaFileUri)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'innovator_id',
+						_1: _elm_lang$core$Json_Encode$int(data.innovator_id)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'organization_id',
+							_1: _elm_lang$core$Json_Encode$int(data.organization_id)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'token',
+								_1: _elm_lang$core$Json_Encode$string(data.token)
+							},
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$ideaDataEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'innovator_id',
+				_1: _elm_lang$core$Json_Encode$int(data.innovator_id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'short_description',
+					_1: _elm_lang$core$Json_Encode$string(data.shortDescription)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'long_description',
+						_1: _elm_lang$core$Json_Encode$string(data.longDescription)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'idea_name',
+							_1: _elm_lang$core$Json_Encode$string(data.ideaName)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'industry',
+								_1: _elm_lang$core$Json_Encode$string(data.industry)
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'tags',
+									_1: _elm_lang$core$Json_Encode$string(data.tags)
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'price',
+										_1: _elm_lang$core$Json_Encode$string(data.ideaPrice)
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'picture_uris',
+											_1: _elm_lang$core$Json_Encode$string(data.pictureUris)
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'video_uri',
+												_1: _elm_lang$core$Json_Encode$string(data.videoUri)
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'token',
+													_1: _elm_lang$core$Json_Encode$string(data.token)
+												},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'has_nda',
+														_1: _elm_lang$core$Json_Encode$bool(data.hasNda)
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'is_default_nda',
+															_1: _elm_lang$core$Json_Encode$bool(data.isDefaultNda)
+														},
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'custom_nda',
+																_1: _elm_lang$core$Json_Encode$string(data.customNda)
+															},
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$chatHistoryRequestEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'to_id',
+				_1: _elm_lang$core$Json_Encode$int(data.to_id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'from_id',
+					_1: _elm_lang$core$Json_Encode$int(data.from_id)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'to_is_organization',
+						_1: _elm_lang$core$Json_Encode$bool(data.to_is_organization)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'from_is_organization',
+							_1: _elm_lang$core$Json_Encode$bool(data.from_is_organization)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'token',
+								_1: _elm_lang$core$Json_Encode$string(data.token)
+							},
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$unredMessagesRequestEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'receiver_id',
+				_1: _elm_lang$core$Json_Encode$int(data.receiver_id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'receiver_is_org',
+					_1: _elm_lang$core$Json_Encode$bool(data.receiver_is_organization)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'token',
+						_1: _elm_lang$core$Json_Encode$string(data.token)
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _user$project$Networking$makeConnectionDataEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'sender_id',
+				_1: _elm_lang$core$Json_Encode$int(data.sender_id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'sender_is_organization',
+					_1: _elm_lang$core$Json_Encode$bool(data.sender_is_organization)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'receiver_id',
+						_1: _elm_lang$core$Json_Encode$int(data.receiver_id)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'receiver_is_organization',
+							_1: _elm_lang$core$Json_Encode$bool(data.receiver_is_organization)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'token',
+								_1: _elm_lang$core$Json_Encode$string(data.token)
+							},
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$updatedInnovatorSettingsEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'id',
+				_1: _elm_lang$core$Json_Encode$int(data.id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'full_name',
+					_1: _elm_lang$core$Json_Encode$string(
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							data.name,
+							A2(_elm_lang$core$Basics_ops['++'], ' ', data.surname)))
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'picture_uri',
+						_1: _elm_lang$core$Json_Encode$string(data.pic_uri)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'country',
+							_1: _elm_lang$core$Json_Encode$string(data.country)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'email',
+								_1: _elm_lang$core$Json_Encode$string(data.email)
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'description',
+									_1: _elm_lang$core$Json_Encode$string(data.description)
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'about_me',
+										_1: _elm_lang$core$Json_Encode$string(data.about_me)
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'education',
+											_1: _elm_lang$core$Json_Encode$string(data.education)
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'experience',
+												_1: _elm_lang$core$Json_Encode$string(data.experience)
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'username',
+													_1: _elm_lang$core$Json_Encode$string(data.username)
+												},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'phone',
+														_1: _elm_lang$core$Json_Encode$string(data.phone)
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'token',
+															_1: _elm_lang$core$Json_Encode$string(data.token)
+														},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$updateOrganizationDataEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'id',
+				_1: _elm_lang$core$Json_Encode$int(data.id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'name',
+					_1: _elm_lang$core$Json_Encode$string(data.name)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'logo_uri',
+						_1: _elm_lang$core$Json_Encode$string(data.pic_uri)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'country',
+							_1: _elm_lang$core$Json_Encode$string(data.country)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'email',
+								_1: _elm_lang$core$Json_Encode$string(data.email)
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'description',
+									_1: _elm_lang$core$Json_Encode$string(data.description)
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'webpage',
+										_1: _elm_lang$core$Json_Encode$string(data.webpage)
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'about_us',
+											_1: _elm_lang$core$Json_Encode$string(data.about_us)
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'industry',
+												_1: _elm_lang$core$Json_Encode$string(data.industry)
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'interested_industries',
+													_1: _elm_lang$core$Json_Encode$string(data.interested_industries)
+												},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'username',
+														_1: _elm_lang$core$Json_Encode$string(data.username)
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'phone',
+															_1: _elm_lang$core$Json_Encode$string(data.phone)
+														},
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'token',
+																_1: _elm_lang$core$Json_Encode$string(data.token)
+															},
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$tariffPlanDataEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'id',
+				_1: _elm_lang$core$Json_Encode$int(data.id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'is_organization',
+					_1: _elm_lang$core$Json_Encode$bool(data.is_organization)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'tariff_plan_name',
+						_1: _elm_lang$core$Json_Encode$string(data.tariff_plan_name)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'token',
+							_1: _elm_lang$core$Json_Encode$string(data.token)
+						},
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$postCommentDataEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'author_id',
+				_1: _elm_lang$core$Json_Encode$int(data.author_id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'author_is_org',
+					_1: _elm_lang$core$Json_Encode$bool(data.author_is_org)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'body',
+						_1: _elm_lang$core$Json_Encode$string(data.body)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'post_id',
+							_1: _elm_lang$core$Json_Encode$int(data.post_id)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'token',
+								_1: _elm_lang$core$Json_Encode$string(data.token)
+							},
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$searchDataEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'query',
+				_1: _elm_lang$core$Json_Encode$string(data.query)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'token',
+					_1: _elm_lang$core$Json_Encode$string(data.token)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'user_id',
+						_1: _elm_lang$core$Json_Encode$int(data.user_id)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'user_is_org',
+							_1: _elm_lang$core$Json_Encode$bool(data.user_is_org)
+						},
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$fullDescReqWrapperEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'notification_type_code',
+				_1: _elm_lang$core$Json_Encode$int(data.notification_type_code)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'requested_idea_id',
+					_1: _elm_lang$core$Json_Encode$int(data.requested_idea_id)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'addressed_to',
+						_1: _elm_lang$core$Json_Encode$int(data.addressed_to)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'addressed_to_is_org',
+							_1: _elm_lang$core$Json_Encode$bool(data.addressed_to_is_org)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'requested_from',
+								_1: _elm_lang$core$Json_Encode$int(data.requested_from)
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'requested_from_is_org',
+									_1: _elm_lang$core$Json_Encode$bool(data.requested_from_is_org)
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'token',
+										_1: _elm_lang$core$Json_Encode$string(data.token)
+									},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$acceptRejectFullDescWrapperEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'notif_id',
+				_1: _elm_lang$core$Json_Encode$int(data.notif_id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'res_code',
+					_1: _elm_lang$core$Json_Encode$int(data.res_code)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'token',
+						_1: _elm_lang$core$Json_Encode$string(data.token)
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _user$project$Networking$ndaDataEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'author_id',
+				_1: _elm_lang$core$Json_Encode$int(data.author_id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'author_is_org',
+					_1: _elm_lang$core$Json_Encode$bool(data.author_is_org)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'idea_id',
+						_1: _elm_lang$core$Json_Encode$int(data.idea_id)
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'recipient_id',
+							_1: _elm_lang$core$Json_Encode$int(data.recipient_id)
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'recipient_is_org',
+								_1: _elm_lang$core$Json_Encode$bool(data.recipient_is_org)
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'token',
+									_1: _elm_lang$core$Json_Encode$string(data.token)
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'is_default_nda',
+										_1: _elm_lang$core$Json_Encode$bool(data.is_default_nda)
+									},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}
+			}
+		});
+};
+var _user$project$Networking$userIdentifierWrapperEncoder = function (data) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'id',
+				_1: _elm_lang$core$Json_Encode$int(data.id)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'is_org',
+					_1: _elm_lang$core$Json_Encode$bool(data.is_org)
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'token',
+						_1: _elm_lang$core$Json_Encode$string(data.token)
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _user$project$Networking$fetchSuggestions = F2(
+	function (data, uri) {
+		var body = _elm_lang$http$Http$jsonBody(
+			_user$project$Networking$getMemberDataStructEncoder(data));
+		return A3(_elm_lang$http$Http$post, uri, body, _user$project$Networking$suggestionsDecoder);
+	});
+var _user$project$Networking$fetchSuggestionsCmd = F2(
+	function (data, uri) {
+		return A2(
+			_elm_lang$http$Http$send,
+			_user$project$Messages$OnFetchSuggestionsCompleted,
+			A2(_user$project$Networking$fetchSuggestions, data, uri));
+	});
+var _user$project$Networking$api = 'http://localhost:4000/api/';
+var _user$project$Networking$memberLoginUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'member/login');
+var _user$project$Networking$memberLogin = function (memberData) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$loginDataEncoder(memberData));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$memberLoginUri, body, _user$project$Networking$loginDataDecoder);
+};
+var _user$project$Networking$memberLoginCmd = function (memberData) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnLoggingInMemberCompleted,
+		_user$project$Networking$memberLogin(memberData));
+};
+var _user$project$Networking$fetchTopMembersUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'top_members');
+var _user$project$Networking$topMembersFetch = A2(_elm_lang$http$Http$get, _user$project$Networking$fetchTopMembersUri, _user$project$Networking$topMembersDecoder);
+var _user$project$Networking$topMembersFetchCmd = A2(_elm_lang$http$Http$send, _user$project$Messages$TopMembersFetchCompleted, _user$project$Networking$topMembersFetch);
+var _user$project$Networking$organizationRegisterUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'organization/register');
+var _user$project$Networking$organizationRegister = F2(
+	function (registerData, tarrifPlan) {
+		var body = _elm_lang$http$Http$jsonBody(
+			A2(_user$project$Networking$organizationRegisterDataEncoder, tarrifPlan, registerData));
+		return A3(_elm_lang$http$Http$post, _user$project$Networking$organizationRegisterUri, body, _user$project$Networking$registeredDataDecoder);
+	});
+var _user$project$Networking$organizationRegisterCmd = F2(
+	function (registerData, tarrifPlan) {
+		return A2(
+			_elm_lang$http$Http$send,
+			_user$project$Messages$CompanyRegisterCompleted,
+			A2(_user$project$Networking$organizationRegister, registerData, tarrifPlan));
+	});
+var _user$project$Networking$innovatorRegisterUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'innovator/register');
+var _user$project$Networking$innovatorRegister = F2(
+	function (registerData, tarrifPlan) {
+		var body = _elm_lang$http$Http$jsonBody(
+			A2(_user$project$Networking$innovatorRegisterDataEncoder, tarrifPlan, registerData));
+		return A3(_elm_lang$http$Http$post, _user$project$Networking$innovatorRegisterUri, body, _user$project$Networking$registeredDataDecoder);
+	});
+var _user$project$Networking$innovatorRegisterCmd = F2(
+	function (registerData, tarrifPlan) {
+		return A2(
+			_elm_lang$http$Http$send,
+			_user$project$Messages$InnovatorRegisterCompleted,
+			A2(_user$project$Networking$innovatorRegister, registerData, tarrifPlan));
+	});
+var _user$project$Networking$promoRegisterUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'promo/registration');
+var _user$project$Networking$promoRegister = function (promoData) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$promoDataEncoder(promoData));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$promoRegisterUri, body, _user$project$Networking$promoDataDecoder);
+};
+var _user$project$Networking$promoRegisterCmd = function (promoData) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$PromoRegistrationCallCompleted,
+		_user$project$Networking$promoRegister(promoData));
+};
+var _user$project$Networking$adminPanelSignInUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'admin_login');
+var _user$project$Networking$adminPanelSignIn = function (signInData) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$signInDataEncoder(signInData));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$adminPanelSignInUri, body, _user$project$Networking$signInDataDecoder);
+};
+var _user$project$Networking$adminPanelSignInCmd = function (signInData) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$AdminPanelSignInCompleted,
+		_user$project$Networking$adminPanelSignIn(signInData));
+};
+var _user$project$Networking$signOutUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'sign_out');
+var _user$project$Networking$signOut = function (token) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$tokenEncoder(token));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$signOutUri, body, _user$project$Networking$signOutResponseDecoder);
+};
+var _user$project$Networking$signOutCmd = function (token) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnSignOutCompleted,
+		_user$project$Networking$signOut(token));
+};
+var _user$project$Networking$getInnovatorDataUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'get_innovator_data');
+var _user$project$Networking$getInnovatorData = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$getMemberDataStructEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$getInnovatorDataUri, body, _user$project$Networking$innovatorExtendedWrapperDecoder);
+};
+var _user$project$Networking$getInnovatorDataCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnGetInnovatorDataCompleted,
+		_user$project$Networking$getInnovatorData(data));
+};
+var _user$project$Networking$getOrganizationDataUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'get_organization_data');
+var _user$project$Networking$getOrganizationData = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$getMemberDataStructEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$getOrganizationDataUri, body, _user$project$Networking$organizationExtendedWrapperDecoder);
+};
+var _user$project$Networking$getOrganizationDataCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnGetOrganizationDataCompleted,
+		_user$project$Networking$getOrganizationData(data));
+};
+var _user$project$Networking$sendContactUsEmailUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'send_contact_email');
+var _user$project$Networking$submitContactUsForm = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$contactUsFormEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$sendContactUsEmailUri, body, _user$project$Networking$simpleResponseDecoder);
+};
+var _user$project$Networking$submitContactUsFormCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnContactUsFormSubmitCompleted,
+		_user$project$Networking$submitContactUsForm(data));
+};
+var _user$project$Networking$submitPostUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'submit_post');
+var _user$project$Networking$submitNewPost = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$postDataEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$submitPostUri, body, _user$project$Networking$simpleResponseDecoder);
+};
+var _user$project$Networking$submitNewPostCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnSubmitPostCompleted,
+		_user$project$Networking$submitNewPost(data));
+};
+var _user$project$Networking$submitIdeaUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'submit_idea');
+var _user$project$Networking$submitNewIdea = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$ideaDataEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$submitIdeaUri, body, _user$project$Networking$simpleResponseDecoder);
+};
+var _user$project$Networking$submitNewIdeaCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnSubmitIdeaCompleted,
+		_user$project$Networking$submitNewIdea(data));
+};
+var _user$project$Networking$fetchExtendedPostsUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'fetch_extended_posts');
+var _user$project$Networking$fetchExtendedPosts = function (token) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$tokenEncoder(token));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$fetchExtendedPostsUri, body, _user$project$Networking$extendedPostsListDecoder);
+};
+var _user$project$Networking$fetchExtendedPostsCmd = function (token) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnFetchExtendedPostsCompleted,
+		_user$project$Networking$fetchExtendedPosts(token));
+};
+var _user$project$Networking$fetchChatHistoryUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'fetch_chat_history');
+var _user$project$Networking$fetchChatHistory = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$chatHistoryRequestEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$fetchChatHistoryUri, body, _user$project$Networking$chatHistoryDecoder);
+};
+var _user$project$Networking$fetchChatHistoryCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnChatHistoryFetchCompleted,
+		_user$project$Networking$fetchChatHistory(data));
+};
+var _user$project$Networking$fetchUnredMessagesUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'fetch_unred_messages');
+var _user$project$Networking$fetchUnredMessages = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$unredMessagesRequestEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$fetchUnredMessagesUri, body, _user$project$Networking$unredMessagesDecoder);
+};
+var _user$project$Networking$fetchUnredMessagesCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnFetchUnredChatMessagesCompleted,
+		_user$project$Networking$fetchUnredMessages(data));
+};
+var _user$project$Networking$fetchSuggestedOrganizationsUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'fetch_suggested_companies');
+var _user$project$Networking$fetchSuggestedInnovatorsUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'fetch_suggested_innovators');
+var _user$project$Networking$makeConnectionUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'make_connection');
+var _user$project$Networking$makeConnection = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$makeConnectionDataEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$makeConnectionUri, body, _user$project$Networking$simpleResponseDecoder);
+};
+var _user$project$Networking$makeConnectionCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnMakeConnectionCompleted,
+		_user$project$Networking$makeConnection(data));
+};
+var _user$project$Networking$updateInnovatorSettingsUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'update_innovator_settings');
+var _user$project$Networking$updateInnovatorSettings = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$updatedInnovatorSettingsEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$updateInnovatorSettingsUri, body, _user$project$Networking$innovatorExtendedWrapperDecoder);
+};
+var _user$project$Networking$updateInnovatorSettingsCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnUpdateInnovatorSettingsCompleted,
+		_user$project$Networking$updateInnovatorSettings(data));
+};
+var _user$project$Networking$subscribeTariffPlanUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'subscribe_tariff_plan');
+var _user$project$Networking$subscribeTariffPlan = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$tariffPlanDataEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$subscribeTariffPlanUri, body, _user$project$Networking$simpleResponseDecoder);
+};
+var _user$project$Networking$subscribeTariffPlanCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnSubscribeTariffPlanCompleted,
+		_user$project$Networking$subscribeTariffPlan(data));
+};
+var _user$project$Networking$updateOrganizationSettingsUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'update_organization_settings');
+var _user$project$Networking$updateOrganizationSettings = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$updateOrganizationDataEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$updateOrganizationSettingsUri, body, _user$project$Networking$organizationExtendedWrapperDecoder);
+};
+var _user$project$Networking$updateOrganizationSettingsCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnUpdateOrganizationSettingsCompleted,
+		_user$project$Networking$updateOrganizationSettings(data));
+};
+var _user$project$Networking$markNotifAsRedUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'mark_notif_as_red');
+var _user$project$Networking$markNotifAsRed = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$getMemberDataStructEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$markNotifAsRedUri, body, _user$project$Networking$simpleResponseDecoder);
+};
+var _user$project$Networking$markNotifAsRedCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnMarkNotifAsRedCompleted,
+		_user$project$Networking$markNotifAsRed(data));
+};
+var _user$project$Networking$fetchNewNotifsUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'fetch_unred_notifs');
+var _user$project$Networking$fetchNewNotifications = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$unredMessagesRequestEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$fetchNewNotifsUri, body, _user$project$Networking$notificationsListDecoder);
+};
+var _user$project$Networking$fetchNewNotificationsCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnFetchNewNotificationsCompleted,
+		_user$project$Networking$fetchNewNotifications(data));
+};
+var _user$project$Networking$likePostUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'like_post');
+var _user$project$Networking$likePost = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$getMemberDataStructEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$likePostUri, body, _user$project$Networking$simpleResponseDecoder);
+};
+var _user$project$Networking$likePostCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnPostLikedCompleted,
+		_user$project$Networking$likePost(data));
+};
+var _user$project$Networking$createCommentUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'create_comment');
+var _user$project$Networking$createComment = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$postCommentDataEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$createCommentUri, body, _user$project$Networking$postCommentDataDecoder);
+};
+var _user$project$Networking$createCommentCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnPostCommentSubmitCompleted,
+		_user$project$Networking$createComment(data));
+};
+var _user$project$Networking$fetchCommentsUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'fetch_comments');
+var _user$project$Networking$fetchPostComments = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$getMemberDataStructEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$fetchCommentsUri, body, _user$project$Networking$postCommentsDecoder);
+};
+var _user$project$Networking$fetchPostCommentsCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnPostCommentsFetchCompleted,
+		_user$project$Networking$fetchPostComments(data));
+};
+var _user$project$Networking$processSearchUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'process_search');
+var _user$project$Networking$processSearch = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$searchDataEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$processSearchUri, body, _user$project$Networking$processedSearchDataDecoder);
+};
+var _user$project$Networking$processSearchCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnProcessSearchCompleted,
+		_user$project$Networking$processSearch(data));
+};
+var _user$project$Networking$checkConnectionAndConnectUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'check_connection_and_connect');
+var _user$project$Networking$checkConnectionAndConnect = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$makeConnectionDataEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$checkConnectionAndConnectUri, body, _user$project$Networking$simpleResponseDecoder);
+};
+var _user$project$Networking$checkConnectionAndConnectCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnCheckConnectionAndConnectCompleted,
+		_user$project$Networking$checkConnectionAndConnect(data));
+};
+var _user$project$Networking$createFullDescReqNotifUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'create_full_desc_req_notification');
+var _user$project$Networking$fullDescRequest = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$fullDescReqWrapperEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$createFullDescReqNotifUri, body, _user$project$Networking$simpleResponseDecoder);
+};
+var _user$project$Networking$fullDescRequestCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnFullDescRequestCompleted,
+		_user$project$Networking$fullDescRequest(data));
+};
+var _user$project$Networking$acceptOrRejectFullDescReqUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'accept_or_reject_full_desc_req');
+var _user$project$Networking$acceptRejectFullDesc = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$acceptRejectFullDescWrapperEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$acceptOrRejectFullDescReqUri, body, _user$project$Networking$simpleResponseDecoder);
+};
+var _user$project$Networking$acceptRejectFullDescCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnAcceptRejectFullDescCompleted,
+		_user$project$Networking$acceptRejectFullDesc(data));
+};
+var _user$project$Networking$getFullIdeaUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'get_full_idea');
+var _user$project$Networking$getFullIdeaData = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$getMemberDataStructEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$getFullIdeaUri, body, _user$project$Networking$fullIdeaDataDecoder);
+};
+var _user$project$Networking$getFullIdeaDataCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnGetFullIdeaDataCompleted,
+		_user$project$Networking$getFullIdeaData(data));
+};
+var _user$project$Networking$saveNdaUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'save_nda');
+var _user$project$Networking$saveNda = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$ndaDataEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$saveNdaUri, body, _user$project$Networking$simpleResponseDecoder);
+};
+var _user$project$Networking$saveNdaCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnSaveNdaCallCompleted,
+		_user$project$Networking$saveNda(data));
+};
+var _user$project$Networking$fetchSignedNdasUri = A2(_elm_lang$core$Basics_ops['++'], _user$project$Networking$api, 'fetch_signed_ndas');
+var _user$project$Networking$fetchSignedNdas = function (data) {
+	var body = _elm_lang$http$Http$jsonBody(
+		_user$project$Networking$userIdentifierWrapperEncoder(data));
+	return A3(_elm_lang$http$Http$post, _user$project$Networking$fetchSignedNdasUri, body, _user$project$Networking$signedNdasListDecoder);
+};
+var _user$project$Networking$fetchSignedNdasCmd = function (data) {
+	return A2(
+		_elm_lang$http$Http$send,
+		_user$project$Messages$OnFetchSignedNdasCompleted,
+		_user$project$Networking$fetchSignedNdas(data));
+};

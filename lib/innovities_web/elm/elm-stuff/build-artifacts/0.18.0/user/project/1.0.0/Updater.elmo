@@ -1,0 +1,4030 @@
+var _user$project$Updater$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		switch (_p0.ctor) {
+			case 'OnConnectInitiated':
+				var currentUser = model.loggedInMember;
+				var data = A5(_user$project$Models$ConnectionData, currentUser.id, currentUser.isOrganization, _p0._0, _p0._1, currentUser.token);
+				var cmd = _user$project$Networking$checkConnectionAndConnectCmd(data);
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnCheckConnectionAndConnectCompleted':
+				var _p1 = _p0._0;
+				if (_p1.ctor === 'Ok') {
+					var _p2 = _p1._0;
+					var currentConnections = model.connections;
+					var updatedConnections = _elm_lang$core$String$isEmpty(_p2.success) ? currentConnections : A2(
+						_elm_lang$core$Basics_ops['++'],
+						{
+							ctor: '::',
+							_0: A2(_user$project$Models$MapItem, _p2.success, _p2.error),
+							_1: {ctor: '[]'}
+						},
+						currentConnections);
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{connections: updatedConnections}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnSeeOtherInnovator':
+				var _p3 = _p0._0;
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$SeeOtherInnovatorPage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileSeeOtherInnovatorPage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileSeeOtherInnovatorPage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$SeeOtherInnovatorPage))(_p3)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							seeOtherInnovator: _p3,
+							desktopPage: _user$project$Models$SeeOtherInnovatorPage,
+							dashboardMobilePage: _user$project$Models$MobileSeeOtherInnovatorPage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileSeeOtherInnovatorPage, _1: model.mobilePageHistory},
+							pageHistory: {ctor: '::', _0: _user$project$Models$SeeOtherInnovatorPage, _1: model.pageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnSeeOtherOrganization':
+				var _p4 = _p0._0;
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$SeeOtherOrganizationPage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileSeeOtherOrganizationPage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileSeeOtherOrganizationPage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$SeeOtherOrganizationPage))(model.seeOtherInnovator)(_p4)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							seeOtherOrganization: _p4,
+							desktopPage: _user$project$Models$SeeOtherOrganizationPage,
+							dashboardMobilePage: _user$project$Models$MobileSeeOtherOrganizationPage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileSeeOtherOrganizationPage, _1: model.mobilePageHistory},
+							pageHistory: {ctor: '::', _0: _user$project$Models$SeeOtherOrganizationPage, _1: model.pageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnSubmitSearch':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$SearchPage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileSearchPage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileSearchPage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$SearchPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var currentUser = model.loggedInMember;
+				var data = model.searchProgress;
+				var msVisibility = _elm_lang$core$String$isEmpty(data.typedSearch) ? true : false;
+				var cmd = _elm_lang$core$String$isEmpty(data.typedSearch) ? _elm_lang$core$Platform_Cmd$none : _elm_lang$core$Platform_Cmd$batch(
+					{
+						ctor: '::',
+						_0: _user$project$Networking$processSearchCmd(
+							A4(_user$project$Models$SearchData, data.typedSearch, currentUser.token, currentUser.id, currentUser.isOrganization)),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Ports$cacheAllData(cachedData),
+							_1: {ctor: '[]'}
+						}
+					});
+				var updatedData = _elm_lang$core$String$isEmpty(data.typedSearch) ? data : _elm_lang$core$Native_Utils.update(
+					data,
+					{typedSearch: '', progressStatus: _user$project$Models$Loading});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							searchProgress: updatedData,
+							desktopPage: _user$project$Models$SearchPage,
+							dashboardMobilePage: _user$project$Models$MobileSearchPage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileSearchPage, _1: model.mobilePageHistory},
+							pageHistory: {ctor: '::', _0: _user$project$Models$SearchPage, _1: model.pageHistory},
+							mobileSearchVisible: msVisibility
+						}),
+					_1: cmd
+				};
+			case 'OnInputSearch':
+				var oldData = model.searchProgress;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{typedSearch: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{searchProgress: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnProcessSearchCompleted':
+				var _p5 = _p0._0;
+				if (_p5.ctor === 'Ok') {
+					var oldData = model.searchProgress;
+					var updatedData = _elm_lang$core$Native_Utils.update(
+						oldData,
+						{progressStatus: _user$project$Models$Loaded, typedSearch: ''});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{searchedData: _p5._0, searchProgress: updatedData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					var oldData = model.searchProgress;
+					var updatedData = _elm_lang$core$Native_Utils.update(
+						oldData,
+						{progressStatus: _user$project$Models$Idle});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{searchProgress: updatedData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnDoubleLocationSwitch':
+				var cmd = _user$project$Ports$scrollToElement(_p0._0);
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnSwitchToHomePage':
+				var _p6 = _p0._0;
+				var cmd = _elm_lang$core$Platform_Cmd$batch(
+					{
+						ctor: '::',
+						_0: _user$project$Ports$reverseBackgroundImage(''),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$navigation$Navigation$newUrl(
+								A2(_elm_lang$core$Basics_ops['++'], '#', _p6)),
+							_1: {
+								ctor: '::',
+								_0: _user$project$Ports$initFakeInterOpForLocationSwitch(_p6),
+								_1: {ctor: '[]'}
+							}
+						}
+					});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{pricingOpened: _user$project$Models$Closed}),
+					_1: cmd
+				};
+			case 'OnCustomNdaInput':
+				var oldIdeaData = model.newIdeaData;
+				var updatedIdeaData = _elm_lang$core$Native_Utils.update(
+					oldIdeaData,
+					{customNda: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: updatedIdeaData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnNdaTypeClicked':
+				var oldIdeaData = model.newIdeaData;
+				var updatedIdeaData = function () {
+					var _p7 = _p0._0;
+					switch (_p7) {
+						case 'Default':
+							return _elm_lang$core$Native_Utils.update(
+								oldIdeaData,
+								{isDefaultNda: true});
+						case 'Custom':
+							return _elm_lang$core$Native_Utils.update(
+								oldIdeaData,
+								{isDefaultNda: false});
+						default:
+							return oldIdeaData;
+					}
+				}();
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: updatedIdeaData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnHasNdaClicked':
+				var oldIdeaData = model.newIdeaData;
+				var updatedIdeaData = _elm_lang$core$Native_Utils.update(
+					oldIdeaData,
+					{hasNda: !oldIdeaData.hasNda});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: updatedIdeaData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnBackButtonPressedMobile':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					model.pageHistory);
+				var oldPageHistoryMobile = model.mobilePageHistory;
+				var newPageHistoryMobile = A2(_elm_lang$core$List$drop, 1, oldPageHistoryMobile);
+				var currentPageMobile = function () {
+					var _p8 = _elm_lang$core$List$head(newPageHistoryMobile);
+					if (_p8.ctor === 'Just') {
+						return _p8._0;
+					} else {
+						return _user$project$Models$MobileHomePage;
+					}
+				}();
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(currentPageMobile);
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					newPageHistoryMobile);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _elm_lang$core$Native_Utils.eq(currentPageMobile, _user$project$Models$MobileHomePage) ? _elm_lang$core$Platform_Cmd$batch(
+					{
+						ctor: '::',
+						_0: _elm_lang$navigation$Navigation$newUrl('#'),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Ports$reverseBackgroundImage(''),
+							_1: {
+								ctor: '::',
+								_0: _user$project$Ports$cacheAllData(cachedData),
+								_1: {ctor: '[]'}
+							}
+						}
+					}) : _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobilePageHistory: newPageHistoryMobile, dashboardMobilePage: currentPageMobile}),
+					_1: cmd
+				};
+			case 'OnBackButtonPressed':
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					model.mobilePageHistory);
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+				var oldPageHistory = model.pageHistory;
+				var newPageHistory = A2(_elm_lang$core$List$drop, 1, oldPageHistory);
+				var currentPage = function () {
+					var _p9 = _elm_lang$core$List$head(newPageHistory);
+					if (_p9.ctor === 'Just') {
+						return _p9._0;
+					} else {
+						return _user$project$Models$HomePage;
+					}
+				}();
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					newPageHistory);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(currentPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _elm_lang$core$Native_Utils.eq(currentPage, _user$project$Models$HomePage) ? _elm_lang$core$Platform_Cmd$batch(
+					{
+						ctor: '::',
+						_0: _elm_lang$navigation$Navigation$newUrl('#'),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Ports$reverseBackgroundImage(''),
+							_1: {
+								ctor: '::',
+								_0: _user$project$Ports$cacheAllData(cachedData),
+								_1: {ctor: '[]'}
+							}
+						}
+					}) : _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{pageHistory: newPageHistory, desktopPage: currentPage}),
+					_1: cmd
+				};
+			case 'OnOpenNDAsIdea':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$ViewFullIdeaPage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileViewFullIdeaPage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileViewFullIdeaPage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$ViewFullIdeaPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var currentUser = model.loggedInMember;
+				var cmd = _elm_lang$core$Platform_Cmd$batch(
+					{
+						ctor: '::',
+						_0: _user$project$Networking$getFullIdeaDataCmd(
+							A2(_user$project$Models$GetDataRequestStruct, _p0._0, currentUser.token)),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Ports$cacheAllData(cachedData),
+							_1: {ctor: '[]'}
+						}
+					});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							desktopPage: _user$project$Models$ViewFullIdeaPage,
+							dashboardMobilePage: _user$project$Models$MobileViewFullIdeaPage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileViewFullIdeaPage, _1: model.mobilePageHistory},
+							pageHistory: {ctor: '::', _0: _user$project$Models$ViewFullIdeaPage, _1: model.pageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnFetchSignedNdasCompleted':
+				var _p10 = _p0._0;
+				if (_p10.ctor === 'Ok') {
+					var _p11 = _p10._0;
+					var pageHistoryString = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$desktopPageToString(p);
+						},
+						model.pageHistory);
+					var mobilePageHistoryStr = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$mobilePageToString(p);
+						},
+						model.mobilePageHistory);
+					var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+					var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+						_user$project$TypeToStringUtils$langToString(model.language))(
+						_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(_p11);
+					var cmd = _elm_lang$core$Platform_Cmd$batch(
+						{
+							ctor: '::',
+							_0: _user$project$Ports$cacheAllData(cachedData),
+							_1: {ctor: '[]'}
+						});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{signedNDAs: _p11}),
+						_1: cmd
+					};
+				} else {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								signedNDAs: {ctor: '[]'}
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnSwitchNDAsPage':
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileNDAsPage);
+				var updatedPageHistory = {ctor: '::', _0: _user$project$Models$NDAsPage, _1: model.pageHistory};
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					updatedPageHistory);
+				var updatedMobilePageHistory = {ctor: '::', _0: _user$project$Models$MobileNDAsPage, _1: model.mobilePageHistory};
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					updatedMobilePageHistory);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$NDAsPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var currentUser = model.loggedInMember;
+				var cmd = _elm_lang$core$Platform_Cmd$batch(
+					{
+						ctor: '::',
+						_0: _user$project$Ports$cacheAllData(cachedData),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Networking$fetchSignedNdasCmd(
+								A3(_user$project$Models$UserIdentifierWrapper, currentUser.id, currentUser.isOrganization, currentUser.token)),
+							_1: {ctor: '[]'}
+						}
+					});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{dashboardMobilePage: _user$project$Models$MobileNDAsPage, desktopPage: _user$project$Models$NDAsPage, mobilePageHistory: updatedMobilePageHistory, pageHistory: updatedPageHistory}),
+					_1: cmd
+				};
+			case 'OnSwitchToDashboard':
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileNewsfeedPage);
+				var oldPageHistoryMobile = model.mobilePageHistory;
+				var newPageHistoryMobile = {ctor: '::', _0: _user$project$Models$MobileNewsfeedPage, _1: oldPageHistoryMobile};
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					newPageHistoryMobile);
+				var oldPageHistory = model.pageHistory;
+				var newPageHistory = {ctor: '::', _0: _user$project$Models$NewsfeedPage, _1: oldPageHistory};
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					newPageHistory);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$NewsfeedPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _elm_lang$core$Platform_Cmd$batch(
+					{
+						ctor: '::',
+						_0: _elm_lang$navigation$Navigation$newUrl('#dashboard'),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Ports$setWhiteBackground(''),
+							_1: {
+								ctor: '::',
+								_0: _user$project$Ports$cacheAllData(cachedData),
+								_1: {ctor: '[]'}
+							}
+						}
+					});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{dashboardMobilePage: _user$project$Models$MobileNewsfeedPage, desktopPage: _user$project$Models$NewsfeedPage, pageHistory: newPageHistory, mobilePageHistory: newPageHistoryMobile}),
+					_1: cmd
+				};
+			case 'OnFetchCachedDataCompleted':
+				var _p12 = _p0._0;
+				var pHistory = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$stringToDesktopPage(p);
+					},
+					_p12.pageHistory);
+				var mPageHistory = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$stringToMobilePage(p);
+					},
+					_p12.mobilePageHistory);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							loggedInMember: _p12.loggedInMember,
+							dashboardMobilePage: _user$project$TypeToStringUtils$stringToMobilePage(_p12.dashboardMobilePage),
+							currentInnovatorExtended: _p12.currentInnovatorExtended,
+							currentOrganizationExtended: _p12.currentOrganizationExtended,
+							postList: _p12.postList,
+							currentChatHistory: _p12.currentChatHistory,
+							pendingUnredMessages: _p12.pendingUnredMessages,
+							suggestedUsers: _p12.suggestedUsers,
+							notifications: _p12.notifications,
+							language: _user$project$TypeToStringUtils$stringToLang(_p12.language),
+							desktopPage: _user$project$TypeToStringUtils$stringToDesktopPage(_p12.desktopPage),
+							seeOtherInnovator: _p12.seeOtherInnovator,
+							seeOtherOrganization: _p12.seeOtherOrganization,
+							viewingCurrentIdea: _p12.viewingCurrentIdea,
+							viewingCurrentFullIdea: _p12.viewingCurrentFullIdea,
+							mobilePageHistory: mPageHistory,
+							pageHistory: pHistory,
+							signedNDAs: _p12.signedNDAs
+						}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSaveNdaCallCompleted':
+				var _p13 = _p0._0;
+				if (_p13.ctor === 'Ok') {
+					var organizationExtended = model.currentOrganizationExtended;
+					var updatedOrganizationExtended = _elm_lang$core$Native_Utils.update(
+						organizationExtended,
+						{complete_ideas_count: organizationExtended.complete_ideas_count + 1});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{currentOrganizationExtended: updatedOrganizationExtended}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnNDAAccepted':
+				var currentIdeaInView = model.viewingCurrentFullIdea;
+				var currentUser = model.loggedInMember;
+				var payload = function () {
+					var _p14 = _p0._0;
+					switch (_p14) {
+						case 'default_nda':
+							return A7(_user$project$Models$NDAFullDataWrapper, currentIdeaInView.innovator_id, false, currentIdeaInView.id, currentUser.id, currentUser.isOrganization, currentUser.token, true);
+						case 'custom_nda':
+							return A7(_user$project$Models$NDAFullDataWrapper, currentIdeaInView.innovator_id, false, currentIdeaInView.id, currentUser.id, currentUser.isOrganization, currentUser.token, false);
+						default:
+							return A7(_user$project$Models$NDAFullDataWrapper, currentIdeaInView.innovator_id, false, currentIdeaInView.id, currentUser.id, currentUser.isOrganization, currentUser.token, true);
+					}
+				}();
+				var cmd = _user$project$Networking$saveNdaCmd(payload);
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnNDARejected':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$NewsfeedPage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileHomePage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileHomePage);
+				var emptyFullIdea = _user$project$Models$FullIdeaData(0)('')('')('')('')('')('')('')(0)('')('')('')(false)(true)('');
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$NewsfeedPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(emptyFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							viewingCurrentFullIdea: emptyFullIdea,
+							desktopPage: _user$project$Models$NewsfeedPage,
+							dashboardMobilePage: _user$project$Models$MobileHomePage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileHomePage, _1: model.mobilePageHistory},
+							pageHistory: {ctor: '::', _0: _user$project$Models$NewsfeedPage, _1: model.pageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnGetFullIdeaDataCompleted':
+				var _p15 = _p0._0;
+				if (_p15.ctor === 'Ok') {
+					var _p16 = _p15._0;
+					var langString = _elm_lang$core$Native_Utils.eq(model.language, _user$project$Models$Arm) ? 'arm' : (_elm_lang$core$Native_Utils.eq(model.language, _user$project$Models$Eng) ? 'eng' : '');
+					var currentOrganization = model.currentOrganizationExtended;
+					var ndaData = ((!_elm_lang$core$Native_Utils.eq(_p16.id, 0)) && (_p16.has_nda && _p16.is_default_nda)) ? A5(_user$project$Ports$NDADataWrapper, currentOrganization.name, _p16.innovator_name, _p16.idea_name, langString, '') : (((!_elm_lang$core$Native_Utils.eq(_p16.id, 0)) && (_p16.has_nda && (!_p16.is_default_nda))) ? A5(_user$project$Ports$NDADataWrapper, currentOrganization.name, _p16.innovator_name, _p16.idea_name, langString, _p16.custom_nda) : A5(_user$project$Ports$NDADataWrapper, '', '', '', '', ''));
+					var cmd = (_elm_lang$core$Native_Utils.eq(_p16.id, 0) || (!_p16.has_nda)) ? _elm_lang$core$Platform_Cmd$none : _user$project$Ports$showNDAConfirmDialog(ndaData);
+					var viewingFullIdea = model.viewingCurrentFullIdea;
+					var updatedCurrentFullIdea = _elm_lang$core$Native_Utils.eq(_p16.id, 0) ? viewingFullIdea : _p16;
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{viewingCurrentFullIdea: updatedCurrentFullIdea}),
+						_1: cmd
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnFullDescRequestInitiated':
+				var currentUser = model.loggedInMember;
+				var data = A7(_user$project$Models$FullDescReqWrapper, 0, _p0._0, _p0._1, false, currentUser.id, currentUser.isOrganization, currentUser.token);
+				var cmd = _user$project$Networking$fullDescRequestCmd(data);
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnFullDescRequestCompleted':
+				var _p17 = _p0._0;
+				if (_p17.ctor === 'Ok') {
+					var hasError = (!_elm_lang$core$String$isEmpty(_p17._0.error)) ? true : false;
+					var nextDesktopPage = hasError ? model.desktopPage : _user$project$Models$NewsfeedPage;
+					var nextMobilePage = hasError ? model.dashboardMobilePage : _user$project$Models$MobileHomePage;
+					var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(nextMobilePage);
+					var updatedPageHistory = hasError ? model.pageHistory : {ctor: '::', _0: _user$project$Models$NewsfeedPage, _1: model.pageHistory};
+					var pageHistoryString = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$desktopPageToString(p);
+						},
+						updatedPageHistory);
+					var mobileUpdatedPageHistory = hasError ? model.mobilePageHistory : {ctor: '::', _0: _user$project$Models$MobileHomePage, _1: model.mobilePageHistory};
+					var mobilePageHistoryStr = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$mobilePageToString(p);
+						},
+						mobileUpdatedPageHistory);
+					var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+						_user$project$TypeToStringUtils$langToString(model.language))(
+						_user$project$TypeToStringUtils$desktopPageToString(nextDesktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+					var cmd = _user$project$Ports$cacheAllData(cachedData);
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{desktopPage: nextDesktopPage, dashboardMobilePage: nextMobilePage, mobilePageHistory: mobileUpdatedPageHistory, pageHistory: updatedPageHistory}),
+						_1: cmd
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnViewIdeaPageSwitch':
+				var _p18 = _p0._0;
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$ViewIdeaPage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileViewIdeaPage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileViewIdeaPage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$ViewIdeaPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(_p18)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							viewingCurrentIdea: _p18,
+							desktopPage: _user$project$Models$ViewIdeaPage,
+							dashboardMobilePage: _user$project$Models$MobileViewIdeaPage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileViewIdeaPage, _1: model.mobilePageHistory},
+							pageHistory: {ctor: '::', _0: _user$project$Models$ViewIdeaPage, _1: model.pageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnToggleMobileSearchInput':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileSearchVisible: !model.mobileSearchVisible}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnShareProfileOnFacebook':
+				var cmd = _user$project$Ports$shareProfileOnFacebook(_p0._0);
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnSharePostOnFacebook':
+				var cmd = _user$project$Ports$sharePostOnFacebook(_p0._0);
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnSubmitComment':
+				var commentData = model.currentCommentData;
+				var selectedPostId = model.currentPostWithComments;
+				var currentUser = model.loggedInMember;
+				var data = A7(_user$project$Models$PostCommentData, currentUser.id, currentUser.isOrganization, '', commentData.body, '', selectedPostId, currentUser.token);
+				var cmd = _user$project$Networking$createCommentCmd(data);
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnCurrentPostCommentInput':
+				var oldCommentData = model.currentCommentData;
+				var updatedCommentData = _elm_lang$core$Native_Utils.update(
+					oldCommentData,
+					{body: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{currentCommentData: updatedCommentData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnPostCommentsFetchCompleted':
+				var _p19 = _p0._0;
+				if (_p19.ctor === 'Ok') {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{currentPostComments: _p19._0}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnPostCommentsClicked':
+				var _p20 = _p0._0;
+				var currentUser = model.loggedInMember;
+				var cmd = _user$project$Networking$fetchPostCommentsCmd(
+					A2(_user$project$Models$GetDataRequestStruct, _p20, currentUser.token));
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							currentPostComments: {ctor: '[]'},
+							currentCommentData: A7(_user$project$Models$PostCommentData, 0, false, '', '', '', 0, ''),
+							currentPostWithComments: _p20
+						}),
+					_1: cmd
+				};
+			case 'OnPostCommentSubmitCompleted':
+				var _p21 = _p0._0;
+				if (_p21.ctor === 'Ok') {
+					var _p22 = _p21._0;
+					var currentPostCommentsOld = model.currentPostComments;
+					var currentPostCommentsUpdated = _elm_lang$core$String$isEmpty(_p22.body) ? currentPostCommentsOld : A2(
+						_elm_lang$core$Basics_ops['++'],
+						currentPostCommentsOld,
+						{
+							ctor: '::',
+							_0: _p22,
+							_1: {ctor: '[]'}
+						});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{currentPostComments: currentPostCommentsUpdated}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnPostLikedCompleted':
+				var _p23 = _p0._0;
+				if (_p23.ctor === 'Ok') {
+					var updatedPostIdStr = _p23._0.success;
+					var oldList = model.postList;
+					var updatedPostList = _elm_lang$core$String$isEmpty(updatedPostIdStr) ? oldList : A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _elm_lang$core$Native_Utils.eq(
+								_elm_lang$core$Basics$toString(p.post_id),
+								updatedPostIdStr) ? A8(_user$project$Models$ExtendedPostData, p.author_name, p.author_desc, p.author_pic, p.author_id, p.post_id, p.post_media_file, p.post_message, p.post_likes + 1) : p;
+						},
+						oldList);
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{postList: updatedPostList}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnPostLikeClicked':
+				var currentUser = model.loggedInMember;
+				var cmd = _user$project$Networking$likePostCmd(
+					A2(_user$project$Models$GetDataRequestStruct, _p0._0, currentUser.token));
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnSwitchLang':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{language: _p0._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnViewFullIdeaData':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$ViewFullIdeaPage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileViewFullIdeaPage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileViewFullIdeaPage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$ViewFullIdeaPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var langString = _elm_lang$core$Native_Utils.eq(model.language, _user$project$Models$Arm) ? 'arm' : (_elm_lang$core$Native_Utils.eq(model.language, _user$project$Models$Eng) ? 'eng' : '');
+				var currentOrganization = model.currentOrganizationExtended;
+				var currentUser = model.loggedInMember;
+				var cmd = _elm_lang$core$Platform_Cmd$batch(
+					{
+						ctor: '::',
+						_0: _user$project$Networking$getFullIdeaDataCmd(
+							A2(_user$project$Models$GetDataRequestStruct, _p0._0, currentUser.token)),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Networking$markNotifAsRedCmd(
+								A2(_user$project$Models$GetDataRequestStruct, _p0._1, currentUser.token)),
+							_1: {
+								ctor: '::',
+								_0: _user$project$Ports$cacheAllData(cachedData),
+								_1: {ctor: '[]'}
+							}
+						}
+					});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							desktopPage: _user$project$Models$ViewFullIdeaPage,
+							dashboardMobilePage: _user$project$Models$MobileViewFullIdeaPage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileViewFullIdeaPage, _1: model.mobilePageHistory},
+							pageHistory: {ctor: '::', _0: _user$project$Models$ViewFullIdeaPage, _1: model.pageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnAcceptRejectFullDescInitiated':
+				var currentUser = model.loggedInMember;
+				var data = A3(_user$project$Models$AcceptRejectFullDescWrapper, _p0._0, _p0._1, currentUser.token);
+				var cmd = _user$project$Networking$acceptRejectFullDescCmd(data);
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnAcceptRejectFullDescCompleted':
+				var _p24 = _p0._0;
+				if (_p24.ctor === 'Ok') {
+					var _p25 = _p24._0;
+					var oldNotifs = model.notifications;
+					var updatedNotifs = _elm_lang$core$String$isEmpty(_p25.error) ? A2(
+						_elm_lang$core$List$filter,
+						function (n) {
+							return !_elm_lang$core$Native_Utils.eq(
+								_elm_lang$core$Basics$toString(n.id),
+								_p25.success);
+						},
+						oldNotifs) : oldNotifs;
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{notifications: updatedNotifs}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnRegularNewNotifsFetch':
+				var loginData = model.loggedInMember;
+				var unredMessagesRequestWrapper = A3(_user$project$Models$UnredChatMessagesRequestWrapper, loginData.id, loginData.isOrganization, loginData.token);
+				var cmd = _user$project$Networking$fetchNewNotificationsCmd(unredMessagesRequestWrapper);
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnMarkNotifAsRedCompleted':
+				var _p26 = _p0._0;
+				if (_p26.ctor === 'Ok') {
+					var _p27 = _p26._0;
+					var notifsOldList = model.notifications;
+					var notifId = _elm_lang$core$String$isEmpty(_p27.success) ? '0' : _p27.success;
+					var updatedList = A2(
+						_elm_lang$core$List$filter,
+						function (n) {
+							return !_elm_lang$core$Native_Utils.eq(
+								_elm_lang$core$Basics$toString(n.id),
+								notifId);
+						},
+						notifsOldList);
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{notifications: updatedList}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnNewNotifItemClick':
+				var currentUser = model.loggedInMember;
+				var cmd = _user$project$Networking$markNotifAsRedCmd(
+					A2(_user$project$Models$GetDataRequestStruct, _p0._0, currentUser.token));
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnNewNotifsVisibilityToggle':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newNotificationsVisible: !model.newNotificationsVisible}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnFetchNewNotificationsCompleted':
+				var _p28 = _p0._0;
+				if (_p28.ctor === 'Ok') {
+					var _p29 = _p28._0;
+					var pageHistoryString = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$desktopPageToString(p);
+						},
+						model.pageHistory);
+					var mobilePageHistoryStr = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$mobilePageToString(p);
+						},
+						model.mobilePageHistory);
+					var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+					var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(_p29)(
+						_user$project$TypeToStringUtils$langToString(model.language))(
+						_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+					var cmd = _user$project$Ports$cacheAllData(cachedData);
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{notifications: _p29}),
+						_1: cmd
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnSelectTariffPlan':
+				var currentUser = model.loggedInMember;
+				var data = A4(_user$project$Models$TariffPlanSubscriptionData, currentUser.id, currentUser.isOrganization, _p0._0, currentUser.token);
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: _user$project$Networking$subscribeTariffPlanCmd(data)
+				};
+			case 'OnSubscribeTariffPlanCompleted':
+				var _p30 = _p0._0;
+				if (_p30.ctor === 'Ok') {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{tariffPlanSubError: _p30._0.error}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{tariffPlanSubError: 'Couldn\'t update your tariff plan! Contact with us, please.'}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnUpdateOrganizationSettingsCompleted':
+				var _p31 = _p0._0;
+				if (_p31.ctor === 'Ok') {
+					var orgEditables = _user$project$Models$OrganizationSettingsFieldsEditable(false)(false)(false)(false)(false)(false)(false)(false)(false)(false)(false);
+					var editables = _user$project$Models$InnovatorSettingsFieldsEditable(false)(false)(false)(false)(false)(false)(false)(false)(false)(false);
+					var currentOldOrgData = model.currentOrganizationExtended;
+					var oldData = model.organizationSettingsFields;
+					var initialData = _elm_lang$core$Native_Utils.update(
+						oldData,
+						{error: ''});
+					var resOrgData = _p31._0.organization_data;
+					var updatedData = _elm_lang$core$Native_Utils.eq(resOrgData.id, 0) ? _elm_lang$core$Native_Utils.update(
+						initialData,
+						{error: resOrgData.industry}) : _elm_lang$core$Native_Utils.update(
+						initialData,
+						{error: 'Saved!'});
+					var updatedOrgData = _elm_lang$core$Native_Utils.eq(resOrgData.id, 0) ? currentOldOrgData : resOrgData;
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{organizationSettingsFields: updatedData, currentOrganizationExtended: updatedOrgData, innovatorSettingsFieldsEditable: editables, organizationSettingsFieldsEditable: orgEditables}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					var oldData = model.organizationSettingsFields;
+					var initialData = _elm_lang$core$Native_Utils.update(
+						oldData,
+						{error: ''});
+					var updatedData = _elm_lang$core$Native_Utils.update(
+						initialData,
+						{error: 'Couldn\'t update your settings! Try to reload the page and contact with us, please.'});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{organizationSettingsFields: updatedData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnOrganizationSettingsSaveChanges':
+				var currentUser = model.loggedInMember;
+				var initialData = model.organizationSettingsFields;
+				var orgData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: ''});
+				var round1 = (_elm_lang$core$String$isEmpty(orgData.error) && _elm_lang$core$String$isEmpty(orgData.name)) ? _elm_lang$core$Native_Utils.update(
+					orgData,
+					{error: 'Name required!'}) : orgData;
+				var round2 = (_elm_lang$core$String$isEmpty(round1.error) && _elm_lang$core$String$isEmpty(round1.email)) ? _elm_lang$core$Native_Utils.update(
+					round1,
+					{error: 'Email required!'}) : round1;
+				var round3 = (_elm_lang$core$String$isEmpty(round2.error) && _elm_lang$core$String$isEmpty(round2.country)) ? _elm_lang$core$Native_Utils.update(
+					round2,
+					{error: 'Country required!'}) : round2;
+				var dataToSend = _elm_lang$core$Native_Utils.update(
+					round3,
+					{token: currentUser.token});
+				var cmd = (_elm_lang$core$String$isEmpty(round3.error) && (!_elm_lang$core$String$isEmpty(round3.pic_name))) ? _user$project$Ports$submitOrgSettingsPicToFirebase(round3.pic_name) : (_elm_lang$core$String$isEmpty(round3.error) ? _user$project$Networking$updateOrganizationSettingsCmd(dataToSend) : _elm_lang$core$Platform_Cmd$none);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: round3}),
+					_1: cmd
+				};
+			case 'OnGetUploadedOrgSettingsPicUri':
+				var _p32 = _p0._0;
+				var currentUser = model.loggedInMember;
+				var oldData = model.organizationSettingsFields;
+				var initialData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{error: ''});
+				var updatedData = _elm_lang$core$String$isEmpty(_p32.error) ? _elm_lang$core$Native_Utils.update(
+					initialData,
+					{pic_uri: _p32.uri}) : _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: _p32.error});
+				var dataToSend = _elm_lang$core$Native_Utils.update(
+					updatedData,
+					{token: currentUser.token});
+				var cmd = _elm_lang$core$String$isEmpty(updatedData.error) ? _user$project$Networking$updateOrganizationSettingsCmd(dataToSend) : _elm_lang$core$Platform_Cmd$none;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: cmd
+				};
+			case 'OnOrganizationSettingsPicNameReceived':
+				var _p33 = _p0._0;
+				var initialData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{pic_name: _p33.fileName, error: _p33.error});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnGetFakeInterOpResponse3':
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: _user$project$Ports$initOrgSettingsMediaBtn('')
+				};
+			case 'OnOrganizationSettingsChangePasswordInput':
+				var oldData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{changePassword: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrganizationSettingsDescriptionInput':
+				var oldData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{description: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrganizationSettingsWebpageInput':
+				var oldData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{webpage: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrganizationSettingsCountryInput':
+				var oldData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{country: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrganizationSettingsInterestedIndustriesInput':
+				var oldData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{interested_industries: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrganizationSettingsIndustryInput':
+				var oldData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{industry: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrganizationSettingsAboutInput':
+				var oldData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{about_us: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrganizationSettingsEmailInput':
+				var oldData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{email: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrganizationSettingsPhoneInput':
+				var oldData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{phone: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrganizationSettingsNameInput':
+				var oldData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{name: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrganizationSettingsUsernameInput':
+				var oldData = model.organizationSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{username: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrgSettingsUsernameEditable':
+				var oldData = model.organizationSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{username: !oldData.username});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrgSettingsNameEditable':
+				var oldData = model.organizationSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{name: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrgSettingsWebpageEditable':
+				var oldData = model.organizationSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{webpage: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrgSettingsPhoneEditable':
+				var oldData = model.organizationSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{phone: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrgSettingsEmailEditable':
+				var oldData = model.organizationSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{email: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrgSettingsAboutEditable':
+				var oldData = model.organizationSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{about_us: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrgSettingsDescriptionEditable':
+				var oldData = model.organizationSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{description: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrgSettingsIndustryEditable':
+				var oldData = model.organizationSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{industry: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrgSettingsInterestedIndustriesEditable':
+				var oldData = model.organizationSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{interested_industries: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrgSettingsCountryEditable':
+				var oldData = model.organizationSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{country: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnOrgSettingsChangePasswordEditable':
+				var oldData = model.organizationSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{changePassword: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{organizationSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnUpdateInnovatorSettingsCompleted':
+				var _p34 = _p0._0;
+				if (_p34.ctor === 'Ok') {
+					var editables = _user$project$Models$InnovatorSettingsFieldsEditable(false)(false)(false)(false)(false)(false)(false)(false)(false)(false);
+					var currentInnovatorOldData = model.currentInnovatorExtended;
+					var oldData = model.innovatorSettingsFields;
+					var initialData = _elm_lang$core$Native_Utils.update(
+						oldData,
+						{error: ''});
+					var res = _p34._0.innovator_data;
+					var updatedData = _elm_lang$core$Native_Utils.eq(res.id, 0) ? _elm_lang$core$Native_Utils.update(
+						initialData,
+						{error: res.experience}) : _elm_lang$core$Native_Utils.update(
+						initialData,
+						{error: 'Saved!'});
+					var currentInnovatorUpdatedData = _elm_lang$core$Native_Utils.eq(res.id, 0) ? currentInnovatorOldData : res;
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{innovatorSettingsFields: updatedData, currentInnovatorExtended: currentInnovatorUpdatedData, innovatorSettingsFieldsEditable: editables}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					var oldData = model.innovatorSettingsFields;
+					var initialData = _elm_lang$core$Native_Utils.update(
+						oldData,
+						{error: ''});
+					var updatedData = _elm_lang$core$Native_Utils.update(
+						initialData,
+						{error: 'Something went wrong! Try again or contact with us, please!'});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{innovatorSettingsFields: updatedData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnGetUploadedSettingsPicUri':
+				var _p35 = _p0._0;
+				var currentUser = model.loggedInMember;
+				var oldData = model.innovatorSettingsFields;
+				var initialData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{error: ''});
+				var updatedData = _elm_lang$core$String$isEmpty(_p35.error) ? _elm_lang$core$Native_Utils.update(
+					initialData,
+					{pic_uri: _p35.uri}) : _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: _p35.error});
+				var dataToSend = _elm_lang$core$String$isEmpty(updatedData.error) ? _elm_lang$core$Native_Utils.update(
+					updatedData,
+					{token: currentUser.token}) : updatedData;
+				var cmd = _elm_lang$core$String$isEmpty(updatedData.error) ? _user$project$Networking$updateInnovatorSettingsCmd(dataToSend) : _elm_lang$core$Platform_Cmd$none;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: cmd
+				};
+			case 'OnGetFakeInterOpResponse2':
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: _user$project$Ports$initSettingsMediaBtn('')
+				};
+			case 'OnInnovatorSettingsPicNameReceived':
+				var _p36 = _p0._0;
+				var oldData = model.innovatorSettingsFields;
+				var initialData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{error: ''});
+				var updatedData = _elm_lang$core$String$isEmpty(_p36.error) ? _elm_lang$core$Native_Utils.update(
+					initialData,
+					{pic_name: _p36.fileName}) : _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: _p36.error});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorSettingsSaveChanges':
+				var currentUser = model.loggedInMember;
+				var oldData = model.innovatorSettingsFields;
+				var initialData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{error: ''});
+				var round1 = _elm_lang$core$String$isEmpty(initialData.name) ? _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: 'Name required!'}) : initialData;
+				var round2 = (_elm_lang$core$String$isEmpty(round1.error) && _elm_lang$core$String$isEmpty(round1.surname)) ? _elm_lang$core$Native_Utils.update(
+					round1,
+					{error: 'Surname required!'}) : round1;
+				var round3 = (_elm_lang$core$String$isEmpty(round2.error) && _elm_lang$core$String$isEmpty(round2.email)) ? _elm_lang$core$Native_Utils.update(
+					round2,
+					{error: 'Email required!'}) : round2;
+				var round4 = (_elm_lang$core$String$isEmpty(round3.error) && _elm_lang$core$String$isEmpty(round3.country)) ? _elm_lang$core$Native_Utils.update(
+					round3,
+					{error: 'Country required!'}) : round3;
+				var round5 = _elm_lang$core$String$isEmpty(round4.error) ? _elm_lang$core$Native_Utils.update(
+					round4,
+					{token: currentUser.token}) : round4;
+				var cmd = (_elm_lang$core$String$isEmpty(round4.error) && (!_elm_lang$core$String$isEmpty(round4.pic_name))) ? _user$project$Ports$submitSettingsPicToFirebase(round4.pic_name) : (_elm_lang$core$String$isEmpty(round4.error) ? _user$project$Networking$updateInnovatorSettingsCmd(round5) : _elm_lang$core$Platform_Cmd$none);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: round4}),
+					_1: cmd
+				};
+			case 'OnInnovatorSettingsUsernameInput':
+				var oldData = model.innovatorSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{username: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorSettingsNameInput':
+				var oldData = model.innovatorSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{name: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorSettingsSurnameInput':
+				var oldData = model.innovatorSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{surname: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorSettingsPhoneInput':
+				var oldData = model.innovatorSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{phone: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorSettingsEmailInput':
+				var oldData = model.innovatorSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{email: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorSettingsAboutInput':
+				var oldData = model.innovatorSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{about_me: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorSettingsEducationInput':
+				var oldData = model.innovatorSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{education: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorSettingsExperienceInput':
+				var oldData = model.innovatorSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{experience: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorSettingsCountryInput':
+				var oldData = model.innovatorSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{country: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorSettingsChangePasswordInput':
+				var oldData = model.innovatorSettingsFields;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{changePassword: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFields: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSettingsUsernameEditable':
+				var initialData = model.innovatorSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{username: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSettingsNameEditable':
+				var initialData = model.innovatorSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{name: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSettingsSurnameEditable':
+				var initialData = model.innovatorSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{surname: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSettingsPhoneEditable':
+				var initialData = model.innovatorSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{phone: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSettingsEmailEditable':
+				var initialData = model.innovatorSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{email: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSettingsAboutEditable':
+				var initialData = model.innovatorSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{about: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSettingsEducationEditable':
+				var initialData = model.innovatorSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{education: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSettingsExperienceEditable':
+				var initialData = model.innovatorSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{experience: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSettingsCountryEditable':
+				var initialData = model.innovatorSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{country: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSettingsChangePasswordEditable':
+				var initialData = model.innovatorSettingsFieldsEditable;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{changePassword: true});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorSettingsFieldsEditable: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSwitchTariffPlansPage':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$TariffPlansPage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileSettingsPage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$TariffPlansPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							desktopPage: _user$project$Models$TariffPlansPage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileSettingsPage, _1: model.mobilePageHistory},
+							pageHistory: {ctor: '::', _0: _user$project$Models$TariffPlansPage, _1: model.pageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnSwitchSettingsPage':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$SettingsPage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileSettingsPage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$SettingsPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							desktopPage: _user$project$Models$SettingsPage,
+							dashboardMobilePage: _user$project$Models$MobileSettingsPage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileSettingsPage, _1: model.mobilePageHistory},
+							pageHistory: {ctor: '::', _0: _user$project$Models$SettingsPage, _1: model.pageHistory}
+						}),
+					_1: _elm_lang$core$Platform_Cmd$batch(
+						{
+							ctor: '::',
+							_0: _user$project$Ports$initFakeInterOp2(''),
+							_1: {
+								ctor: '::',
+								_0: _user$project$Ports$initFakeInterOp3(''),
+								_1: {
+									ctor: '::',
+									_0: _user$project$Ports$cacheAllData(cachedData),
+									_1: {ctor: '[]'}
+								}
+							}
+						})
+				};
+			case 'OnMakeConnectionCompleted':
+				var _p37 = _p0._0;
+				if (_p37.ctor === 'Ok') {
+					var _p38 = _p37._0;
+					var currentUser = model.loggedInMember;
+					var cmd = (_elm_lang$core$String$isEmpty(_p38.error) && (_elm_lang$core$Native_Utils.eq(_p38.success, 'True') && currentUser.isOrganization)) ? A2(
+						_user$project$Networking$fetchSuggestionsCmd,
+						A2(_user$project$Models$GetDataRequestStruct, currentUser.id, currentUser.token),
+						_user$project$Networking$fetchSuggestedInnovatorsUri) : ((_elm_lang$core$String$isEmpty(_p38.error) && (_elm_lang$core$Native_Utils.eq(_p38.success, 'True') && (!currentUser.isOrganization))) ? A2(
+						_user$project$Networking$fetchSuggestionsCmd,
+						A2(_user$project$Models$GetDataRequestStruct, currentUser.id, currentUser.token),
+						_user$project$Networking$fetchSuggestedOrganizationsUri) : _elm_lang$core$Platform_Cmd$none);
+					return {ctor: '_Tuple2', _0: model, _1: cmd};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnMakeConnectionInitiated':
+				var _p39 = _p0._0;
+				var currentUser = model.loggedInMember;
+				var cmd = currentUser.isOrganization ? _user$project$Networking$makeConnectionCmd(
+					A5(_user$project$Models$ConnectionData, currentUser.id, true, _p39, false, currentUser.token)) : _user$project$Networking$makeConnectionCmd(
+					A5(_user$project$Models$ConnectionData, currentUser.id, false, _p39, true, currentUser.token));
+				return {ctor: '_Tuple2', _0: model, _1: cmd};
+			case 'OnFetchSuggestionsCompleted':
+				var _p40 = _p0._0;
+				if (_p40.ctor === 'Ok') {
+					var _p41 = _p40._0;
+					var currentSuggestions = model.suggestedUsers;
+					var suggestionsList = _elm_lang$core$Native_Utils.eq(
+						_elm_lang$core$List$length(_p41),
+						3) ? _p41 : (_elm_lang$core$Native_Utils.eq(
+						_elm_lang$core$List$length(_p41),
+						0) ? currentSuggestions : function (cl) {
+						return A2(_elm_lang$core$Basics_ops['++'], _p41, cl);
+					}(
+						A2(
+							_elm_lang$core$List$drop,
+							_elm_lang$core$List$length(_p41),
+							currentSuggestions)));
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{suggestedUsers: suggestionsList}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnMarkMessageAsRedReply':
+				var _p42 = _p0._0;
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					model.pageHistory);
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					model.mobilePageHistory);
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+				var currentUser = model.loggedInMember;
+				var newMessageData = A8(_user$project$Models$NewChatMessageData, _p42.receiver_id, 0, false, _p42.receiver_is_org, '', _p42.receiver_name, '', '');
+				var pendingNewMessagesList = model.pendingUnredMessages;
+				var updatedPendingMessagesList = A2(
+					_elm_lang$core$List$filter,
+					function (m) {
+						return !_elm_lang$core$Native_Utils.eq(m.id, _p42.message_id);
+					},
+					pendingNewMessagesList);
+				var cachedData = _user$project$Models$CacheDataWrapper(currentUser)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(updatedPendingMessagesList)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _elm_lang$core$Platform_Cmd$batch(
+					{
+						ctor: '::',
+						_0: _user$project$Networking$fetchChatHistoryCmd(
+							A5(_user$project$Models$ChatHistoryRequestWrapper, newMessageData.to_id, currentUser.id, newMessageData.receiver_is_organization, currentUser.isOrganization, currentUser.token)),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Ports$cacheAllData(cachedData),
+							_1: {ctor: '[]'}
+						}
+					});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{pendingUnredMessages: updatedPendingMessagesList, chatWindowOpened: true, newChatMessageData: newMessageData}),
+					_1: cmd
+				};
+			case 'OnUnredChatMessageClick':
+				var currentUser = model.loggedInMember;
+				var reqDataWrapper = A2(_user$project$Ports$MarkMessageAsRedWrapper, _p0._0, currentUser.token);
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: _user$project$Ports$markAsRedChatMessage(reqDataWrapper)
+				};
+			case 'OnNewMessagesNotifsVisibilityToggle':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newMessagesNotifsVisible: !model.newMessagesNotifsVisible}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnFetchUnredChatMessagesCompleted':
+				var _p43 = _p0._0;
+				if (_p43.ctor === 'Ok') {
+					var _p44 = _p43._0;
+					var pageHistoryString = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$desktopPageToString(p);
+						},
+						model.pageHistory);
+					var mobilePageHistoryStr = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$mobilePageToString(p);
+						},
+						model.mobilePageHistory);
+					var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+					var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(_p44)(model.suggestedUsers)(model.notifications)(
+						_user$project$TypeToStringUtils$langToString(model.language))(
+						_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+					var cmd = _user$project$Ports$cacheAllData(cachedData);
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{pendingUnredMessages: _p44}),
+						_1: cmd
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnExtendedUnredMessageIncome':
+				var _p45 = _p0._0;
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					model.pageHistory);
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					model.mobilePageHistory);
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+				var initialList = model.pendingUnredMessages;
+				var filteredList = A2(
+					_elm_lang$core$List$filter,
+					function (m) {
+						return (!_elm_lang$core$Native_Utils.eq(m.sender_id, _p45.sender_id)) || (!_elm_lang$core$Native_Utils.eq(m.sender_is_organization, _p45.sender_is_organization));
+					},
+					initialList);
+				var finalList = {ctor: '::', _0: _p45, _1: filteredList};
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(finalList)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{pendingUnredMessages: finalList}),
+					_1: cmd
+				};
+			case 'OnChatHistoryFetchCompleted':
+				var _p46 = _p0._0;
+				if (_p46.ctor === 'Ok') {
+					var _p47 = _p46._0;
+					var pageHistoryString = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$desktopPageToString(p);
+						},
+						model.pageHistory);
+					var mobilePageHistoryStr = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$mobilePageToString(p);
+						},
+						model.mobilePageHistory);
+					var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+					var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(_p47)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+						_user$project$TypeToStringUtils$langToString(model.language))(
+						_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+					var cmd = _user$project$Ports$cacheAllData(cachedData);
+					var tmp = model.newChatMessageData;
+					var initialData = _elm_lang$core$Native_Utils.update(
+						tmp,
+						{error: ''});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{newChatMessageData: initialData, currentChatHistory: _p47}),
+						_1: cmd
+					};
+				} else {
+					var tmp = model.newChatMessageData;
+					var initialData = _elm_lang$core$Native_Utils.update(
+						tmp,
+						{error: 'Error submitting your message! Try again or contact with us, please'});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{newChatMessageData: initialData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnChatMessageError':
+				var tmp = model.newChatMessageData;
+				var initialData = _elm_lang$core$Native_Utils.update(
+					tmp,
+					{error: ''});
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: _p0._0.error});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newChatMessageData: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnIncomingChatMessage':
+				var _p48 = _p0._0;
+				var currentUser = model.loggedInMember;
+				var currentUserId = currentUser.id;
+				var currentUserIsOrganization = currentUser.isOrganization;
+				var newMessageReceiverIsOrganization = _p48.receiver_is_organization;
+				var newMessageReceiverId = _p48.receiver_id;
+				var newMessageSenderIsOrganization = _p48.sender_is_organization;
+				var newMessageSenderId = _p48.sender_id;
+				var newMessageId = _p48.id;
+				var initialData = model.newChatMessageData;
+				var currentReceiverId = initialData.to_id;
+				var currentReceiverIsOrganization = initialData.receiver_is_organization;
+				var cmd = (_elm_lang$core$Native_Utils.eq(currentUserId, newMessageReceiverId) && (_elm_lang$core$Native_Utils.eq(currentUserIsOrganization, newMessageReceiverIsOrganization) && ((!_elm_lang$core$Native_Utils.eq(currentReceiverId, newMessageSenderId)) || (!_elm_lang$core$Native_Utils.eq(currentReceiverIsOrganization, newMessageSenderIsOrganization))))) ? _user$project$Ports$fetchMessageSenderPicture(_p48) : ((_elm_lang$core$Native_Utils.eq(currentUserId, newMessageReceiverId) && (_elm_lang$core$Native_Utils.eq(currentUserIsOrganization, newMessageReceiverIsOrganization) && (_elm_lang$core$Native_Utils.eq(currentReceiverId, newMessageSenderId) && _elm_lang$core$Native_Utils.eq(currentReceiverIsOrganization, newMessageSenderIsOrganization)))) ? _user$project$Ports$markIncomingMessageAsRed(
+					A2(_user$project$Ports$MarkMessageAsRedWrapper, newMessageId, currentUser.token)) : _elm_lang$core$Platform_Cmd$none);
+				var pendingMessageData = (_elm_lang$core$Native_Utils.eq(currentUserId, newMessageSenderId) && (_elm_lang$core$Native_Utils.eq(currentUserIsOrganization, newMessageSenderIsOrganization) && (_elm_lang$core$Native_Utils.eq(currentReceiverId, newMessageReceiverId) && _elm_lang$core$Native_Utils.eq(currentReceiverIsOrganization, newMessageReceiverIsOrganization)))) ? _elm_lang$core$Native_Utils.update(
+					initialData,
+					{body: '', error: ''}) : initialData;
+				var chatHistory = model.currentChatHistory;
+				var updatedChatHistory = ((_elm_lang$core$Native_Utils.eq(currentUserId, newMessageSenderId) && (_elm_lang$core$Native_Utils.eq(currentUserIsOrganization, newMessageSenderIsOrganization) && (_elm_lang$core$Native_Utils.eq(currentReceiverId, newMessageReceiverId) && _elm_lang$core$Native_Utils.eq(currentReceiverIsOrganization, newMessageReceiverIsOrganization)))) || (_elm_lang$core$Native_Utils.eq(currentUserId, newMessageReceiverId) && (_elm_lang$core$Native_Utils.eq(currentUserIsOrganization, newMessageReceiverIsOrganization) && (_elm_lang$core$Native_Utils.eq(currentReceiverId, newMessageSenderId) && _elm_lang$core$Native_Utils.eq(currentReceiverIsOrganization, newMessageSenderIsOrganization))))) ? {ctor: '::', _0: _p48, _1: chatHistory} : chatHistory;
+				var finalChatHistory = (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$List$length(updatedChatHistory),
+					20) > 0) ? A2(_elm_lang$core$List$take, 20, updatedChatHistory) : updatedChatHistory;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{currentChatHistory: finalChatHistory, newChatMessageData: pendingMessageData}),
+					_1: cmd
+				};
+			case 'OnSubmitChatMessage':
+				var currentUser = model.loggedInMember;
+				var tmp = model.newChatMessageData;
+				var initialData = _elm_lang$core$Native_Utils.update(
+					tmp,
+					{error: ''});
+				var round1 = _elm_lang$core$String$isEmpty(initialData.body) ? _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: 'Type some message to send'}) : initialData;
+				var round2 = _elm_lang$core$Native_Utils.update(
+					round1,
+					{from_id: currentUser.id, sender_is_organization: currentUser.isOrganization, token: currentUser.token});
+				var cmd = _elm_lang$core$String$isEmpty(round2.error) ? _user$project$Ports$submitChatMessageToChannel(
+					A6(_user$project$Ports$NewChatMessageWrapper, round2.body, 20, round2.receiver_is_organization, round2.sender_is_organization, round2.to_id, '$2b$12$hlIgRLnkBKntpWFClZZJZevDfRrY5zZyOLgGrnQYPxRrWzYMEGBgK')) : _elm_lang$core$Platform_Cmd$none;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newChatMessageData: round2}),
+					_1: cmd
+				};
+			case 'OnInputChatMessage':
+				var initialData = model.newChatMessageData;
+				var updatedData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{body: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newChatMessageData: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnToggleChatWindow':
+				var currentUser = model.loggedInMember;
+				var newMessageData = function () {
+					var _p49 = _p0._0;
+					if (_p49.ctor === 'Nothing') {
+						return A8(_user$project$Models$NewChatMessageData, 0, 0, false, false, '', '', '', '');
+					} else {
+						var _p50 = _p49._0;
+						return A8(_user$project$Models$NewChatMessageData, _p50.id, 0, false, _p50.is_organization, '', _p50.name, '', '');
+					}
+				}();
+				var windowOpened = _elm_lang$core$Native_Utils.eq(newMessageData.to_id, 0) ? false : true;
+				var cmd = _elm_lang$core$Native_Utils.eq(newMessageData.to_id, 0) ? _elm_lang$core$Platform_Cmd$none : _user$project$Networking$fetchChatHistoryCmd(
+					A5(_user$project$Models$ChatHistoryRequestWrapper, newMessageData.to_id, currentUser.id, newMessageData.receiver_is_organization, currentUser.isOrganization, currentUser.token));
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{chatWindowOpened: windowOpened, newChatMessageData: newMessageData}),
+					_1: cmd
+				};
+			case 'OnGetIdeaPictureUris':
+				var _p51 = _p0._0;
+				var tmp = model.newIdeaData;
+				var initialData = _elm_lang$core$Native_Utils.update(
+					tmp,
+					{error: ''});
+				var updatedData = _elm_lang$core$String$isEmpty(_p51.error) ? _elm_lang$core$Native_Utils.update(
+					initialData,
+					{pictureUris: _p51.uri}) : _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: _p51.error});
+				var cmd = (_elm_lang$core$String$isEmpty(updatedData.error) && (!_elm_lang$core$String$isEmpty(updatedData.videoName))) ? _user$project$Ports$submitVideoFileToFirebase(updatedData.videoName) : (_elm_lang$core$String$isEmpty(updatedData.error) ? _user$project$Networking$submitNewIdeaCmd(updatedData) : _elm_lang$core$Platform_Cmd$none);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: updatedData}),
+					_1: cmd
+				};
+			case 'OnIdeaPicNameChoosen':
+				var _p52 = _p0._0;
+				var tmp = model.newIdeaData;
+				var initialData = _elm_lang$core$Native_Utils.update(
+					tmp,
+					{error: ''});
+				var updatedData = _elm_lang$core$String$isEmpty(_p52.error) ? _elm_lang$core$Native_Utils.update(
+					initialData,
+					{
+						pictureNames: A2(
+							_elm_lang$core$Basics_ops['++'],
+							initialData.pictureNames,
+							A2(_elm_lang$core$Basics_ops['++'], _p52.fileName, ', '))
+					}) : _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: _p52.error});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnGetUploadedVideoFileUri':
+				var _p53 = _p0._0;
+				var loggedInInno = model.currentInnovatorExtended;
+				var loggedInMember = model.loggedInMember;
+				var tmp = model.newIdeaData;
+				var initialData = _elm_lang$core$Native_Utils.update(
+					tmp,
+					{error: ''});
+				var updatedData = _elm_lang$core$String$isEmpty(_p53.error) ? _elm_lang$core$Native_Utils.update(
+					initialData,
+					{videoUri: _p53.uri}) : _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: _p53.error});
+				var round2 = _elm_lang$core$String$isEmpty(updatedData.error) ? _elm_lang$core$Native_Utils.update(
+					updatedData,
+					{token: loggedInMember.token, innovator_id: loggedInInno.id}) : updatedData;
+				var cmd = _elm_lang$core$String$isEmpty(round2.error) ? _user$project$Networking$submitNewIdeaCmd(round2) : _elm_lang$core$Platform_Cmd$none;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: round2}),
+					_1: cmd
+				};
+			case 'OnIdeaVideoNameChoosen':
+				var _p54 = _p0._0;
+				var tmp = model.newIdeaData;
+				var initialData = _elm_lang$core$Native_Utils.update(
+					tmp,
+					{error: ''});
+				var updatedData = _elm_lang$core$String$isEmpty(_p54.error) ? _elm_lang$core$Native_Utils.update(
+					initialData,
+					{videoName: _p54.fileName}) : _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: _p54.error});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: updatedData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubmitIdeaCompleted':
+				var _p55 = _p0._0;
+				if (_p55.ctor === 'Ok') {
+					var _p56 = _p55._0;
+					var pageHistoryString = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$desktopPageToString(p);
+						},
+						model.pageHistory);
+					var mobilePageHistoryStr = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$mobilePageToString(p);
+						},
+						model.mobilePageHistory);
+					var updatedMobilePage = _elm_lang$core$String$isEmpty(_p56.error) ? _user$project$Models$MobileProfilePage : _user$project$Models$MobilePostAnIdeaPage;
+					var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(updatedMobilePage);
+					var nextPage = _elm_lang$core$String$isEmpty(_p56.error) ? _user$project$Models$ProfilePage : _user$project$Models$NewIdeaPage;
+					var innovatorExtended = model.currentInnovatorExtended;
+					var updatedInnovatorExtended = _elm_lang$core$String$isEmpty(_p56.error) ? _elm_lang$core$Native_Utils.update(
+						innovatorExtended,
+						{ideas_count: innovatorExtended.ideas_count + 1}) : innovatorExtended;
+					var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(updatedInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+						_user$project$TypeToStringUtils$langToString(model.language))(
+						_user$project$TypeToStringUtils$desktopPageToString(nextPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+					var cmd = _elm_lang$core$String$isEmpty(_p56.error) ? _elm_lang$core$Platform_Cmd$batch(
+						{
+							ctor: '::',
+							_0: _elm_lang$navigation$Navigation$newUrl('#profile'),
+							_1: {
+								ctor: '::',
+								_0: _user$project$Ports$cacheAllData(cachedData),
+								_1: {ctor: '[]'}
+							}
+						}) : _elm_lang$core$Platform_Cmd$none;
+					var initialData = model.newIdeaData;
+					var updatedData = _elm_lang$core$String$isEmpty(_p56.error) ? _elm_lang$core$Native_Utils.update(
+						initialData,
+						{ideaName: '', industry: '', tags: '', shortDescription: '', ideaPrice: '', longDescription: '', pictureUris: '', videoUri: '', error: '', token: '', innovator_id: 0, videoName: '', pictureNames: '', hasNda: false, isDefaultNda: true, customNda: ''}) : _elm_lang$core$Native_Utils.update(
+						initialData,
+						{error: _p56.error});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{newIdeaData: updatedData, desktopPage: nextPage, dashboardMobilePage: updatedMobilePage, currentInnovatorExtended: updatedInnovatorExtended}),
+						_1: cmd
+					};
+				} else {
+					var initialData = model.newIdeaData;
+					var updatedData = _elm_lang$core$Native_Utils.update(
+						initialData,
+						{
+							error: _elm_lang$core$Basics$toString(_p55._0)
+						});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{newIdeaData: updatedData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnNewIdeaSubmit':
+				var loggedInInno = model.currentInnovatorExtended;
+				var loggedInMember = model.loggedInMember;
+				var initialData = model.newIdeaData;
+				var round1 = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: ''});
+				var round2 = (_elm_lang$core$String$isEmpty(round1.error) && _elm_lang$core$String$isEmpty(round1.ideaName)) ? _elm_lang$core$Native_Utils.update(
+					round1,
+					{error: 'Idea/Project name required'}) : round1;
+				var round3 = (_elm_lang$core$String$isEmpty(round2.error) && _elm_lang$core$String$isEmpty(round2.industry)) ? _elm_lang$core$Native_Utils.update(
+					round2,
+					{error: 'Industry required'}) : round2;
+				var round4 = (_elm_lang$core$String$isEmpty(round3.error) && _elm_lang$core$String$isEmpty(round3.shortDescription)) ? _elm_lang$core$Native_Utils.update(
+					round3,
+					{error: 'Short description required'}) : round3;
+				var round5 = (_elm_lang$core$String$isEmpty(round4.error) && _elm_lang$core$String$isEmpty(round4.longDescription)) ? _elm_lang$core$Native_Utils.update(
+					round4,
+					{error: 'Long description required'}) : round4;
+				var round6 = (_elm_lang$core$String$isEmpty(round5.error) && (round5.hasNda && ((!round5.isDefaultNda) && _elm_lang$core$String$isEmpty(round5.customNda)))) ? _elm_lang$core$Native_Utils.update(
+					round5,
+					{error: 'Custom NDA required!'}) : round5;
+				var round7 = _elm_lang$core$String$isEmpty(round6.error) ? _elm_lang$core$Native_Utils.update(
+					round6,
+					{token: loggedInMember.token, innovator_id: loggedInInno.id}) : round6;
+				var cmd = (_elm_lang$core$String$isEmpty(round7.error) && (!_elm_lang$core$String$isEmpty(round7.pictureNames))) ? _user$project$Ports$submitPicturesToFirebase(round7.pictureNames) : ((_elm_lang$core$String$isEmpty(round7.error) && (!_elm_lang$core$String$isEmpty(round7.videoName))) ? _user$project$Ports$submitVideoFileToFirebase(round7.videoName) : (_elm_lang$core$String$isEmpty(round7.error) ? _user$project$Networking$submitNewIdeaCmd(round7) : _elm_lang$core$Platform_Cmd$none));
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: round7}),
+					_1: cmd
+				};
+			case 'OnNewIdeaLongDescriptionInput':
+				var oldData = model.newIdeaData;
+				var newData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{longDescription: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: newData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnNewIdeaPriceInput':
+				var oldData = model.newIdeaData;
+				var newData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{ideaPrice: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: newData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnNewIdeaShortDescriptionInput':
+				var oldData = model.newIdeaData;
+				var newData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{shortDescription: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: newData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnNewIdeaTagsInput':
+				var oldData = model.newIdeaData;
+				var newData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{tags: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: newData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnNewIdeaIndustryInput':
+				var oldData = model.newIdeaData;
+				var newData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{industry: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: newData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnNewIdeaNameInput':
+				var oldData = model.newIdeaData;
+				var newData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{ideaName: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{newIdeaData: newData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnGetFakeInterOpResponse':
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: _user$project$Ports$initIdeaMediaBtns('')
+				};
+			case 'OnMobileDashboardNewIdeaPageVisible':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					model.pageHistory);
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobilePostAnIdeaPage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobilePostAnIdeaPage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _elm_lang$core$Platform_Cmd$batch(
+					{
+						ctor: '::',
+						_0: _user$project$Ports$initFakeInterOp(''),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Ports$cacheAllData(cachedData),
+							_1: {ctor: '[]'}
+						}
+					});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							dashboardMobilePage: _user$project$Models$MobilePostAnIdeaPage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobilePostAnIdeaPage, _1: model.mobilePageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnDashboardNewIdeaPageVisible':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$NewIdeaPage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					model.mobilePageHistory);
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$NewIdeaPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							desktopPage: _user$project$Models$NewIdeaPage,
+							pageHistory: {ctor: '::', _0: _user$project$Models$NewIdeaPage, _1: model.pageHistory}
+						}),
+					_1: _elm_lang$core$Platform_Cmd$batch(
+						{
+							ctor: '::',
+							_0: _user$project$Ports$initFakeInterOp(''),
+							_1: {
+								ctor: '::',
+								_0: _user$project$Ports$cacheAllData(cachedData),
+								_1: {ctor: '[]'}
+							}
+						})
+				};
+			case 'OnFetchExtendedPostsCompleted':
+				var _p57 = _p0._0;
+				if (_p57.ctor === 'Ok') {
+					var _p58 = _p57._0;
+					var pageHistoryString = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$desktopPageToString(p);
+						},
+						model.pageHistory);
+					var mobilePageHistoryStr = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$mobilePageToString(p);
+						},
+						model.mobilePageHistory);
+					var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+					var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(_p58)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+						_user$project$TypeToStringUtils$langToString(model.language))(
+						_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+					var cmd = _user$project$Ports$cacheAllData(cachedData);
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{postList: _p58}),
+						_1: cmd
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnSubmitPostCompleted':
+				var _p59 = _p0._0;
+				if (_p59.ctor === 'Ok') {
+					var _p60 = _p59._0;
+					var loggedInUser = model.loggedInMember;
+					var cmd = _elm_lang$core$String$isEmpty(_p60.error) ? _user$project$Networking$fetchExtendedPostsCmd(loggedInUser.token) : _elm_lang$core$Platform_Cmd$none;
+					var initialData = model.postData;
+					var updatedData = _elm_lang$core$String$isEmpty(_p60.error) ? _elm_lang$core$Native_Utils.update(
+						initialData,
+						{innovator_id: 0, organization_id: 0, message: '', mediaFileName: '', mediaFileUri: '', error: '', token: ''}) : _elm_lang$core$Native_Utils.update(
+						initialData,
+						{error: _p60.error});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{postData: updatedData}),
+						_1: cmd
+					};
+				} else {
+					var initialData = model.postData;
+					var updatedData = _elm_lang$core$Native_Utils.update(
+						initialData,
+						{
+							error: _elm_lang$core$Basics$toString(_p59._0)
+						});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{postData: updatedData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnGetUploadedMediaFileUri':
+				var _p61 = _p0._0;
+				var loggedInInno = model.currentInnovatorExtended;
+				var loggedInOrg = model.currentOrganizationExtended;
+				var loggedInMember = model.loggedInMember;
+				var initialData = model.postData;
+				var firstRound = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: ''});
+				var secondRound = _elm_lang$core$String$isEmpty(_p61.error) ? _elm_lang$core$Native_Utils.update(
+					firstRound,
+					{mediaFileUri: _p61.uri}) : _elm_lang$core$Native_Utils.update(
+					firstRound,
+					{error: _p61.error});
+				var thirdRound = loggedInMember.isOrganization ? _elm_lang$core$Native_Utils.update(
+					secondRound,
+					{organization_id: loggedInOrg.id, token: loggedInMember.token}) : _elm_lang$core$Native_Utils.update(
+					secondRound,
+					{innovator_id: loggedInInno.id, token: loggedInMember.token});
+				var cmd = _elm_lang$core$String$isEmpty(thirdRound.error) ? _user$project$Networking$submitNewPostCmd(thirdRound) : _elm_lang$core$Platform_Cmd$none;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{postData: thirdRound}),
+					_1: cmd
+				};
+			case 'OnSubmitPost':
+				var loggedInInno = model.currentInnovatorExtended;
+				var loggedInOrg = model.currentOrganizationExtended;
+				var loggedInMember = model.loggedInMember;
+				var initialData = model.postData;
+				var firstRound = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: ''});
+				var secondRound = (_elm_lang$core$String$isEmpty(firstRound.message) && _elm_lang$core$String$isEmpty(firstRound.mediaFileName)) ? _elm_lang$core$Native_Utils.update(
+					firstRound,
+					{error: 'Some message or media file required!'}) : firstRound;
+				var thirdRound = loggedInMember.isOrganization ? _elm_lang$core$Native_Utils.update(
+					secondRound,
+					{organization_id: loggedInOrg.id, token: loggedInMember.token}) : _elm_lang$core$Native_Utils.update(
+					secondRound,
+					{innovator_id: loggedInInno.id, token: loggedInMember.token});
+				var cmd = (_elm_lang$core$String$isEmpty(thirdRound.error) && (!_elm_lang$core$String$isEmpty(thirdRound.mediaFileName))) ? _user$project$Ports$submitMediaFileToFirebase(thirdRound.mediaFileName) : (_elm_lang$core$String$isEmpty(thirdRound.error) ? _user$project$Networking$submitNewPostCmd(thirdRound) : _elm_lang$core$Platform_Cmd$none);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{postData: thirdRound}),
+					_1: cmd
+				};
+			case 'OnPostMessageInput':
+				var oldPostData = model.postData;
+				var updatedPostData = _elm_lang$core$Native_Utils.update(
+					oldPostData,
+					{message: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{postData: updatedPostData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnPostImageNameChoosen':
+				var _p62 = _p0._0;
+				var oldPostData = model.postData;
+				var fileName = _elm_lang$core$String$isEmpty(_p62.error) ? _p62.fileName : '';
+				var updatedPostData = _elm_lang$core$Native_Utils.update(
+					oldPostData,
+					{mediaFileName: fileName, error: _p62.error});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{postData: updatedPostData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnContactUsFormSubmitCompleted':
+				var _p63 = _p0._0;
+				if (_p63.ctor === 'Ok') {
+					var _p64 = _p63._0;
+					var oldData = model.contactUsData;
+					var output = _elm_lang$core$String$isEmpty(_p64.error) ? 'Your message has been submitted. Thank you!' : _p64.error;
+					var newData = A2(_elm_lang$core$String$contains, 'message has been submitted', output) ? _elm_lang$core$Native_Utils.update(
+						oldData,
+						{error: output, name: '', email: '', message: ''}) : _elm_lang$core$Native_Utils.update(
+						oldData,
+						{error: output});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{contactUsData: newData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					var oldData = model.contactUsData;
+					var newData = _elm_lang$core$Native_Utils.update(
+						oldData,
+						{error: 'Something weird happened. Try later, please!'});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{contactUsData: newData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnContactUsFormSubmit':
+				var initialData = model.contactUsData;
+				var i1 = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{error: ''});
+				var i2 = _elm_lang$core$String$isEmpty(i1.name) ? _elm_lang$core$Native_Utils.update(
+					i1,
+					{error: 'Name required!'}) : i1;
+				var i3 = (_elm_lang$core$String$isEmpty(i2.error) && ((!A2(_elm_lang$core$String$contains, '@', i2.email)) || (!A2(_elm_lang$core$String$contains, '.', i2.email)))) ? _elm_lang$core$Native_Utils.update(
+					i2,
+					{error: 'Wrong email format!'}) : i2;
+				var i4 = (_elm_lang$core$String$isEmpty(i3.error) && _elm_lang$core$String$isEmpty(i3.message)) ? _elm_lang$core$Native_Utils.update(
+					i3,
+					{error: 'Message required!'}) : i3;
+				var cmd = _elm_lang$core$String$isEmpty(i4.error) ? _user$project$Networking$submitContactUsFormCmd(i4) : _elm_lang$core$Platform_Cmd$none;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{contactUsData: i4}),
+					_1: cmd
+				};
+			case 'OnContactUsMessageInput':
+				var oldData = model.contactUsData;
+				var newData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{message: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{contactUsData: newData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnContactUsEmailInput':
+				var oldData = model.contactUsData;
+				var newData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{email: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{contactUsData: newData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnContactUsNameInput':
+				var oldData = model.contactUsData;
+				var newData = _elm_lang$core$Native_Utils.update(
+					oldData,
+					{name: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{contactUsData: newData}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribeMaxOrganization':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedOrganizationsPlan: _user$project$Models$MaxOrganization}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribePremiumOrganization':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedOrganizationsPlan: _user$project$Models$PremiumOrganization}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribePlusOrganization':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedOrganizationsPlan: _user$project$Models$PlusOrganization}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribeBasicOrganization':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedOrganizationsPlan: _user$project$Models$BasicOrganization}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribeMaxOrganizationMobile':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedOrganizationsPlan: _user$project$Models$MaxOrganization, mobileMenuView: false, mobileDefaultView: true, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false, mobileGetStartedOpened: true, mobileRegisterIdeaGeneratorOpened: false, mobileRegisterCompanyOpened: true}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribePremiumOrganizationMobile':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedOrganizationsPlan: _user$project$Models$PremiumOrganization, mobileMenuView: false, mobileDefaultView: true, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false, mobileGetStartedOpened: true, mobileRegisterIdeaGeneratorOpened: false, mobileRegisterCompanyOpened: true}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribePlusOrganizationMobile':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedOrganizationsPlan: _user$project$Models$PlusOrganization, mobileMenuView: false, mobileDefaultView: true, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false, mobileGetStartedOpened: true, mobileRegisterIdeaGeneratorOpened: false, mobileRegisterCompanyOpened: true}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribeBasicOrganizationMobile':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedOrganizationsPlan: _user$project$Models$BasicOrganization, mobileMenuView: false, mobileDefaultView: true, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false, mobileGetStartedOpened: true, mobileRegisterIdeaGeneratorOpened: false, mobileRegisterCompanyOpened: true}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribePremiumInnovatorsMobile':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedInnovatorsPlan: _user$project$Models$PremiumInnovator, mobileMenuView: false, mobileDefaultView: true, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false, mobileGetStartedOpened: true, mobileRegisterIdeaGeneratorOpened: true, mobileRegisterCompanyOpened: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribePlusInnovatorsMobile':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedInnovatorsPlan: _user$project$Models$PlusInnovator, mobileMenuView: false, mobileDefaultView: true, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false, mobileGetStartedOpened: true, mobileRegisterIdeaGeneratorOpened: true, mobileRegisterCompanyOpened: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribeBasicInnovatorsMobile':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedInnovatorsPlan: _user$project$Models$BasicInnovator, mobileMenuView: false, mobileDefaultView: true, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false, mobileGetStartedOpened: true, mobileRegisterIdeaGeneratorOpened: true, mobileRegisterCompanyOpened: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribeFreeInnovatorsMobile':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedInnovatorsPlan: _user$project$Models$FreeInnovator, mobileMenuView: false, mobileDefaultView: true, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false, mobileGetStartedOpened: true, mobileRegisterIdeaGeneratorOpened: true, mobileRegisterCompanyOpened: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribeFreeInnovators':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedInnovatorsPlan: _user$project$Models$FreeInnovator}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribeBasicInnovators':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedInnovatorsPlan: _user$project$Models$BasicInnovator}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribePlusInnovators':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedInnovatorsPlan: _user$project$Models$PlusInnovator}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnSubscribePremiumInnovators':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{selectedInnovatorsPlan: _user$project$Models$PremiumInnovator}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnGetOrganizationDataCompleted':
+				var _p65 = _p0._0;
+				if (_p65.ctor === 'Ok') {
+					var data = _p65._0.organization_data;
+					var orgExtended = _elm_lang$core$Native_Utils.eq(data.id, 0) ? _user$project$Models$OrganizationExtended(0)('')('')('')('')(0)(0)('')('')('')('')('')('')('')(0)(0) : data;
+					var cmd = _elm_lang$core$Native_Utils.eq(data.id, 0) ? _elm_lang$core$Platform_Cmd$none : _user$project$Ports$initPostMediaBtn('');
+					var orgSettingsFields = _elm_lang$core$Native_Utils.eq(data.id, 0) ? _user$project$Models$OrganizationSettingsFields(0)('')('')('')('')(0)(0)('')('')('')('')('')('')('')('')('')('')('') : _user$project$Models$OrganizationSettingsFields(data.id)(data.name)(data.pic_uri)(data.country)(data.email)(data.complete_ideas_count)(data.organizations_plan_id)(data.description)(data.webpage)(data.about_us)(data.industry)(data.interested_industries)(data.username)(data.phone)('')('')('')('');
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{currentOrganizationExtended: orgExtended, organizationSettingsFields: orgSettingsFields}),
+						_1: cmd
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnGetInnovatorDataCompleted':
+				var _p66 = _p0._0;
+				if (_p66.ctor === 'Ok') {
+					var data = _p66._0.innovator_data;
+					var cmd = _elm_lang$core$Native_Utils.eq(data.id, 0) ? _elm_lang$core$Platform_Cmd$none : _user$project$Ports$initPostMediaBtn('');
+					var innData = _elm_lang$core$Native_Utils.eq(data.id, 0) ? _user$project$Models$InnovatorExtended(0)('')('')(0)('')('')(0)(0)('')('')('')('')('')('')(0) : data;
+					var nameList = A2(_elm_lang$core$String$split, ' ', data.name);
+					var name = function () {
+						var _p67 = _elm_lang$core$List$head(nameList);
+						if (_p67.ctor === 'Just') {
+							return _p67._0;
+						} else {
+							return '';
+						}
+					}();
+					var surnameList = A2(_elm_lang$core$List$drop, 1, nameList);
+					var surname = function () {
+						var _p68 = _elm_lang$core$List$head(surnameList);
+						if (_p68.ctor === 'Just') {
+							return _p68._0;
+						} else {
+							return '';
+						}
+					}();
+					var innSettingsFields = _elm_lang$core$Native_Utils.eq(data.id, 0) ? _user$project$Models$InnovatorSettingsFields(0)('')('')('')(0)('')('')(0)(0)('')('')('')('')('')('')('')('')('')('') : _user$project$Models$InnovatorSettingsFields(data.id)(name)(surname)(data.pic_uri)(data.rating)(data.country)(data.email)(data.ideas_count)(data.innovators_plan_id)(data.description)(data.about_me)(data.education)(data.experience)(data.username)(data.phone)('')('')('')('');
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{currentInnovatorExtended: innData, innovatorSettingsFields: innSettingsFields}),
+						_1: cmd
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnSignOutInitiated':
+				var data = model.loggedInMember;
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: _user$project$Networking$signOutCmd(data.token)
+				};
+			case 'OnSignOutCompleted':
+				var _p69 = _p0._0;
+				if (_p69.ctor === 'Ok') {
+					var orgEditables = _user$project$Models$OrganizationSettingsFieldsEditable(false)(false)(false)(false)(false)(false)(false)(false)(false)(false)(false);
+					var editables = _user$project$Models$InnovatorSettingsFieldsEditable(false)(false)(false)(false)(false)(false)(false)(false)(false)(false);
+					var cmd = _elm_lang$core$Native_Utils.eq(_p69._0.response, 'Sucess!') ? _elm_lang$core$Platform_Cmd$batch(
+						{
+							ctor: '::',
+							_0: _elm_lang$navigation$Navigation$newUrl('#'),
+							_1: {
+								ctor: '::',
+								_0: _user$project$Ports$reverseBackgroundImage(''),
+								_1: {
+									ctor: '::',
+									_0: _user$project$Ports$turnOffNewNotifsFetch(''),
+									_1: {
+										ctor: '::',
+										_0: _user$project$Ports$clearCachedData(''),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}) : _elm_lang$core$Platform_Cmd$none;
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								loggingInMember: A3(_user$project$Models$LoggingInMember, '', '', ''),
+								loggedInMember: A5(_user$project$Models$LoggedInMember, 0, '', '', true, ''),
+								dashboardOptionsVisible: false,
+								newMessagesNotifsVisible: false,
+								desktopPage: _user$project$Models$HomePage,
+								dashboardMobilePage: _user$project$Models$MobileHomePage,
+								getStartedOpened: false,
+								loginOpened: false,
+								innovatorSettingsFieldsEditable: editables,
+								organizationSettingsFieldsEditable: orgEditables,
+								chatWindowOpened: false,
+								connections: {ctor: '[]'},
+								mobilePageHistory: {ctor: '[]'},
+								pageHistory: {ctor: '[]'},
+								signedNDAs: {ctor: '[]'},
+								mobileMenuView: false,
+								mobileDefaultView: true,
+								mobileIdeaGeneratorsView: false,
+								mobileOrganizationsView: false,
+								mobilePricingToggleOpen: false,
+								mobilePricingIdeaGeneratorsView: false,
+								mobilePricingOrganizationsView: false,
+								mobileAboutUsView: false,
+								mobileContactView: false,
+								mobileFaqView: false,
+								mobileTarrifPlansView: false,
+								mobileGetStartedOpened: false,
+								mobileRegisterIdeaGeneratorOpened: false,
+								mobileRegisterCompanyOpened: false,
+								registerIdeaGeneratorOpened: false,
+								registerCompanyOpened: false
+							}),
+						_1: cmd
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnDashboardMobileSettingsPageOpen':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$SettingsPage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileSettingsPage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileSettingsPage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$SettingsPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							dashboardMobilePage: _user$project$Models$MobileSettingsPage,
+							desktopPage: _user$project$Models$SettingsPage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileSettingsPage, _1: model.mobilePageHistory},
+							pageHistory: {ctor: '::', _0: _user$project$Models$SettingsPage, _1: model.pageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnDashboardMobileProfilePageOpen':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					model.pageHistory);
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileProfilePage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileProfilePage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							dashboardMobilePage: _user$project$Models$MobileProfilePage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileProfilePage, _1: model.mobilePageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnDashboardMobileHomePageOpen':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					model.pageHistory);
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$MobileHomePage, _1: model.mobilePageHistory});
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(_user$project$Models$MobileHomePage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							dashboardMobilePage: _user$project$Models$MobileHomePage,
+							mobilePageHistory: {ctor: '::', _0: _user$project$Models$MobileHomePage, _1: model.mobilePageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnLocationChangeProfilePage':
+				var pageHistoryString = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$desktopPageToString(p);
+					},
+					{ctor: '::', _0: _user$project$Models$ProfilePage, _1: model.pageHistory});
+				var mobilePageHistoryStr = A2(
+					_elm_lang$core$List$map,
+					function (p) {
+						return _user$project$TypeToStringUtils$mobilePageToString(p);
+					},
+					model.mobilePageHistory);
+				var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+				var cachedData = _user$project$Models$CacheDataWrapper(model.loggedInMember)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+					_user$project$TypeToStringUtils$langToString(model.language))(
+					_user$project$TypeToStringUtils$desktopPageToString(_user$project$Models$ProfilePage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+				var cmd = _user$project$Ports$cacheAllData(cachedData);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							desktopPage: _user$project$Models$ProfilePage,
+							pageHistory: {ctor: '::', _0: _user$project$Models$ProfilePage, _1: model.pageHistory}
+						}),
+					_1: cmd
+				};
+			case 'OnSwitchDashboardOptionsVisible':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{dashboardOptionsVisible: !model.dashboardOptionsVisible}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnLoggingInMemberCompleted':
+				var _p70 = _p0._0;
+				if (_p70.ctor === 'Ok') {
+					var _p71 = _p70._0;
+					var oldPageHistoryMobile = model.mobilePageHistory;
+					var newPageHistoryMobile = {ctor: '::', _0: _user$project$Models$MobileNewsfeedPage, _1: oldPageHistoryMobile};
+					var oldPageHistory = model.pageHistory;
+					var newPageHistory = {ctor: '::', _0: _user$project$Models$NewsfeedPage, _1: oldPageHistory};
+					var pageHistoryString = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$desktopPageToString(p);
+						},
+						model.pageHistory);
+					var mobilePageHistoryStr = A2(
+						_elm_lang$core$List$map,
+						function (p) {
+							return _user$project$TypeToStringUtils$mobilePageToString(p);
+						},
+						model.mobilePageHistory);
+					var mobilePageStr = _user$project$TypeToStringUtils$mobilePageToString(model.dashboardMobilePage);
+					var loginData = _p71.login_data;
+					var getExtendedDataCmd = loginData.isOrganization ? _user$project$Networking$getOrganizationDataCmd(
+						A2(_user$project$Models$GetDataRequestStruct, loginData.id, loginData.token)) : _user$project$Networking$getInnovatorDataCmd(
+						A2(_user$project$Models$GetDataRequestStruct, loginData.id, loginData.token));
+					var unredMessagesRequestWrapper = A3(_user$project$Models$UnredChatMessagesRequestWrapper, loginData.id, loginData.isOrganization, loginData.token);
+					var getSuggestions = loginData.isOrganization ? A2(
+						_user$project$Networking$fetchSuggestionsCmd,
+						A2(_user$project$Models$GetDataRequestStruct, loginData.id, loginData.token),
+						_user$project$Networking$fetchSuggestedInnovatorsUri) : A2(
+						_user$project$Networking$fetchSuggestionsCmd,
+						A2(_user$project$Models$GetDataRequestStruct, loginData.id, loginData.token),
+						_user$project$Networking$fetchSuggestedOrganizationsUri);
+					var cachedData = _user$project$Models$CacheDataWrapper(loginData)(mobilePageStr)(model.currentInnovatorExtended)(model.currentOrganizationExtended)(model.postList)(model.currentChatHistory)(model.pendingUnredMessages)(model.suggestedUsers)(model.notifications)(
+						_user$project$TypeToStringUtils$langToString(model.language))(
+						_user$project$TypeToStringUtils$desktopPageToString(model.desktopPage))(model.seeOtherInnovator)(model.seeOtherOrganization)(model.viewingCurrentIdea)(model.viewingCurrentFullIdea)(mobilePageHistoryStr)(pageHistoryString)(model.signedNDAs);
+					var loggingInData = model.loggingInMember;
+					var newLoggingInData = _elm_lang$core$Native_Utils.update(
+						loggingInData,
+						{loginError: _p71.error});
+					return _elm_lang$core$String$isEmpty(_p71.error) ? {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{loggedInMember: loginData, pageHistory: newPageHistory, mobilePageHistory: newPageHistoryMobile}),
+						_1: _elm_lang$core$Platform_Cmd$batch(
+							{
+								ctor: '::',
+								_0: _elm_lang$navigation$Navigation$newUrl('#dashboard'),
+								_1: {
+									ctor: '::',
+									_0: _user$project$Ports$setWhiteBackground(''),
+									_1: {
+										ctor: '::',
+										_0: getExtendedDataCmd,
+										_1: {
+											ctor: '::',
+											_0: _user$project$Networking$fetchExtendedPostsCmd(loginData.token),
+											_1: {
+												ctor: '::',
+												_0: _user$project$Networking$fetchUnredMessagesCmd(unredMessagesRequestWrapper),
+												_1: {
+													ctor: '::',
+													_0: getSuggestions,
+													_1: {
+														ctor: '::',
+														_0: _user$project$Networking$fetchNewNotificationsCmd(unredMessagesRequestWrapper),
+														_1: {
+															ctor: '::',
+															_0: _user$project$Ports$turnOnNewNotifsFetch(''),
+															_1: {
+																ctor: '::',
+																_0: _user$project$Ports$cacheAllData(cachedData),
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							})
+					} : {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{loggingInMember: newLoggingInData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					var loggingInData = model.loggingInMember;
+					var newLoggingInData = _elm_lang$core$Native_Utils.update(
+						loggingInData,
+						{
+							loginError: _elm_lang$core$Basics$toString(_p70._0)
+						});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{loggingInMember: newLoggingInData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnLoggingInMemberLogin':
+				var initialData = model.loggingInMember;
+				var memberData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{loginError: ''});
+				var email = memberData.email;
+				var emailError = ((!A2(_elm_lang$core$String$contains, '@', email)) || (!A2(_elm_lang$core$String$contains, '.', email))) ? 'Invalid email format' : '';
+				var password = memberData.password;
+				var passwordError = (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$String$length(password),
+					8) < 0) ? 'Password at least 8 chars long' : '';
+				var errorOutput = (!_elm_lang$core$String$isEmpty(emailError)) ? emailError : ((!_elm_lang$core$String$isEmpty(passwordError)) ? passwordError : '');
+				var newMember = _elm_lang$core$Native_Utils.update(
+					memberData,
+					{loginError: errorOutput});
+				var cmd = (_elm_lang$core$String$isEmpty(emailError) && _elm_lang$core$String$isEmpty(passwordError)) ? _user$project$Networking$memberLoginCmd(memberData) : _elm_lang$core$Platform_Cmd$none;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{loggingInMember: newMember}),
+					_1: cmd
+				};
+			case 'OnLoggingInMemberUsernameInput':
+				var oldMember = model.loggingInMember;
+				var newMember = _elm_lang$core$Native_Utils.update(
+					oldMember,
+					{email: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{loggingInMember: newMember}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnLoggingInMemberPasswordInput':
+				var oldMember = model.loggingInMember;
+				var newMember = _elm_lang$core$Native_Utils.update(
+					oldMember,
+					{password: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{loggingInMember: newMember}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'TopMembersFetchCompleted':
+				var _p72 = _p0._0;
+				if (_p72.ctor === 'Ok') {
+					var _p73 = _p72._0;
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{topInnovators: _p73.innovators, topOrganizations: _p73.organizations}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'OnInnovatorRegistrationSubmit':
+				var tarrifPlan = model.selectedInnovatorsPlan;
+				var tp = function () {
+					var _p74 = tarrifPlan;
+					switch (_p74.ctor) {
+						case 'NotSelectedForInnovators':
+							return 'Weird Error';
+						case 'FreeInnovator':
+							return 'Free';
+						case 'BasicInnovator':
+							return 'Basic';
+						case 'PlusInnovator':
+							return 'Plus';
+						default:
+							return 'Premium';
+					}
+				}();
+				var initialData = model.innovatorUnderRegistration;
+				var oldInnovatorData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{registrationError: ''});
+				var name = oldInnovatorData.full_name;
+				var email = oldInnovatorData.email;
+				var password = oldInnovatorData.password;
+				var country = oldInnovatorData.country;
+				var agreedWithTS = oldInnovatorData.termsOfServiceAgreemant;
+				var newInnovatorData = _elm_lang$core$String$isEmpty(name) ? _elm_lang$core$Native_Utils.update(
+					oldInnovatorData,
+					{registrationError: 'Name required'}) : oldInnovatorData;
+				var newInnovatorData1 = (_elm_lang$core$String$isEmpty(newInnovatorData.registrationError) && ((!A2(_elm_lang$core$String$contains, '@', email)) || (!A2(_elm_lang$core$String$contains, '.', email)))) ? _elm_lang$core$Native_Utils.update(
+					newInnovatorData,
+					{registrationError: 'Email is invalid'}) : newInnovatorData;
+				var newInnovatorData2 = (_elm_lang$core$String$isEmpty(newInnovatorData1.registrationError) && (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$String$length(password),
+					8) < 0)) ? _elm_lang$core$Native_Utils.update(
+					newInnovatorData1,
+					{registrationError: 'Password at least 8 characters long'}) : newInnovatorData1;
+				var newInnovatorData3 = (_elm_lang$core$String$isEmpty(newInnovatorData2.registrationError) && _elm_lang$core$String$isEmpty(country)) ? _elm_lang$core$Native_Utils.update(
+					newInnovatorData2,
+					{registrationError: 'Country required'}) : newInnovatorData2;
+				var newInnovatorData4 = (_elm_lang$core$String$isEmpty(newInnovatorData3.registrationError) && (!agreedWithTS)) ? _elm_lang$core$Native_Utils.update(
+					newInnovatorData3,
+					{registrationError: 'Should be agreed with our TS'}) : newInnovatorData3;
+				var newInnovatorData5 = (_elm_lang$core$String$isEmpty(newInnovatorData4.registrationError) && _elm_lang$core$Native_Utils.eq(tarrifPlan, _user$project$Models$NotSelectedForInnovators)) ? _elm_lang$core$Native_Utils.update(
+					newInnovatorData4,
+					{registrationError: 'Select tariff plan, please'}) : newInnovatorData4;
+				var cmd = (_elm_lang$core$String$isEmpty(newInnovatorData5.registrationError) && (!_elm_lang$core$Native_Utils.eq(tarrifPlan, _user$project$Models$NotSelectedForInnovators))) ? A2(_user$project$Networking$innovatorRegisterCmd, newInnovatorData5, tp) : _elm_lang$core$Platform_Cmd$none;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorUnderRegistration: newInnovatorData5}),
+					_1: cmd
+				};
+			case 'OnInnovatorRegistrationSubmitMobile':
+				var tarrifPlan = model.selectedInnovatorsPlan;
+				var tp = function () {
+					var _p75 = tarrifPlan;
+					switch (_p75.ctor) {
+						case 'NotSelectedForInnovators':
+							return 'Weird Error';
+						case 'FreeInnovator':
+							return 'Free';
+						case 'BasicInnovator':
+							return 'Basic';
+						case 'PlusInnovator':
+							return 'Plus';
+						default:
+							return 'Premium';
+					}
+				}();
+				var initialData = model.innovatorUnderRegistration;
+				var oldInnovatorData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{registrationError: ''});
+				var name = oldInnovatorData.full_name;
+				var email = oldInnovatorData.email;
+				var password = oldInnovatorData.password;
+				var country = oldInnovatorData.country;
+				var agreedWithTS = oldInnovatorData.termsOfServiceAgreemant;
+				var newInnovatorData = _elm_lang$core$String$isEmpty(name) ? _elm_lang$core$Native_Utils.update(
+					oldInnovatorData,
+					{registrationError: 'Name required'}) : oldInnovatorData;
+				var newInnovatorData1 = (_elm_lang$core$String$isEmpty(newInnovatorData.registrationError) && ((!A2(_elm_lang$core$String$contains, '@', email)) || (!A2(_elm_lang$core$String$contains, '.', email)))) ? _elm_lang$core$Native_Utils.update(
+					newInnovatorData,
+					{registrationError: 'Email is invalid'}) : newInnovatorData;
+				var newInnovatorData2 = (_elm_lang$core$String$isEmpty(newInnovatorData1.registrationError) && (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$String$length(password),
+					8) < 0)) ? _elm_lang$core$Native_Utils.update(
+					newInnovatorData1,
+					{registrationError: 'Password at least 8 characters long'}) : newInnovatorData1;
+				var newInnovatorData3 = (_elm_lang$core$String$isEmpty(newInnovatorData2.registrationError) && _elm_lang$core$String$isEmpty(country)) ? _elm_lang$core$Native_Utils.update(
+					newInnovatorData2,
+					{registrationError: 'Country required'}) : newInnovatorData2;
+				var newInnovatorData4 = (_elm_lang$core$String$isEmpty(newInnovatorData3.registrationError) && (!agreedWithTS)) ? _elm_lang$core$Native_Utils.update(
+					newInnovatorData3,
+					{registrationError: 'Should be agreed with our TS'}) : newInnovatorData3;
+				var newModel = (_elm_lang$core$String$isEmpty(newInnovatorData4.registrationError) && (!_elm_lang$core$Native_Utils.eq(tarrifPlan, _user$project$Models$NotSelectedForInnovators))) ? _elm_lang$core$Native_Utils.update(
+					model,
+					{innovatorUnderRegistration: newInnovatorData4}) : ((!_elm_lang$core$String$isEmpty(newInnovatorData4.registrationError)) ? _elm_lang$core$Native_Utils.update(
+					model,
+					{innovatorUnderRegistration: newInnovatorData4}) : (_elm_lang$core$Native_Utils.eq(tarrifPlan, _user$project$Models$NotSelectedForInnovators) ? _elm_lang$core$Native_Utils.update(
+					model,
+					{innovatorUnderRegistration: newInnovatorData4, mobileMenuView: false, mobileDefaultView: true, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false, mobileGetStartedOpened: true, mobileRegisterIdeaGeneratorOpened: true, mobileRegisterCompanyOpened: false}) : _elm_lang$core$Native_Utils.update(
+					model,
+					{innovatorUnderRegistration: newInnovatorData4})));
+				var cmd = (_elm_lang$core$String$isEmpty(newInnovatorData4.registrationError) && (!_elm_lang$core$Native_Utils.eq(tarrifPlan, _user$project$Models$NotSelectedForInnovators))) ? A2(_user$project$Networking$innovatorRegisterCmd, newInnovatorData4, tp) : _elm_lang$core$Platform_Cmd$none;
+				return {ctor: '_Tuple2', _0: newModel, _1: cmd};
+			case 'InnovatorRegisterCompleted':
+				var _p76 = _p0._0;
+				if (_p76.ctor === 'Ok') {
+					var _p77 = _p76._0;
+					if (!_elm_lang$core$String$isEmpty(_p77.error)) {
+						var oldData = model.innovatorUnderRegistration;
+						var newData = _elm_lang$core$Native_Utils.update(
+							oldData,
+							{registrationError: _p77.error});
+						return {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Native_Utils.update(
+								model,
+								{innovatorUnderRegistration: newData}),
+							_1: _elm_lang$core$Platform_Cmd$none
+						};
+					} else {
+						var regDataNew = _p77.reg_data;
+						var loggedInMem = A5(_user$project$Models$LoggedInMember, regDataNew.id, regDataNew.name, regDataNew.email, false, regDataNew.token);
+						return {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Native_Utils.update(
+								model,
+								{loggedInData: _p77.reg_data, loggedInMember: loggedInMem}),
+							_1: _elm_lang$core$Platform_Cmd$batch(
+								{
+									ctor: '::',
+									_0: _elm_lang$navigation$Navigation$newUrl('#dashboard'),
+									_1: {
+										ctor: '::',
+										_0: _user$project$Ports$setWhiteBackground(''),
+										_1: {
+											ctor: '::',
+											_0: _user$project$Networking$getInnovatorDataCmd(
+												A2(_user$project$Models$GetDataRequestStruct, regDataNew.id, regDataNew.token)),
+											_1: {ctor: '[]'}
+										}
+									}
+								})
+						};
+					}
+				} else {
+					var oldData = model.innovatorUnderRegistration;
+					var newData = _elm_lang$core$Native_Utils.update(
+						oldData,
+						{registrationError: 'Some weird stuff. Try again and contact us, please!'});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{innovatorUnderRegistration: newData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnInnovatorRegistrationReceiveNewletterCheck':
+				var oldInnovator = model.innovatorUnderRegistration;
+				var newInnovator = _elm_lang$core$Native_Utils.update(
+					oldInnovator,
+					{receiveNewsletterAgreement: !oldInnovator.receiveNewsletterAgreement});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorUnderRegistration: newInnovator}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorRegistrationTSAgreementCheck':
+				var oldInnovator = model.innovatorUnderRegistration;
+				var newInnovator = _elm_lang$core$Native_Utils.update(
+					oldInnovator,
+					{termsOfServiceAgreemant: !oldInnovator.termsOfServiceAgreemant});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorUnderRegistration: newInnovator}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorRegistrationCountryInput':
+				var oldInnovator = model.innovatorUnderRegistration;
+				var newInnovator = _elm_lang$core$Native_Utils.update(
+					oldInnovator,
+					{country: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorUnderRegistration: newInnovator}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorRegistrationPasswordInput':
+				var oldInnovator = model.innovatorUnderRegistration;
+				var newInnovator = _elm_lang$core$Native_Utils.update(
+					oldInnovator,
+					{password: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorUnderRegistration: newInnovator}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorRegistrationEmailInput':
+				var oldInnovator = model.innovatorUnderRegistration;
+				var newInnovator = _elm_lang$core$Native_Utils.update(
+					oldInnovator,
+					{email: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorUnderRegistration: newInnovator}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnInnovatorRegistrationNameInput':
+				var oldInnovator = model.innovatorUnderRegistration;
+				var newInnovator = _elm_lang$core$Native_Utils.update(
+					oldInnovator,
+					{full_name: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{innovatorUnderRegistration: newInnovator}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnCompanyRegistrationSubmit':
+				var tarrifPlan = model.selectedOrganizationsPlan;
+				var tp = function () {
+					var _p78 = tarrifPlan;
+					switch (_p78.ctor) {
+						case 'NotSelectedForOrganizations':
+							return 'Weird Error';
+						case 'BasicOrganization':
+							return 'Basic';
+						case 'PlusOrganization':
+							return 'Plus';
+						case 'PremiumOrganization':
+							return 'Premium';
+						default:
+							return 'Max';
+					}
+				}();
+				var initialData = model.companyUnderRegistration;
+				var oldCompanyData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{registrationError: ''});
+				var name = oldCompanyData.name;
+				var email = oldCompanyData.email;
+				var password = oldCompanyData.password;
+				var country = oldCompanyData.country;
+				var agreedWithTS = oldCompanyData.termsOfServiceAgreemant;
+				var newCompanyData = _elm_lang$core$String$isEmpty(name) ? _elm_lang$core$Native_Utils.update(
+					oldCompanyData,
+					{registrationError: 'Name required'}) : oldCompanyData;
+				var newCompanyData1 = (_elm_lang$core$String$isEmpty(newCompanyData.registrationError) && ((!A2(_elm_lang$core$String$contains, '@', email)) || (!A2(_elm_lang$core$String$contains, '.', email)))) ? _elm_lang$core$Native_Utils.update(
+					newCompanyData,
+					{registrationError: 'Email is invalid'}) : newCompanyData;
+				var newCompanyData2 = (_elm_lang$core$String$isEmpty(newCompanyData1.registrationError) && (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$String$length(password),
+					8) < 0)) ? _elm_lang$core$Native_Utils.update(
+					newCompanyData1,
+					{registrationError: 'Password at least 8 characters long'}) : newCompanyData1;
+				var newCompanyData3 = (_elm_lang$core$String$isEmpty(newCompanyData2.registrationError) && _elm_lang$core$String$isEmpty(country)) ? _elm_lang$core$Native_Utils.update(
+					newCompanyData2,
+					{registrationError: 'Country required'}) : newCompanyData2;
+				var newCompanyData4 = (_elm_lang$core$String$isEmpty(newCompanyData3.registrationError) && (!agreedWithTS)) ? _elm_lang$core$Native_Utils.update(
+					newCompanyData3,
+					{registrationError: 'Should be agreed with our TS'}) : newCompanyData3;
+				var newCompanyData5 = (_elm_lang$core$String$isEmpty(newCompanyData4.registrationError) && _elm_lang$core$Native_Utils.eq(tarrifPlan, _user$project$Models$NotSelectedForOrganizations)) ? _elm_lang$core$Native_Utils.update(
+					newCompanyData4,
+					{registrationError: 'Select tariff plan, please'}) : newCompanyData4;
+				var cmd = (_elm_lang$core$String$isEmpty(newCompanyData5.registrationError) && (!_elm_lang$core$Native_Utils.eq(tarrifPlan, _user$project$Models$NotSelectedForOrganizations))) ? A2(_user$project$Networking$organizationRegisterCmd, newCompanyData5, tp) : _elm_lang$core$Platform_Cmd$none;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{companyUnderRegistration: newCompanyData5}),
+					_1: cmd
+				};
+			case 'OnCompanyRegistrationSubmitMobile':
+				var tarrifPlan = model.selectedOrganizationsPlan;
+				var tp = function () {
+					var _p79 = tarrifPlan;
+					switch (_p79.ctor) {
+						case 'NotSelectedForOrganizations':
+							return 'Weird Error';
+						case 'BasicOrganization':
+							return 'Basic';
+						case 'PlusOrganization':
+							return 'Plus';
+						case 'PremiumOrganization':
+							return 'Premium';
+						default:
+							return 'Max';
+					}
+				}();
+				var initialData = model.companyUnderRegistration;
+				var oldCompanyData = _elm_lang$core$Native_Utils.update(
+					initialData,
+					{registrationError: ''});
+				var name = oldCompanyData.name;
+				var email = oldCompanyData.email;
+				var password = oldCompanyData.password;
+				var country = oldCompanyData.country;
+				var agreedWithTS = oldCompanyData.termsOfServiceAgreemant;
+				var newCompanyData = _elm_lang$core$String$isEmpty(name) ? _elm_lang$core$Native_Utils.update(
+					oldCompanyData,
+					{registrationError: 'Name required'}) : oldCompanyData;
+				var newCompanyData1 = (_elm_lang$core$String$isEmpty(newCompanyData.registrationError) && ((!A2(_elm_lang$core$String$contains, '@', email)) || (!A2(_elm_lang$core$String$contains, '.', email)))) ? _elm_lang$core$Native_Utils.update(
+					newCompanyData,
+					{registrationError: 'Email is invalid'}) : newCompanyData;
+				var newCompanyData2 = (_elm_lang$core$String$isEmpty(newCompanyData1.registrationError) && (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$String$length(password),
+					8) < 0)) ? _elm_lang$core$Native_Utils.update(
+					newCompanyData1,
+					{registrationError: 'Password at least 8 characters long'}) : newCompanyData1;
+				var newCompanyData3 = (_elm_lang$core$String$isEmpty(newCompanyData2.registrationError) && _elm_lang$core$String$isEmpty(country)) ? _elm_lang$core$Native_Utils.update(
+					newCompanyData2,
+					{registrationError: 'Country required'}) : newCompanyData2;
+				var newCompanyData4 = (_elm_lang$core$String$isEmpty(newCompanyData3.registrationError) && (!agreedWithTS)) ? _elm_lang$core$Native_Utils.update(
+					newCompanyData3,
+					{registrationError: 'Should be agreed with our TS'}) : newCompanyData3;
+				var newModel = (_elm_lang$core$String$isEmpty(newCompanyData4.registrationError) && (!_elm_lang$core$Native_Utils.eq(tarrifPlan, _user$project$Models$NotSelectedForOrganizations))) ? _elm_lang$core$Native_Utils.update(
+					model,
+					{companyUnderRegistration: newCompanyData4}) : ((!_elm_lang$core$String$isEmpty(newCompanyData4.registrationError)) ? _elm_lang$core$Native_Utils.update(
+					model,
+					{companyUnderRegistration: newCompanyData4}) : (_elm_lang$core$Native_Utils.eq(tarrifPlan, _user$project$Models$NotSelectedForOrganizations) ? _elm_lang$core$Native_Utils.update(
+					model,
+					{companyUnderRegistration: newCompanyData4, mobileMenuView: false, mobileDefaultView: false, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: true, mobileGetStartedOpened: false, mobileRegisterIdeaGeneratorOpened: false, mobileRegisterCompanyOpened: false}) : _elm_lang$core$Native_Utils.update(
+					model,
+					{companyUnderRegistration: newCompanyData4})));
+				var cmd = (_elm_lang$core$String$isEmpty(newCompanyData4.registrationError) && (!_elm_lang$core$Native_Utils.eq(tarrifPlan, _user$project$Models$NotSelectedForOrganizations))) ? A2(_user$project$Networking$organizationRegisterCmd, newCompanyData4, tp) : _elm_lang$core$Platform_Cmd$none;
+				return {ctor: '_Tuple2', _0: newModel, _1: cmd};
+			case 'CompanyRegisterCompleted':
+				var _p80 = _p0._0;
+				if (_p80.ctor === 'Ok') {
+					var _p81 = _p80._0;
+					if (!_elm_lang$core$String$isEmpty(_p81.error)) {
+						var oldData = model.companyUnderRegistration;
+						var newData = _elm_lang$core$Native_Utils.update(
+							oldData,
+							{registrationError: _p81.error});
+						return {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Native_Utils.update(
+								model,
+								{companyUnderRegistration: newData}),
+							_1: _elm_lang$core$Platform_Cmd$none
+						};
+					} else {
+						var regDataNew = _p81.reg_data;
+						var loggedInMem = A5(_user$project$Models$LoggedInMember, regDataNew.id, regDataNew.name, regDataNew.email, true, regDataNew.token);
+						return {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Native_Utils.update(
+								model,
+								{loggedInData: _p81.reg_data, loggedInMember: loggedInMem}),
+							_1: _elm_lang$core$Platform_Cmd$batch(
+								{
+									ctor: '::',
+									_0: _elm_lang$navigation$Navigation$newUrl('#dashboard'),
+									_1: {
+										ctor: '::',
+										_0: _user$project$Ports$setWhiteBackground(''),
+										_1: {
+											ctor: '::',
+											_0: _user$project$Networking$getOrganizationDataCmd(
+												A2(_user$project$Models$GetDataRequestStruct, regDataNew.id, regDataNew.token)),
+											_1: {ctor: '[]'}
+										}
+									}
+								})
+						};
+					}
+				} else {
+					var oldData = model.companyUnderRegistration;
+					var newData = _elm_lang$core$Native_Utils.update(
+						oldData,
+						{registrationError: 'Some weird stuff. Try again and contact us, please!'});
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{companyUnderRegistration: newData}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnCompanyRegistrationReceiveNewletterCheck':
+				var oldCompany = model.companyUnderRegistration;
+				var newCompany = _elm_lang$core$Native_Utils.update(
+					oldCompany,
+					{receiveNewsletterAgreement: !oldCompany.receiveNewsletterAgreement});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{companyUnderRegistration: newCompany}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnCompanyRegistrationTSAgreementCheck':
+				var oldCompany = model.companyUnderRegistration;
+				var newCompany = _elm_lang$core$Native_Utils.update(
+					oldCompany,
+					{termsOfServiceAgreemant: !oldCompany.termsOfServiceAgreemant});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{companyUnderRegistration: newCompany}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnCompanyRegistrationCountryInput':
+				var oldCompany = model.companyUnderRegistration;
+				var newCompany = _elm_lang$core$Native_Utils.update(
+					oldCompany,
+					{country: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{companyUnderRegistration: newCompany}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnCompanyRegistrationPasswordInput':
+				var oldCompany = model.companyUnderRegistration;
+				var newCompany = _elm_lang$core$Native_Utils.update(
+					oldCompany,
+					{password: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{companyUnderRegistration: newCompany}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnCompanyRegistrationEmailInput':
+				var oldCompany = model.companyUnderRegistration;
+				var newCompany = _elm_lang$core$Native_Utils.update(
+					oldCompany,
+					{email: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{companyUnderRegistration: newCompany}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnCompanyRegistrationNameInput':
+				var oldCompany = model.companyUnderRegistration;
+				var newCompany = _elm_lang$core$Native_Utils.update(
+					oldCompany,
+					{name: _p0._0});
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{companyUnderRegistration: newCompany}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobileTarrifPlansViewOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileMenuView: false, mobileDefaultView: false, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: true}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobileFaqViewOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileMenuView: false, mobileDefaultView: false, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: true, mobileTarrifPlansView: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobileContactUsViewOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileMenuView: false, mobileDefaultView: false, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: true, mobileFaqView: false, mobileTarrifPlansView: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobileAboutUsViewOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileMenuView: false, mobileDefaultView: false, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: true, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobilePricingOrganizationsViewOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileMenuView: false, mobileDefaultView: false, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: true, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobilePricingIdeaGeneratorsViewOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileMenuView: false, mobileDefaultView: false, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: true, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobilePricingToggle':
+				var newToggleStatus = !model.mobilePricingToggleOpen;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileDefaultView: false, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: newToggleStatus, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobileOrganizationsViewOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileMenuView: false, mobileDefaultView: false, mobileIdeaGeneratorsView: false, mobileOrganizationsView: true, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobileIdeaGeneratorsViewOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileMenuView: false, mobileDefaultView: false, mobileIdeaGeneratorsView: true, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobileMenuOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileMenuView: true, mobileDefaultView: false, mobileIdeaGeneratorsView: false, mobileOrganizationsView: false, mobilePricingToggleOpen: false, mobilePricingIdeaGeneratorsView: false, mobilePricingOrganizationsView: false, mobileAboutUsView: false, mobileContactView: false, mobileFaqView: false, mobileTarrifPlansView: false}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobileRegisterIdeaGeneratorViewOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileRegisterIdeaGeneratorOpened: true}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobileRegisterCompanyViewOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileRegisterCompanyOpened: true}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnMobileGetStartedViewOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{mobileGetStartedOpened: true}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnAdminPanelSignIn':
+				return (_elm_lang$core$Native_Utils.eq(
+					_elm_lang$core$String$length(model.adminPanelFirstPassword),
+					0) || _elm_lang$core$Native_Utils.eq(
+					_elm_lang$core$String$length(model.adminPanelSecondPassword),
+					0)) ? {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{adminPanelSignInError: 'Երկու դաշտերն էլ պարտադիր են լրացման համար'}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				} : {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: _user$project$Networking$adminPanelSignInCmd(
+						A2(_user$project$Models$AdminPanelSignInData, model.adminPanelFirstPassword, model.adminPanelSecondPassword))
+				};
+			case 'OnAdminPanelFirstPasswordInput':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{adminPanelFirstPassword: _p0._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnAdminPanelSecondPasswordInput':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{adminPanelSecondPassword: _p0._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'AdminPanelSignInCompleted':
+				var _p82 = _p0._0;
+				if (_p82.ctor === 'Ok') {
+					var _p83 = _p82._0;
+					return _elm_lang$core$Native_Utils.eq(
+						_elm_lang$core$String$length(_p83.error),
+						0) ? {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{adminPanelRegDataList: _p83.reg_data, adminPanelSignedIn: true}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					} : {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{adminPanelSignInError: _p83.error}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								adminPanelSignInError: _elm_lang$core$Basics$toString(_p82._0)
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'PromoRegistrationCallCompleted':
+				var _p84 = _p0._0;
+				if (_p84.ctor === 'Ok') {
+					var _p85 = _p84._0;
+					return _elm_lang$core$Native_Utils.eq(
+						_elm_lang$core$String$length(_p85.error),
+						0) ? {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{landingInputFieldsVisible: false}),
+						_1: _user$project$Ports$showPromoRegistrationConfirmDialog('')
+					} : {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{landingPromoRegisterError: _p85.error}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{landingPromoRegisterError: 'Չսպասված սխալ գրանցման ժամանակ: Կապվեք մեզ հետ, խնդրեմ'}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'OnLandingSignUpMobileClick':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{landingSignUpMobileVisible: true}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnLandingSignUp':
+				var shortIdea = model.landingShortIdea;
+				var prefOrganization = model.landingCompany;
+				var email = model.landingEmail;
+				var emailError = _elm_lang$core$String$isEmpty(email) ? 'Պարտադիր է լրացնել' : ((!(A2(_elm_lang$core$String$contains, '@', email) && A2(_elm_lang$core$String$contains, '.', email))) ? 'Էլ. հասցեի ֆորմատը սխալ է' : '');
+				var username = model.landingUsername;
+				var usernameError = _elm_lang$core$String$isEmpty(username) ? 'Պարտադիր է լրացնել' : '';
+				var cmd = (_elm_lang$core$String$isEmpty(usernameError) && (_elm_lang$core$String$isEmpty(emailError) && (_elm_lang$core$String$isEmpty(model.landingCompanyError) && _elm_lang$core$String$isEmpty(model.landingShortIdeaError)))) ? _user$project$Networking$promoRegisterCmd(
+					A5(_user$project$Models$PromoRegistration, username, email, prefOrganization, shortIdea, '')) : _elm_lang$core$Platform_Cmd$none;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{landingUsernameError: usernameError, landingEmailError: emailError}),
+					_1: cmd
+				};
+			case 'OnLandingShortIdeaType':
+				var _p86 = _p0._0;
+				var ideaError = (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$String$length(_p86),
+					200) > 0) ? 'Առավելագույնը 200 նիշ:' : '';
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{landingShortIdea: _p86, landingShortIdeaError: ideaError}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnLandingCompanyType':
+				var _p87 = _p0._0;
+				var companyError = (_elm_lang$core$Native_Utils.cmp(
+					_elm_lang$core$String$length(_p87),
+					30) > 0) ? 'Առավելագույնը 30 նիշ:' : '';
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{landingCompany: _p87, landingCompanyError: companyError}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnLandingEmailType':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{landingEmail: _p0._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnLandingUsernameType':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{landingUsername: _p0._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnIdeaGeneratorRegistrationOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{registerIdeaGeneratorOpened: true}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnCompanyRegistrationOpen':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{registerCompanyOpened: true}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnLoginButtonSwitch':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{loginOpened: !model.loginOpened}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnGetStartedButtonsSwitch':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{getStartedOpened: !model.getStartedOpened}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnPricingClose':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{pricingOpened: _user$project$Models$Closed}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnPricingOpen':
+				var reverted = function () {
+					var _p88 = model.pricingOpened;
+					if (_p88.ctor === 'Opened') {
+						return _user$project$Models$Closed;
+					} else {
+						return _user$project$Models$Opened;
+					}
+				}();
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{pricingOpened: reverted}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'OnLocationChange':
+				var newRoute = _user$project$Routes$parseLocation(_p0._0);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{route: newRoute}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			default:
+				return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+		}
+	});

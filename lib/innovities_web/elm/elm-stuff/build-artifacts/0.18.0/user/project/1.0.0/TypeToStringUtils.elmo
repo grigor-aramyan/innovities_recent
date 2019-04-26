@@ -1,0 +1,153 @@
+var _user$project$TypeToStringUtils$stringToLang = function (langStr) {
+	var lang = function () {
+		var _p0 = langStr;
+		switch (_p0) {
+			case 'arm':
+				return _user$project$Models$Arm;
+			case 'eng':
+				return _user$project$Models$Eng;
+			default:
+				return _user$project$Models$Eng;
+		}
+	}();
+	return lang;
+};
+var _user$project$TypeToStringUtils$langToString = function (lang) {
+	var langStr = function () {
+		var _p1 = lang;
+		if (_p1.ctor === 'Arm') {
+			return 'arm';
+		} else {
+			return 'eng';
+		}
+	}();
+	return langStr;
+};
+var _user$project$TypeToStringUtils$stringToDesktopPage = function (pageStr) {
+	var page = function () {
+		var _p2 = pageStr;
+		switch (_p2) {
+			case 'home':
+				return _user$project$Models$HomePage;
+			case 'newsfeed':
+				return _user$project$Models$NewsfeedPage;
+			case 'profile':
+				return _user$project$Models$ProfilePage;
+			case 'newIdea':
+				return _user$project$Models$NewIdeaPage;
+			case 'settings':
+				return _user$project$Models$SettingsPage;
+			case 'tariffPlans':
+				return _user$project$Models$TariffPlansPage;
+			case 'search':
+				return _user$project$Models$SearchPage;
+			case 'seeOtherInnovator':
+				return _user$project$Models$SeeOtherInnovatorPage;
+			case 'seeOtherOrganization':
+				return _user$project$Models$SeeOtherOrganizationPage;
+			case 'viewIdea':
+				return _user$project$Models$ViewIdeaPage;
+			case 'viewFullIdea':
+				return _user$project$Models$ViewFullIdeaPage;
+			case 'desktopNDA':
+				return _user$project$Models$NDAsPage;
+			default:
+				return _user$project$Models$HomePage;
+		}
+	}();
+	return page;
+};
+var _user$project$TypeToStringUtils$desktopPageToString = function (page) {
+	var pageStr = function () {
+		var _p3 = page;
+		switch (_p3.ctor) {
+			case 'HomePage':
+				return 'home';
+			case 'NewsfeedPage':
+				return 'newsfeed';
+			case 'ProfilePage':
+				return 'profile';
+			case 'NewIdeaPage':
+				return 'newIdea';
+			case 'SettingsPage':
+				return 'settings';
+			case 'TariffPlansPage':
+				return 'tariffPlans';
+			case 'SearchPage':
+				return 'search';
+			case 'SeeOtherInnovatorPage':
+				return 'seeOtherInnovator';
+			case 'SeeOtherOrganizationPage':
+				return 'seeOtherOrganization';
+			case 'ViewIdeaPage':
+				return 'viewIdea';
+			case 'ViewFullIdeaPage':
+				return 'viewFullIdea';
+			default:
+				return 'desktopNDA';
+		}
+	}();
+	return pageStr;
+};
+var _user$project$TypeToStringUtils$mobilePageToString = function (page) {
+	var pageStr = function () {
+		var _p4 = page;
+		switch (_p4.ctor) {
+			case 'MobileHomePage':
+				return 'home';
+			case 'MobileNewsfeedPage':
+				return 'mobileNewsfeed';
+			case 'MobileProfilePage':
+				return 'profile';
+			case 'MobileSettingsPage':
+				return 'settings';
+			case 'MobilePostAnIdeaPage':
+				return 'newIdea';
+			case 'MobileSearchPage':
+				return 'search';
+			case 'MobileSeeOtherInnovatorPage':
+				return 'seeOtherInnovator';
+			case 'MobileSeeOtherOrganizationPage':
+				return 'seeOtherOrganization';
+			case 'MobileViewIdeaPage':
+				return 'viewIdea';
+			case 'MobileViewFullIdeaPage':
+				return 'viewFullIdea';
+			default:
+				return 'mobileNDA';
+		}
+	}();
+	return pageStr;
+};
+var _user$project$TypeToStringUtils$stringToMobilePage = function (pageStr) {
+	var page = function () {
+		var _p5 = pageStr;
+		switch (_p5) {
+			case 'home':
+				return _user$project$Models$MobileHomePage;
+			case 'mobileNewsfeed':
+				return _user$project$Models$MobileNewsfeedPage;
+			case 'profile':
+				return _user$project$Models$MobileProfilePage;
+			case 'settings':
+				return _user$project$Models$MobileSettingsPage;
+			case 'newIdea':
+				return _user$project$Models$MobilePostAnIdeaPage;
+			case 'search':
+				return _user$project$Models$MobileSearchPage;
+			case 'seeOtherInnovator':
+				return _user$project$Models$MobileSeeOtherInnovatorPage;
+			case 'seeOtherOrganization':
+				return _user$project$Models$MobileSeeOtherOrganizationPage;
+			case 'viewIdea':
+				return _user$project$Models$MobileViewIdeaPage;
+			case 'viewFullIdea':
+				return _user$project$Models$MobileViewFullIdeaPage;
+			case 'mobileNDA':
+				return _user$project$Models$MobileNDAsPage;
+			default:
+				return _user$project$Models$MobileHomePage;
+		}
+	}();
+	return page;
+};

@@ -1,0 +1,471 @@
+var _user$project$Main$subscriptions = function (model) {
+	return _elm_lang$core$Platform_Sub$batch(
+		{
+			ctor: '::',
+			_0: _user$project$Ports$sendFakeInterOpResponseForLocationSwitch(_user$project$Messages$OnDoubleLocationSwitch),
+			_1: {
+				ctor: '::',
+				_0: _user$project$Ports$fetchCachedDataResponse(_user$project$Messages$OnFetchCachedDataCompleted),
+				_1: {
+					ctor: '::',
+					_0: _user$project$Ports$ndaRejected(_user$project$Messages$OnNDARejected),
+					_1: {
+						ctor: '::',
+						_0: _user$project$Ports$ndaAccepted(_user$project$Messages$OnNDAAccepted),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Ports$regularNewNotifsFetch(_user$project$Messages$OnRegularNewNotifsFetch),
+							_1: {
+								ctor: '::',
+								_0: _user$project$Ports$replyWithOrgSettingsPicUri(_user$project$Messages$OnGetUploadedOrgSettingsPicUri),
+								_1: {
+									ctor: '::',
+									_0: _user$project$Ports$getOrgSettingsImageName(_user$project$Messages$OnOrganizationSettingsPicNameReceived),
+									_1: {
+										ctor: '::',
+										_0: _user$project$Ports$sendFakeInterOpResponse3(_user$project$Messages$OnGetFakeInterOpResponse3),
+										_1: {
+											ctor: '::',
+											_0: _user$project$Ports$replyWithSettingsPicUri(_user$project$Messages$OnGetUploadedSettingsPicUri),
+											_1: {
+												ctor: '::',
+												_0: _user$project$Ports$sendFakeInterOpResponse2(_user$project$Messages$OnGetFakeInterOpResponse2),
+												_1: {
+													ctor: '::',
+													_0: _user$project$Ports$getSettingsImageName(_user$project$Messages$OnInnovatorSettingsPicNameReceived),
+													_1: {
+														ctor: '::',
+														_0: _user$project$Ports$replyToMarkAsRedWithSendersData(_user$project$Messages$OnMarkMessageAsRedReply),
+														_1: {
+															ctor: '::',
+															_0: _user$project$Ports$replyWithUnredChatMessageWithPic(_user$project$Messages$OnExtendedUnredMessageIncome),
+															_1: {
+																ctor: '::',
+																_0: _user$project$Ports$chatMessageSubmitError(_user$project$Messages$OnChatMessageError),
+																_1: {
+																	ctor: '::',
+																	_0: _user$project$Ports$incomingChatMessage(_user$project$Messages$OnIncomingChatMessage),
+																	_1: {
+																		ctor: '::',
+																		_0: _user$project$Ports$replyWithIdeaPictureUris(_user$project$Messages$OnGetIdeaPictureUris),
+																		_1: {
+																			ctor: '::',
+																			_0: _user$project$Ports$sendFakeInterOpResponse(_user$project$Messages$OnGetFakeInterOpResponse),
+																			_1: {
+																				ctor: '::',
+																				_0: _user$project$Ports$getIdeaPicName(_user$project$Messages$OnIdeaPicNameChoosen),
+																				_1: {
+																					ctor: '::',
+																					_0: _user$project$Ports$replyWithIdeaVideoFileUri(_user$project$Messages$OnGetUploadedVideoFileUri),
+																					_1: {
+																						ctor: '::',
+																						_0: _user$project$Ports$getIdeaVideoName(_user$project$Messages$OnIdeaVideoNameChoosen),
+																						_1: {
+																							ctor: '::',
+																							_0: _user$project$Ports$getPostImageName(_user$project$Messages$OnPostImageNameChoosen),
+																							_1: {
+																								ctor: '::',
+																								_0: _user$project$Ports$replyWithPostMediaFileUri(_user$project$Messages$OnGetUploadedMediaFileUri),
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		});
+};
+var _user$project$Main$homeView = function (model) {
+	var loggedInData = model.loggedInData;
+	var vis = model.mobileMenuView ? {ctor: '_Tuple2', _0: 'display', _1: 'none'} : {ctor: '_Tuple2', _0: 'display', _1: 'initial'};
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _user$project$BackButtonView$backButtonView(model),
+			_1: {
+				ctor: '::',
+				_0: _user$project$BackButtonView$backButtonViewMobile(model),
+				_1: {
+					ctor: '::',
+					_0: _user$project$HeaderView$headerView(model),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$style(
+									{
+										ctor: '::',
+										_0: vis,
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$br,
+									{ctor: '[]'},
+									{ctor: '[]'}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$br,
+										{ctor: '[]'},
+										{ctor: '[]'}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$br,
+											{ctor: '[]'},
+											{ctor: '[]'}),
+										_1: {ctor: '[]'}
+									}
+								}
+							}),
+						_1: {
+							ctor: '::',
+							_0: _user$project$IntroInfo$mobileMenuScreenView(model),
+							_1: {
+								ctor: '::',
+								_0: _user$project$IntroInfo$infoView(model),
+								_1: {
+									ctor: '::',
+									_0: _user$project$TarrifPlans$ideaGeneratorsPlan(model),
+									_1: {
+										ctor: '::',
+										_0: _user$project$TarrifPlans$ideaGeneratorsPlanTab(model),
+										_1: {
+											ctor: '::',
+											_0: _user$project$TarrifPlans$organizationsPlan(model),
+											_1: {
+												ctor: '::',
+												_0: _user$project$TarrifPlans$organizationsPlanTab(model),
+												_1: {
+													ctor: '::',
+													_0: _user$project$TarrifPlans$tarrifPlansMobile(model),
+													_1: {
+														ctor: '::',
+														_0: _user$project$TopMembersList$innovatorsList(model),
+														_1: {
+															ctor: '::',
+															_0: _user$project$TopMembersList$innovatorsListTab(model),
+															_1: {
+																ctor: '::',
+																_0: _user$project$TopMembersList$innovatorsListMobile(model),
+																_1: {
+																	ctor: '::',
+																	_0: _user$project$TopMembersList$organizationsList(model),
+																	_1: {
+																		ctor: '::',
+																		_0: _user$project$TopMembersList$organizationsListTab(model),
+																		_1: {
+																			ctor: '::',
+																			_0: _user$project$TopMembersList$organizationsListMobile(model),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$br,
+																					{ctor: '[]'},
+																					{ctor: '[]'}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$br,
+																						{ctor: '[]'},
+																						{ctor: '[]'}),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$br,
+																							{ctor: '[]'},
+																							{ctor: '[]'}),
+																						_1: {
+																							ctor: '::',
+																							_0: _user$project$AboutUsView$aboutUsView,
+																							_1: {
+																								ctor: '::',
+																								_0: _user$project$AboutUsView$aboutUsViewTab,
+																								_1: {
+																									ctor: '::',
+																									_0: _user$project$AboutUsView$aboutUsMobileView(model),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(
+																											_elm_lang$html$Html$br,
+																											{ctor: '[]'},
+																											{ctor: '[]'}),
+																										_1: {
+																											ctor: '::',
+																											_0: A2(
+																												_elm_lang$html$Html$br,
+																												{ctor: '[]'},
+																												{ctor: '[]'}),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(
+																													_elm_lang$html$Html$br,
+																													{ctor: '[]'},
+																													{ctor: '[]'}),
+																												_1: {
+																													ctor: '::',
+																													_0: _user$project$ContactUsView$contactUsView(model),
+																													_1: {
+																														ctor: '::',
+																														_0: _user$project$ContactUsView$contactUsViewTab(model),
+																														_1: {
+																															ctor: '::',
+																															_0: _user$project$ContactUsView$contactUsViewMobile(model),
+																															_1: {
+																																ctor: '::',
+																																_0: A2(
+																																	_elm_lang$html$Html$br,
+																																	{ctor: '[]'},
+																																	{ctor: '[]'}),
+																																_1: {
+																																	ctor: '::',
+																																	_0: A2(
+																																		_elm_lang$html$Html$br,
+																																		{ctor: '[]'},
+																																		{ctor: '[]'}),
+																																	_1: {
+																																		ctor: '::',
+																																		_0: A2(
+																																			_elm_lang$html$Html$br,
+																																			{ctor: '[]'},
+																																			{ctor: '[]'}),
+																																		_1: {
+																																			ctor: '::',
+																																			_0: _user$project$FaqView$faqView,
+																																			_1: {
+																																				ctor: '::',
+																																				_0: _user$project$FaqView$faqViewTab,
+																																				_1: {
+																																					ctor: '::',
+																																					_0: _user$project$FaqView$faqViewMobile(model.mobileFaqView),
+																																					_1: {
+																																						ctor: '::',
+																																						_0: A2(
+																																							_elm_lang$html$Html$br,
+																																							{ctor: '[]'},
+																																							{ctor: '[]'}),
+																																						_1: {
+																																							ctor: '::',
+																																							_0: A2(
+																																								_elm_lang$html$Html$br,
+																																								{ctor: '[]'},
+																																								{ctor: '[]'}),
+																																							_1: {
+																																								ctor: '::',
+																																								_0: A2(
+																																									_elm_lang$html$Html$br,
+																																									{ctor: '[]'},
+																																									{ctor: '[]'}),
+																																								_1: {
+																																									ctor: '::',
+																																									_0: A2(
+																																										_elm_lang$html$Html$br,
+																																										{ctor: '[]'},
+																																										{ctor: '[]'}),
+																																									_1: {
+																																										ctor: '::',
+																																										_0: A2(
+																																											_elm_lang$html$Html$br,
+																																											{ctor: '[]'},
+																																											{ctor: '[]'}),
+																																										_1: {
+																																											ctor: '::',
+																																											_0: _user$project$FooterView$footerView,
+																																											_1: {
+																																												ctor: '::',
+																																												_0: _user$project$FooterView$footerViewTab,
+																																												_1: {
+																																													ctor: '::',
+																																													_0: _user$project$ChatWindowView$chatWindowView(model),
+																																													_1: {ctor: '[]'}
+																																												}
+																																											}
+																																										}
+																																									}
+																																								}
+																																							}
+																																						}
+																																					}
+																																				}
+																																			}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		});
+};
+var _user$project$Main$page = function (model) {
+	var currentRoute = model.route;
+	var _p0 = currentRoute;
+	switch (_p0.ctor) {
+		case 'HomeRoute':
+			return _user$project$Main$homeView(model);
+		case 'DashboardRoute':
+			return _user$project$DashboardView$dashboardView(model);
+		case 'AdminRoute':
+			return _user$project$AdminPanelView$adminView(model);
+		default:
+			return A2(
+				_elm_lang$html$Html$div,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('not found'),
+					_1: {ctor: '[]'}
+				});
+	}
+};
+var _user$project$Main$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('uk-height-large'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('uk-container'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$style(
+							{
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'paddingTop', _1: '12px'},
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: _user$project$Main$page(model),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Main$initialModel = function (route) {
+	var initialCountry = _user$project$Utils$makeRealString(
+		_elm_lang$core$List$head(_user$project$CountriesList$countries));
+	return _user$project$Models$Model(route)(_user$project$Models$Closed)(false)(false)(false)(false)('')('')('')('')(false)('')('')('')('')('')(true)('')(
+		{ctor: '[]'})('')('')('')(false)(false)(false)(false)(true)(false)(false)(false)(false)(false)(false)(false)(false)(false)(false)(
+		A7(_user$project$Models$CompanyRegistration, '', '', '', initialCountry, false, false, ''))(
+		A7(_user$project$Models$InnovatorRegistration, '', '', '', initialCountry, false, false, ''))(
+		A4(_user$project$Models$DataRegistered, 0, '', '', ''))(
+		{ctor: '[]'})(
+		{ctor: '[]'})(
+		A3(_user$project$Models$LoggingInMember, '', '', ''))(
+		A5(_user$project$Models$LoggedInMember, 0, '', '', false, ''))(false)(_user$project$Models$MobileHomePage)(
+		_user$project$Models$InnovatorExtended(0)('')('')(0)('')('')(0)(0)('')('')('')('')('')('')(0))(
+		_user$project$Models$OrganizationExtended(0)('')('')('')('')(0)(0)('')('')('')('')('')('')('')(0)(0))(_user$project$Models$NotSelectedForInnovators)(_user$project$Models$NotSelectedForOrganizations)(
+		A4(_user$project$Models$ContactUsData, '', '', '', ''))(
+		A7(_user$project$Models$PostData, 0, 0, '', '', '', '', ''))(
+		{ctor: '[]'})(
+		_user$project$Models$NewIdeaData('')('')('')('')('')('')('')('')('')('')(0)('')('')(false)(true)(''))(
+		A8(_user$project$Models$NewChatMessageData, 0, 0, false, false, '', '', '', ''))(false)(
+		{ctor: '[]'})(
+		{ctor: '[]'})(false)(
+		{
+			ctor: '::',
+			_0: A4(_user$project$Models$SuggestedUser, 0, '', '', ''),
+			_1: {
+				ctor: '::',
+				_0: A4(_user$project$Models$SuggestedUser, 0, '', '', ''),
+				_1: {
+					ctor: '::',
+					_0: A4(_user$project$Models$SuggestedUser, 0, '', '', ''),
+					_1: {ctor: '[]'}
+				}
+			}
+		})(
+		_user$project$Models$InnovatorSettingsFieldsEditable(false)(false)(false)(false)(false)(false)(false)(false)(false)(false))(
+		_user$project$Models$InnovatorSettingsFields(0)('')('')('')(0)('')('')(0)(0)('')('')('')('')('')('')('')('')('')(''))('')(
+		_user$project$Models$OrganizationSettingsFields(0)('')('')('')('')(0)(0)('')('')('')('')('')('')('')('')('')('')(''))(
+		_user$project$Models$OrganizationSettingsFieldsEditable(false)(false)(false)(false)(false)(false)(false)(false)(false)(false)(false))(
+		{ctor: '[]'})(false)(_user$project$Models$Eng)(
+		{ctor: '[]'})(
+		A7(_user$project$Models$PostCommentData, 0, false, '', '', '', 0, ''))(0)(
+		A4(
+			_user$project$Models$ProcessedSearchDataWrapper,
+			{ctor: '[]'},
+			{ctor: '[]'},
+			{ctor: '[]'},
+			{ctor: '[]'}))(
+		A2(_user$project$Models$SearchProgress, '', _user$project$Models$Idle))(_user$project$Models$HomePage)(
+		_user$project$Models$InnovatorExtended(0)('')('')(0)('')('')(0)(0)('')('')('')('')('')('')(0))(
+		_user$project$Models$OrganizationExtended(0)('')('')('')('')(0)(0)('')('')('')('')('')('')('')(0)(0))(
+		{ctor: '[]'})(false)(
+		_user$project$Models$IdeaData(0)('')('')('')('')('')('')('')(0)('')(''))(
+		_user$project$Models$FullIdeaData(0)('')('')('')('')('')('')('')(0)('')('')('')(false)(true)(''))(
+		{ctor: '[]'})(
+		{ctor: '[]'})(
+		{ctor: '[]'});
+};
+var _user$project$Main$init = function (location) {
+	var currentRoute = _user$project$Routes$parseLocation(location);
+	return {
+		ctor: '_Tuple2',
+		_0: _user$project$Main$initialModel(currentRoute),
+		_1: _user$project$Networking$topMembersFetchCmd
+	};
+};
+var _user$project$Main$main = A2(
+	_elm_lang$navigation$Navigation$program,
+	_user$project$Messages$OnLocationChange,
+	{init: _user$project$Main$init, update: _user$project$Updater$update, view: _user$project$Main$view, subscriptions: _user$project$Main$subscriptions})();

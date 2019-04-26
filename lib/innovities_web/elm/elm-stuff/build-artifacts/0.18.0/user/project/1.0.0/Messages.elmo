@@ -1,0 +1,477 @@
+var _user$project$Messages$OnTestMessage = {ctor: 'OnTestMessage'};
+var _user$project$Messages$OnCustomNdaInput = function (a) {
+	return {ctor: 'OnCustomNdaInput', _0: a};
+};
+var _user$project$Messages$OnNdaTypeClicked = function (a) {
+	return {ctor: 'OnNdaTypeClicked', _0: a};
+};
+var _user$project$Messages$OnHasNdaClicked = {ctor: 'OnHasNdaClicked'};
+var _user$project$Messages$OnBackButtonPressedMobile = {ctor: 'OnBackButtonPressedMobile'};
+var _user$project$Messages$OnBackButtonPressed = {ctor: 'OnBackButtonPressed'};
+var _user$project$Messages$OnOpenNDAsIdea = function (a) {
+	return {ctor: 'OnOpenNDAsIdea', _0: a};
+};
+var _user$project$Messages$OnFetchSignedNdasCompleted = function (a) {
+	return {ctor: 'OnFetchSignedNdasCompleted', _0: a};
+};
+var _user$project$Messages$OnSwitchNDAsPage = {ctor: 'OnSwitchNDAsPage'};
+var _user$project$Messages$OnDoubleLocationSwitch = function (a) {
+	return {ctor: 'OnDoubleLocationSwitch', _0: a};
+};
+var _user$project$Messages$OnSwitchToHomePage = function (a) {
+	return {ctor: 'OnSwitchToHomePage', _0: a};
+};
+var _user$project$Messages$OnSwitchToDashboard = {ctor: 'OnSwitchToDashboard'};
+var _user$project$Messages$OnFetchCachedDataCompleted = function (a) {
+	return {ctor: 'OnFetchCachedDataCompleted', _0: a};
+};
+var _user$project$Messages$OnSaveNdaCallCompleted = function (a) {
+	return {ctor: 'OnSaveNdaCallCompleted', _0: a};
+};
+var _user$project$Messages$OnNDARejected = function (a) {
+	return {ctor: 'OnNDARejected', _0: a};
+};
+var _user$project$Messages$OnNDAAccepted = function (a) {
+	return {ctor: 'OnNDAAccepted', _0: a};
+};
+var _user$project$Messages$OnViewFullIdeaData = F3(
+	function (a, b, c) {
+		return {ctor: 'OnViewFullIdeaData', _0: a, _1: b, _2: c};
+	});
+var _user$project$Messages$OnGetFullIdeaDataCompleted = function (a) {
+	return {ctor: 'OnGetFullIdeaDataCompleted', _0: a};
+};
+var _user$project$Messages$OnAcceptRejectFullDescInitiated = F2(
+	function (a, b) {
+		return {ctor: 'OnAcceptRejectFullDescInitiated', _0: a, _1: b};
+	});
+var _user$project$Messages$OnAcceptRejectFullDescCompleted = function (a) {
+	return {ctor: 'OnAcceptRejectFullDescCompleted', _0: a};
+};
+var _user$project$Messages$OnFullDescRequestInitiated = F2(
+	function (a, b) {
+		return {ctor: 'OnFullDescRequestInitiated', _0: a, _1: b};
+	});
+var _user$project$Messages$OnFullDescRequestCompleted = function (a) {
+	return {ctor: 'OnFullDescRequestCompleted', _0: a};
+};
+var _user$project$Messages$OnViewIdeaPageSwitch = function (a) {
+	return {ctor: 'OnViewIdeaPageSwitch', _0: a};
+};
+var _user$project$Messages$OnToggleMobileSearchInput = {ctor: 'OnToggleMobileSearchInput'};
+var _user$project$Messages$OnConnectInitiated = F2(
+	function (a, b) {
+		return {ctor: 'OnConnectInitiated', _0: a, _1: b};
+	});
+var _user$project$Messages$OnCheckConnectionAndConnectCompleted = function (a) {
+	return {ctor: 'OnCheckConnectionAndConnectCompleted', _0: a};
+};
+var _user$project$Messages$OnSeeOtherOrganization = function (a) {
+	return {ctor: 'OnSeeOtherOrganization', _0: a};
+};
+var _user$project$Messages$OnSeeOtherInnovator = function (a) {
+	return {ctor: 'OnSeeOtherInnovator', _0: a};
+};
+var _user$project$Messages$OnSubmitSearch = {ctor: 'OnSubmitSearch'};
+var _user$project$Messages$OnInputSearch = function (a) {
+	return {ctor: 'OnInputSearch', _0: a};
+};
+var _user$project$Messages$OnProcessSearchCompleted = function (a) {
+	return {ctor: 'OnProcessSearchCompleted', _0: a};
+};
+var _user$project$Messages$OnShareProfileOnFacebook = function (a) {
+	return {ctor: 'OnShareProfileOnFacebook', _0: a};
+};
+var _user$project$Messages$OnSharePostOnFacebook = function (a) {
+	return {ctor: 'OnSharePostOnFacebook', _0: a};
+};
+var _user$project$Messages$OnSubmitComment = {ctor: 'OnSubmitComment'};
+var _user$project$Messages$OnCurrentPostCommentInput = function (a) {
+	return {ctor: 'OnCurrentPostCommentInput', _0: a};
+};
+var _user$project$Messages$OnPostCommentsClicked = function (a) {
+	return {ctor: 'OnPostCommentsClicked', _0: a};
+};
+var _user$project$Messages$OnPostCommentsFetchCompleted = function (a) {
+	return {ctor: 'OnPostCommentsFetchCompleted', _0: a};
+};
+var _user$project$Messages$OnPostCommentSubmitCompleted = function (a) {
+	return {ctor: 'OnPostCommentSubmitCompleted', _0: a};
+};
+var _user$project$Messages$OnPostLikedCompleted = function (a) {
+	return {ctor: 'OnPostLikedCompleted', _0: a};
+};
+var _user$project$Messages$OnPostLikeClicked = function (a) {
+	return {ctor: 'OnPostLikeClicked', _0: a};
+};
+var _user$project$Messages$OnSwitchLang = function (a) {
+	return {ctor: 'OnSwitchLang', _0: a};
+};
+var _user$project$Messages$OnRegularNewNotifsFetch = function (a) {
+	return {ctor: 'OnRegularNewNotifsFetch', _0: a};
+};
+var _user$project$Messages$OnMarkNotifAsRedCompleted = function (a) {
+	return {ctor: 'OnMarkNotifAsRedCompleted', _0: a};
+};
+var _user$project$Messages$OnNewNotifItemClick = function (a) {
+	return {ctor: 'OnNewNotifItemClick', _0: a};
+};
+var _user$project$Messages$OnNewNotifsVisibilityToggle = {ctor: 'OnNewNotifsVisibilityToggle'};
+var _user$project$Messages$OnFetchNewNotificationsCompleted = function (a) {
+	return {ctor: 'OnFetchNewNotificationsCompleted', _0: a};
+};
+var _user$project$Messages$OnUpdateOrganizationSettingsCompleted = function (a) {
+	return {ctor: 'OnUpdateOrganizationSettingsCompleted', _0: a};
+};
+var _user$project$Messages$OnGetUploadedOrgSettingsPicUri = function (a) {
+	return {ctor: 'OnGetUploadedOrgSettingsPicUri', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsPicNameReceived = function (a) {
+	return {ctor: 'OnOrganizationSettingsPicNameReceived', _0: a};
+};
+var _user$project$Messages$OnGetFakeInterOpResponse3 = function (a) {
+	return {ctor: 'OnGetFakeInterOpResponse3', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsSaveChanges = {ctor: 'OnOrganizationSettingsSaveChanges'};
+var _user$project$Messages$OnOrganizationSettingsDescriptionInput = function (a) {
+	return {ctor: 'OnOrganizationSettingsDescriptionInput', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsWebpageInput = function (a) {
+	return {ctor: 'OnOrganizationSettingsWebpageInput', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsChangePasswordInput = function (a) {
+	return {ctor: 'OnOrganizationSettingsChangePasswordInput', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsCountryInput = function (a) {
+	return {ctor: 'OnOrganizationSettingsCountryInput', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsInterestedIndustriesInput = function (a) {
+	return {ctor: 'OnOrganizationSettingsInterestedIndustriesInput', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsIndustryInput = function (a) {
+	return {ctor: 'OnOrganizationSettingsIndustryInput', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsAboutInput = function (a) {
+	return {ctor: 'OnOrganizationSettingsAboutInput', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsEmailInput = function (a) {
+	return {ctor: 'OnOrganizationSettingsEmailInput', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsPhoneInput = function (a) {
+	return {ctor: 'OnOrganizationSettingsPhoneInput', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsNameInput = function (a) {
+	return {ctor: 'OnOrganizationSettingsNameInput', _0: a};
+};
+var _user$project$Messages$OnOrganizationSettingsUsernameInput = function (a) {
+	return {ctor: 'OnOrganizationSettingsUsernameInput', _0: a};
+};
+var _user$project$Messages$OnSelectTariffPlan = function (a) {
+	return {ctor: 'OnSelectTariffPlan', _0: a};
+};
+var _user$project$Messages$OnSubscribeTariffPlanCompleted = function (a) {
+	return {ctor: 'OnSubscribeTariffPlanCompleted', _0: a};
+};
+var _user$project$Messages$OnUpdateInnovatorSettingsCompleted = function (a) {
+	return {ctor: 'OnUpdateInnovatorSettingsCompleted', _0: a};
+};
+var _user$project$Messages$OnGetUploadedSettingsPicUri = function (a) {
+	return {ctor: 'OnGetUploadedSettingsPicUri', _0: a};
+};
+var _user$project$Messages$OnGetFakeInterOpResponse2 = function (a) {
+	return {ctor: 'OnGetFakeInterOpResponse2', _0: a};
+};
+var _user$project$Messages$OnInnovatorSettingsPicNameReceived = function (a) {
+	return {ctor: 'OnInnovatorSettingsPicNameReceived', _0: a};
+};
+var _user$project$Messages$OnInnovatorSettingsSaveChanges = {ctor: 'OnInnovatorSettingsSaveChanges'};
+var _user$project$Messages$OnInnovatorSettingsChangePasswordInput = function (a) {
+	return {ctor: 'OnInnovatorSettingsChangePasswordInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorSettingsCountryInput = function (a) {
+	return {ctor: 'OnInnovatorSettingsCountryInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorSettingsExperienceInput = function (a) {
+	return {ctor: 'OnInnovatorSettingsExperienceInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorSettingsEducationInput = function (a) {
+	return {ctor: 'OnInnovatorSettingsEducationInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorSettingsAboutInput = function (a) {
+	return {ctor: 'OnInnovatorSettingsAboutInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorSettingsEmailInput = function (a) {
+	return {ctor: 'OnInnovatorSettingsEmailInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorSettingsPhoneInput = function (a) {
+	return {ctor: 'OnInnovatorSettingsPhoneInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorSettingsSurnameInput = function (a) {
+	return {ctor: 'OnInnovatorSettingsSurnameInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorSettingsNameInput = function (a) {
+	return {ctor: 'OnInnovatorSettingsNameInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorSettingsUsernameInput = function (a) {
+	return {ctor: 'OnInnovatorSettingsUsernameInput', _0: a};
+};
+var _user$project$Messages$OnOrgSettingsChangePasswordEditable = {ctor: 'OnOrgSettingsChangePasswordEditable'};
+var _user$project$Messages$OnOrgSettingsCountryEditable = {ctor: 'OnOrgSettingsCountryEditable'};
+var _user$project$Messages$OnOrgSettingsInterestedIndustriesEditable = {ctor: 'OnOrgSettingsInterestedIndustriesEditable'};
+var _user$project$Messages$OnOrgSettingsIndustryEditable = {ctor: 'OnOrgSettingsIndustryEditable'};
+var _user$project$Messages$OnOrgSettingsDescriptionEditable = {ctor: 'OnOrgSettingsDescriptionEditable'};
+var _user$project$Messages$OnOrgSettingsAboutEditable = {ctor: 'OnOrgSettingsAboutEditable'};
+var _user$project$Messages$OnOrgSettingsEmailEditable = {ctor: 'OnOrgSettingsEmailEditable'};
+var _user$project$Messages$OnOrgSettingsPhoneEditable = {ctor: 'OnOrgSettingsPhoneEditable'};
+var _user$project$Messages$OnOrgSettingsWebpageEditable = {ctor: 'OnOrgSettingsWebpageEditable'};
+var _user$project$Messages$OnOrgSettingsNameEditable = {ctor: 'OnOrgSettingsNameEditable'};
+var _user$project$Messages$OnOrgSettingsUsernameEditable = {ctor: 'OnOrgSettingsUsernameEditable'};
+var _user$project$Messages$OnSettingsChangePasswordEditable = {ctor: 'OnSettingsChangePasswordEditable'};
+var _user$project$Messages$OnSettingsCountryEditable = {ctor: 'OnSettingsCountryEditable'};
+var _user$project$Messages$OnSettingsExperienceEditable = {ctor: 'OnSettingsExperienceEditable'};
+var _user$project$Messages$OnSettingsEducationEditable = {ctor: 'OnSettingsEducationEditable'};
+var _user$project$Messages$OnSettingsAboutEditable = {ctor: 'OnSettingsAboutEditable'};
+var _user$project$Messages$OnSettingsEmailEditable = {ctor: 'OnSettingsEmailEditable'};
+var _user$project$Messages$OnSettingsPhoneEditable = {ctor: 'OnSettingsPhoneEditable'};
+var _user$project$Messages$OnSettingsSurnameEditable = {ctor: 'OnSettingsSurnameEditable'};
+var _user$project$Messages$OnSettingsNameEditable = {ctor: 'OnSettingsNameEditable'};
+var _user$project$Messages$OnSettingsUsernameEditable = {ctor: 'OnSettingsUsernameEditable'};
+var _user$project$Messages$OnSwitchTariffPlansPage = {ctor: 'OnSwitchTariffPlansPage'};
+var _user$project$Messages$OnSwitchSettingsPage = {ctor: 'OnSwitchSettingsPage'};
+var _user$project$Messages$OnMakeConnectionInitiated = function (a) {
+	return {ctor: 'OnMakeConnectionInitiated', _0: a};
+};
+var _user$project$Messages$OnMakeConnectionCompleted = function (a) {
+	return {ctor: 'OnMakeConnectionCompleted', _0: a};
+};
+var _user$project$Messages$OnFetchSuggestionsCompleted = function (a) {
+	return {ctor: 'OnFetchSuggestionsCompleted', _0: a};
+};
+var _user$project$Messages$OnMarkMessageAsRedReply = function (a) {
+	return {ctor: 'OnMarkMessageAsRedReply', _0: a};
+};
+var _user$project$Messages$OnUnredChatMessageClick = function (a) {
+	return {ctor: 'OnUnredChatMessageClick', _0: a};
+};
+var _user$project$Messages$OnNewMessagesNotifsVisibilityToggle = {ctor: 'OnNewMessagesNotifsVisibilityToggle'};
+var _user$project$Messages$OnFetchUnredChatMessagesCompleted = function (a) {
+	return {ctor: 'OnFetchUnredChatMessagesCompleted', _0: a};
+};
+var _user$project$Messages$OnExtendedUnredMessageIncome = function (a) {
+	return {ctor: 'OnExtendedUnredMessageIncome', _0: a};
+};
+var _user$project$Messages$OnChatHistoryFetchCompleted = function (a) {
+	return {ctor: 'OnChatHistoryFetchCompleted', _0: a};
+};
+var _user$project$Messages$OnChatMessageError = function (a) {
+	return {ctor: 'OnChatMessageError', _0: a};
+};
+var _user$project$Messages$OnIncomingChatMessage = function (a) {
+	return {ctor: 'OnIncomingChatMessage', _0: a};
+};
+var _user$project$Messages$OnSubmitChatMessage = {ctor: 'OnSubmitChatMessage'};
+var _user$project$Messages$OnInputChatMessage = function (a) {
+	return {ctor: 'OnInputChatMessage', _0: a};
+};
+var _user$project$Messages$OnToggleChatWindow = function (a) {
+	return {ctor: 'OnToggleChatWindow', _0: a};
+};
+var _user$project$Messages$OnGetIdeaPictureUris = function (a) {
+	return {ctor: 'OnGetIdeaPictureUris', _0: a};
+};
+var _user$project$Messages$OnGetFakeInterOpResponse = function (a) {
+	return {ctor: 'OnGetFakeInterOpResponse', _0: a};
+};
+var _user$project$Messages$OnGetUploadedVideoFileUri = function (a) {
+	return {ctor: 'OnGetUploadedVideoFileUri', _0: a};
+};
+var _user$project$Messages$OnIdeaVideoNameChoosen = function (a) {
+	return {ctor: 'OnIdeaVideoNameChoosen', _0: a};
+};
+var _user$project$Messages$OnIdeaPicNameChoosen = function (a) {
+	return {ctor: 'OnIdeaPicNameChoosen', _0: a};
+};
+var _user$project$Messages$OnNewIdeaSubmit = {ctor: 'OnNewIdeaSubmit'};
+var _user$project$Messages$OnNewIdeaLongDescriptionInput = function (a) {
+	return {ctor: 'OnNewIdeaLongDescriptionInput', _0: a};
+};
+var _user$project$Messages$OnNewIdeaPriceInput = function (a) {
+	return {ctor: 'OnNewIdeaPriceInput', _0: a};
+};
+var _user$project$Messages$OnNewIdeaShortDescriptionInput = function (a) {
+	return {ctor: 'OnNewIdeaShortDescriptionInput', _0: a};
+};
+var _user$project$Messages$OnNewIdeaTagsInput = function (a) {
+	return {ctor: 'OnNewIdeaTagsInput', _0: a};
+};
+var _user$project$Messages$OnNewIdeaIndustryInput = function (a) {
+	return {ctor: 'OnNewIdeaIndustryInput', _0: a};
+};
+var _user$project$Messages$OnNewIdeaNameInput = function (a) {
+	return {ctor: 'OnNewIdeaNameInput', _0: a};
+};
+var _user$project$Messages$OnMobileDashboardNewIdeaPageVisible = {ctor: 'OnMobileDashboardNewIdeaPageVisible'};
+var _user$project$Messages$OnDashboardNewIdeaPageVisible = {ctor: 'OnDashboardNewIdeaPageVisible'};
+var _user$project$Messages$OnFetchExtendedPostsCompleted = function (a) {
+	return {ctor: 'OnFetchExtendedPostsCompleted', _0: a};
+};
+var _user$project$Messages$OnSubmitIdeaCompleted = function (a) {
+	return {ctor: 'OnSubmitIdeaCompleted', _0: a};
+};
+var _user$project$Messages$OnSubmitPostCompleted = function (a) {
+	return {ctor: 'OnSubmitPostCompleted', _0: a};
+};
+var _user$project$Messages$OnSubmitPost = {ctor: 'OnSubmitPost'};
+var _user$project$Messages$OnGetUploadedMediaFileUri = function (a) {
+	return {ctor: 'OnGetUploadedMediaFileUri', _0: a};
+};
+var _user$project$Messages$OnPostMessageInput = function (a) {
+	return {ctor: 'OnPostMessageInput', _0: a};
+};
+var _user$project$Messages$OnPostImageNameChoosen = function (a) {
+	return {ctor: 'OnPostImageNameChoosen', _0: a};
+};
+var _user$project$Messages$OnContactUsFormSubmitCompleted = function (a) {
+	return {ctor: 'OnContactUsFormSubmitCompleted', _0: a};
+};
+var _user$project$Messages$OnContactUsFormSubmit = {ctor: 'OnContactUsFormSubmit'};
+var _user$project$Messages$OnContactUsMessageInput = function (a) {
+	return {ctor: 'OnContactUsMessageInput', _0: a};
+};
+var _user$project$Messages$OnContactUsEmailInput = function (a) {
+	return {ctor: 'OnContactUsEmailInput', _0: a};
+};
+var _user$project$Messages$OnContactUsNameInput = function (a) {
+	return {ctor: 'OnContactUsNameInput', _0: a};
+};
+var _user$project$Messages$OnSubscribeMaxOrganizationMobile = {ctor: 'OnSubscribeMaxOrganizationMobile'};
+var _user$project$Messages$OnSubscribePremiumOrganizationMobile = {ctor: 'OnSubscribePremiumOrganizationMobile'};
+var _user$project$Messages$OnSubscribePlusOrganizationMobile = {ctor: 'OnSubscribePlusOrganizationMobile'};
+var _user$project$Messages$OnSubscribeBasicOrganizationMobile = {ctor: 'OnSubscribeBasicOrganizationMobile'};
+var _user$project$Messages$OnSubscribeMaxOrganization = {ctor: 'OnSubscribeMaxOrganization'};
+var _user$project$Messages$OnSubscribePremiumOrganization = {ctor: 'OnSubscribePremiumOrganization'};
+var _user$project$Messages$OnSubscribePlusOrganization = {ctor: 'OnSubscribePlusOrganization'};
+var _user$project$Messages$OnSubscribeBasicOrganization = {ctor: 'OnSubscribeBasicOrganization'};
+var _user$project$Messages$OnSubscribePremiumInnovatorsMobile = {ctor: 'OnSubscribePremiumInnovatorsMobile'};
+var _user$project$Messages$OnSubscribePlusInnovatorsMobile = {ctor: 'OnSubscribePlusInnovatorsMobile'};
+var _user$project$Messages$OnSubscribeBasicInnovatorsMobile = {ctor: 'OnSubscribeBasicInnovatorsMobile'};
+var _user$project$Messages$OnSubscribeFreeInnovatorsMobile = {ctor: 'OnSubscribeFreeInnovatorsMobile'};
+var _user$project$Messages$OnSubscribePremiumInnovators = {ctor: 'OnSubscribePremiumInnovators'};
+var _user$project$Messages$OnSubscribePlusInnovators = {ctor: 'OnSubscribePlusInnovators'};
+var _user$project$Messages$OnSubscribeBasicInnovators = {ctor: 'OnSubscribeBasicInnovators'};
+var _user$project$Messages$OnSubscribeFreeInnovators = {ctor: 'OnSubscribeFreeInnovators'};
+var _user$project$Messages$OnGetOrganizationDataCompleted = function (a) {
+	return {ctor: 'OnGetOrganizationDataCompleted', _0: a};
+};
+var _user$project$Messages$OnGetInnovatorDataCompleted = function (a) {
+	return {ctor: 'OnGetInnovatorDataCompleted', _0: a};
+};
+var _user$project$Messages$OnSignOutCompleted = function (a) {
+	return {ctor: 'OnSignOutCompleted', _0: a};
+};
+var _user$project$Messages$OnSignOutInitiated = {ctor: 'OnSignOutInitiated'};
+var _user$project$Messages$OnDashboardMobileSettingsPageOpen = {ctor: 'OnDashboardMobileSettingsPageOpen'};
+var _user$project$Messages$OnDashboardMobileProfilePageOpen = {ctor: 'OnDashboardMobileProfilePageOpen'};
+var _user$project$Messages$OnDashboardMobileHomePageOpen = {ctor: 'OnDashboardMobileHomePageOpen'};
+var _user$project$Messages$OnLocationChangeProfilePage = {ctor: 'OnLocationChangeProfilePage'};
+var _user$project$Messages$OnSwitchDashboardOptionsVisible = {ctor: 'OnSwitchDashboardOptionsVisible'};
+var _user$project$Messages$OnLoggingInMemberCompleted = function (a) {
+	return {ctor: 'OnLoggingInMemberCompleted', _0: a};
+};
+var _user$project$Messages$OnLoggingInMemberLogin = {ctor: 'OnLoggingInMemberLogin'};
+var _user$project$Messages$OnLoggingInMemberPasswordInput = function (a) {
+	return {ctor: 'OnLoggingInMemberPasswordInput', _0: a};
+};
+var _user$project$Messages$OnLoggingInMemberUsernameInput = function (a) {
+	return {ctor: 'OnLoggingInMemberUsernameInput', _0: a};
+};
+var _user$project$Messages$TopMembersFetchCompleted = function (a) {
+	return {ctor: 'TopMembersFetchCompleted', _0: a};
+};
+var _user$project$Messages$InnovatorRegisterCompleted = function (a) {
+	return {ctor: 'InnovatorRegisterCompleted', _0: a};
+};
+var _user$project$Messages$OnInnovatorRegistrationSubmitMobile = {ctor: 'OnInnovatorRegistrationSubmitMobile'};
+var _user$project$Messages$OnInnovatorRegistrationSubmit = {ctor: 'OnInnovatorRegistrationSubmit'};
+var _user$project$Messages$OnInnovatorRegistrationReceiveNewletterCheck = {ctor: 'OnInnovatorRegistrationReceiveNewletterCheck'};
+var _user$project$Messages$OnInnovatorRegistrationTSAgreementCheck = {ctor: 'OnInnovatorRegistrationTSAgreementCheck'};
+var _user$project$Messages$OnInnovatorRegistrationCountryInput = function (a) {
+	return {ctor: 'OnInnovatorRegistrationCountryInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorRegistrationPasswordInput = function (a) {
+	return {ctor: 'OnInnovatorRegistrationPasswordInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorRegistrationEmailInput = function (a) {
+	return {ctor: 'OnInnovatorRegistrationEmailInput', _0: a};
+};
+var _user$project$Messages$OnInnovatorRegistrationNameInput = function (a) {
+	return {ctor: 'OnInnovatorRegistrationNameInput', _0: a};
+};
+var _user$project$Messages$CompanyRegisterCompleted = function (a) {
+	return {ctor: 'CompanyRegisterCompleted', _0: a};
+};
+var _user$project$Messages$OnCompanyRegistrationSubmitMobile = {ctor: 'OnCompanyRegistrationSubmitMobile'};
+var _user$project$Messages$OnCompanyRegistrationSubmit = {ctor: 'OnCompanyRegistrationSubmit'};
+var _user$project$Messages$OnCompanyRegistrationReceiveNewletterCheck = {ctor: 'OnCompanyRegistrationReceiveNewletterCheck'};
+var _user$project$Messages$OnCompanyRegistrationTSAgreementCheck = {ctor: 'OnCompanyRegistrationTSAgreementCheck'};
+var _user$project$Messages$OnCompanyRegistrationCountryInput = function (a) {
+	return {ctor: 'OnCompanyRegistrationCountryInput', _0: a};
+};
+var _user$project$Messages$OnCompanyRegistrationPasswordInput = function (a) {
+	return {ctor: 'OnCompanyRegistrationPasswordInput', _0: a};
+};
+var _user$project$Messages$OnCompanyRegistrationEmailInput = function (a) {
+	return {ctor: 'OnCompanyRegistrationEmailInput', _0: a};
+};
+var _user$project$Messages$OnCompanyRegistrationNameInput = function (a) {
+	return {ctor: 'OnCompanyRegistrationNameInput', _0: a};
+};
+var _user$project$Messages$OnMobileFaqViewOpen = {ctor: 'OnMobileFaqViewOpen'};
+var _user$project$Messages$OnMobileContactUsViewOpen = {ctor: 'OnMobileContactUsViewOpen'};
+var _user$project$Messages$OnMobileAboutUsViewOpen = {ctor: 'OnMobileAboutUsViewOpen'};
+var _user$project$Messages$OnMobileTarrifPlansViewOpen = {ctor: 'OnMobileTarrifPlansViewOpen'};
+var _user$project$Messages$OnMobilePricingOrganizationsViewOpen = {ctor: 'OnMobilePricingOrganizationsViewOpen'};
+var _user$project$Messages$OnMobilePricingIdeaGeneratorsViewOpen = {ctor: 'OnMobilePricingIdeaGeneratorsViewOpen'};
+var _user$project$Messages$OnMobilePricingToggle = {ctor: 'OnMobilePricingToggle'};
+var _user$project$Messages$OnMobileOrganizationsViewOpen = {ctor: 'OnMobileOrganizationsViewOpen'};
+var _user$project$Messages$OnMobileIdeaGeneratorsViewOpen = {ctor: 'OnMobileIdeaGeneratorsViewOpen'};
+var _user$project$Messages$OnMobileMenuOpen = {ctor: 'OnMobileMenuOpen'};
+var _user$project$Messages$OnMobileRegisterIdeaGeneratorViewOpen = {ctor: 'OnMobileRegisterIdeaGeneratorViewOpen'};
+var _user$project$Messages$OnMobileRegisterCompanyViewOpen = {ctor: 'OnMobileRegisterCompanyViewOpen'};
+var _user$project$Messages$OnMobileGetStartedViewOpen = {ctor: 'OnMobileGetStartedViewOpen'};
+var _user$project$Messages$OnAdminPanelSignIn = {ctor: 'OnAdminPanelSignIn'};
+var _user$project$Messages$OnAdminPanelSecondPasswordInput = function (a) {
+	return {ctor: 'OnAdminPanelSecondPasswordInput', _0: a};
+};
+var _user$project$Messages$OnAdminPanelFirstPasswordInput = function (a) {
+	return {ctor: 'OnAdminPanelFirstPasswordInput', _0: a};
+};
+var _user$project$Messages$AdminPanelSignInCompleted = function (a) {
+	return {ctor: 'AdminPanelSignInCompleted', _0: a};
+};
+var _user$project$Messages$PromoRegistrationCallCompleted = function (a) {
+	return {ctor: 'PromoRegistrationCallCompleted', _0: a};
+};
+var _user$project$Messages$OnLandingSignUpMobileClick = {ctor: 'OnLandingSignUpMobileClick'};
+var _user$project$Messages$OnLandingSignUp = {ctor: 'OnLandingSignUp'};
+var _user$project$Messages$OnLandingShortIdeaType = function (a) {
+	return {ctor: 'OnLandingShortIdeaType', _0: a};
+};
+var _user$project$Messages$OnLandingCompanyType = function (a) {
+	return {ctor: 'OnLandingCompanyType', _0: a};
+};
+var _user$project$Messages$OnLandingEmailType = function (a) {
+	return {ctor: 'OnLandingEmailType', _0: a};
+};
+var _user$project$Messages$OnLandingUsernameType = function (a) {
+	return {ctor: 'OnLandingUsernameType', _0: a};
+};
+var _user$project$Messages$OnCompanyRegistrationOpen = {ctor: 'OnCompanyRegistrationOpen'};
+var _user$project$Messages$OnIdeaGeneratorRegistrationOpen = {ctor: 'OnIdeaGeneratorRegistrationOpen'};
+var _user$project$Messages$OnLoginButtonSwitch = {ctor: 'OnLoginButtonSwitch'};
+var _user$project$Messages$OnGetStartedButtonsSwitch = {ctor: 'OnGetStartedButtonsSwitch'};
+var _user$project$Messages$OnPricingClose = {ctor: 'OnPricingClose'};
+var _user$project$Messages$OnPricingOpen = {ctor: 'OnPricingOpen'};
+var _user$project$Messages$OnLocationChange = function (a) {
+	return {ctor: 'OnLocationChange', _0: a};
+};

@@ -1,0 +1,106 @@
+var _user$project$BackButtonView$backButtonViewMobile = function (model) {
+	var pageHistory = model.mobilePageHistory;
+	var arrowColor = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(pageHistory),
+		0) > 0) ? {ctor: '_Tuple2', _0: 'color', _1: 'gold'} : {ctor: '_Tuple2', _0: 'color', _1: 'white'};
+	var backDisabled = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(pageHistory),
+		0) > 0) ? {ctor: '_Tuple2', _0: 'pointer-events', _1: 'auto'} : {ctor: '_Tuple2', _0: 'pointer-events', _1: 'none'};
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('backButtonClassMobile'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$a,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Events$onClick(_user$project$Messages$OnBackButtonPressedMobile),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('uk-icon-button'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'background', _1: 'rgba(220,220,220,0.7)'},
+									_1: {
+										ctor: '::',
+										_0: arrowColor,
+										_1: {
+											ctor: '::',
+											_0: backDisabled,
+											_1: {ctor: '[]'}
+										}
+									}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'icon: arrow-left; ratio: 2'),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				},
+				{ctor: '[]'}),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$BackButtonView$backButtonView = function (model) {
+	var pageHistory = model.pageHistory;
+	var arrowColor = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(pageHistory),
+		0) > 0) ? {ctor: '_Tuple2', _0: 'color', _1: 'gold'} : {ctor: '_Tuple2', _0: 'color', _1: 'white'};
+	var backDisabled = (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$List$length(pageHistory),
+		0) > 0) ? {ctor: '_Tuple2', _0: 'pointer-events', _1: 'auto'} : {ctor: '_Tuple2', _0: 'pointer-events', _1: 'none'};
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('backButtonClass'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$a,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Events$onClick(_user$project$Messages$OnBackButtonPressed),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('uk-icon-button'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$style(
+								{
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'background', _1: 'rgba(220,220,220,0.7)'},
+									_1: {
+										ctor: '::',
+										_0: arrowColor,
+										_1: {
+											ctor: '::',
+											_0: backDisabled,
+											_1: {ctor: '[]'}
+										}
+									}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(_elm_lang$html$Html_Attributes$attribute, 'uk-icon', 'icon: arrow-left; ratio: 2'),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				},
+				{ctor: '[]'}),
+			_1: {ctor: '[]'}
+		});
+};
