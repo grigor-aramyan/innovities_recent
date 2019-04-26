@@ -7,7 +7,7 @@ use Mix.Config
 
 config :innovities, Innovities.Mailing.Mailer,
   adapter: Bamboo.SendGridAdapter,
-  api_key: "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"
+  api_key: ""
 
 # General application configuration
 config :innovities,
